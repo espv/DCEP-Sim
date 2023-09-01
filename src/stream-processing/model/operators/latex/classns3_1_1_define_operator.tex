@@ -1,0 +1,65 @@
+\hypertarget{classns3_1_1_define_operator}{}\doxysection{ns3\+::Define\+Operator Class Reference}
+\label{classns3_1_1_define_operator}\index{ns3::DefineOperator@{ns3::DefineOperator}}
+
+
+Inheritance diagram for ns3\+::Define\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Define\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a62fc372b19c8a9a2ca15a7c12d5bdc35}\label{classns3_1_1_define_operator_a62fc372b19c8a9a2ca15a7c12d5bdc35}} 
+{\bfseries Define\+Operator} (std\+::string alias, Ptr$<$ \mbox{\hyperlink{classns3_1_1_filter_operator}{Filter\+Operator}} $>$ filter\+Operator)
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a842f13c9c87cffaf1a26c982c10b2388}\label{classns3_1_1_define_operator_a842f13c9c87cffaf1a26c982c10b2388}} 
+{\bfseries Define\+Operator} (std\+::string alias)
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a4b16acdf6572d43d3c031b3b53e6f9f7}\label{classns3_1_1_define_operator_a4b16acdf6572d43d3c031b3b53e6f9f7}} 
+bool {\bfseries match} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_sequence_partial_state}{Sequence\+Partial\+State}} $>$ sequence, Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) const
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a967e82053f34465c5f42d7853961d5b9}\label{classns3_1_1_define_operator_a967e82053f34465c5f42d7853961d5b9}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_af2cf309f77b69a2d2536fcd997844e81}\label{classns3_1_1_define_operator_af2cf309f77b69a2d2536fcd997844e81}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a6e49b15ebd96a1044cfaabab056013a4}\label{classns3_1_1_define_operator_a6e49b15ebd96a1044cfaabab056013a4}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a28c5db4daf592916ea7a90b9528cb273}\label{classns3_1_1_define_operator_a28c5db4daf592916ea7a90b9528cb273}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a9c1e4bb01b26d5de29f8f14dffeb1546}\label{classns3_1_1_define_operator_a9c1e4bb01b26d5de29f8f14dffeb1546}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a2cb16522f94fd18b122a20b61f2315ab}\label{classns3_1_1_define_operator_a2cb16522f94fd18b122a20b61f2315ab}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_ad21e13775f18b65801066b687994f29c}\label{classns3_1_1_define_operator_ad21e13775f18b65801066b687994f29c}} 
+std\+::string {\bfseries alias}
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_aedea8f5cb84e6f60ff42eef78bd8350a}\label{classns3_1_1_define_operator_aedea8f5cb84e6f60ff42eef78bd8350a}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_filter_operator}{Filter\+Operator}} $>$ {\bfseries filter\+Operator}
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a6e99c1b40065d3593c23617968f51659}\label{classns3_1_1_define_operator_a6e99c1b40065d3593c23617968f51659}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_filter_argument}{Filter\+Argument}} $>$ {\bfseries main\+Filter\+Argument} = nullptr
+\item 
+\mbox{\Hypertarget{classns3_1_1_define_operator_a43a64966dcd6428d7896037f1d28dbbf}\label{classns3_1_1_define_operator_a43a64966dcd6428d7896037f1d28dbbf}} 
+int {\bfseries stream\+\_\+id}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Define\+Operator.\+cpp\end{DoxyCompactItemize}

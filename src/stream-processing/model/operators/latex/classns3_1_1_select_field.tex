@@ -1,0 +1,79 @@
+\hypertarget{classns3_1_1_select_field}{}\doxysection{ns3\+::Select\+Field Class Reference}
+\label{classns3_1_1_select_field}\index{ns3::SelectField@{ns3::SelectField}}
+
+
+Inheritance diagram for ns3\+::Select\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Select\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a2a2735bb5b6082d0c2bfb96b72f391d7}\label{classns3_1_1_select_field_a2a2735bb5b6082d0c2bfb96b72f391d7}} 
+{\bfseries Select\+Field} (const std\+::string \&alias, const std\+::string \&input\+Field, const std\+::string \&output\+Field, Ptr$<$ Stream\+Query $>$ query)
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_af7dbb2843e1dfc2da0d48b59fed5560b}\label{classns3_1_1_select_field_af7dbb2843e1dfc2da0d48b59fed5560b}} 
+{\bfseries Select\+Field} (const std\+::string \&alias, const std\+::string \&input\+Field, Aggregation aggregate, const std\+::string \&output\+Field, Ptr$<$ Stream\+Query $>$ query)
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_add99abad55391104741e48d36f3cb452}\label{classns3_1_1_select_field_add99abad55391104741e48d36f3cb452}} 
+virtual Ptr$<$ \mbox{\hyperlink{classns3_1_1_select_field}{Select\+Field}} $>$ {\bfseries copy} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_aae4b83e4f8a0259ce58b08fe5aa318f6}\label{classns3_1_1_select_field_aae4b83e4f8a0259ce58b08fe5aa318f6}} 
+bool {\bfseries same\+\_\+as} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_select_field}{Select\+Field}} $>$ sf) const
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a6d5e1b503b0d8c355108db6088e64691}\label{classns3_1_1_select_field_a6d5e1b503b0d8c355108db6088e64691}} 
+bool {\bfseries is\+Stream\+Id\+Specified} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a06293d86174a47d92a838ab26b185148}\label{classns3_1_1_select_field_a06293d86174a47d92a838ab26b185148}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_af86ea2661486c4d930ed811ce9e2485e}\label{classns3_1_1_select_field_af86ea2661486c4d930ed811ce9e2485e}} 
+static int {\bfseries get\+Field\+Index} (std\+::string alias, const std\+::string \&field, Ptr$<$ Stream\+Query $>$ query)
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a324425c0ac39e8bff98ce14e5966e886}\label{classns3_1_1_select_field_a324425c0ac39e8bff98ce14e5966e886}} 
+static Ptr$<$ \mbox{\hyperlink{classns3_1_1_select_field}{Select\+Field}} $>$ {\bfseries create\+Sf} (std\+::string \&field, Ptr$<$ Stream\+Query $>$ query)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_aac925bec98c1c024c872bf6628465d76}\label{classns3_1_1_select_field_aac925bec98c1c024c872bf6628465d76}} 
+int {\bfseries input\+\_\+stream\+\_\+id} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a71984f403129817b46674a2c178c7292}\label{classns3_1_1_select_field_a71984f403129817b46674a2c178c7292}} 
+std\+::string {\bfseries alias} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a9e4e84844e68e42ebee71dc25c547d2c}\label{classns3_1_1_select_field_a9e4e84844e68e42ebee71dc25c547d2c}} 
+std\+::string {\bfseries input\+Field}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a7b6876aea88adf61d25e2eb3320a30a0}\label{classns3_1_1_select_field_a7b6876aea88adf61d25e2eb3320a30a0}} 
+int {\bfseries input\+Field\+Index} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_ad7a0e996e28612ecfe32d19803eed11a}\label{classns3_1_1_select_field_ad7a0e996e28612ecfe32d19803eed11a}} 
+int {\bfseries output\+Field\+Index} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a457d54a1f4afd40bee34b1f49278a2a9}\label{classns3_1_1_select_field_a457d54a1f4afd40bee34b1f49278a2a9}} 
+std\+::string {\bfseries output\+Field}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_abd2a123e4747b4f302b648b2d20e87a4}\label{classns3_1_1_select_field_abd2a123e4747b4f302b648b2d20e87a4}} 
+Type {\bfseries type}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a08daf03f67a1afb8ab536942418524e3}\label{classns3_1_1_select_field_a08daf03f67a1afb8ab536942418524e3}} 
+Aggregation {\bfseries aggregate}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_a4eab6a9e304c41610c76059d956d2fc6}\label{classns3_1_1_select_field_a4eab6a9e304c41610c76059d956d2fc6}} 
+int {\bfseries tuple\+\_\+index} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_field_aaf38ffdd65a0c5eb3ab2e5b6cac9275e}\label{classns3_1_1_select_field_aaf38ffdd65a0c5eb3ab2e5b6cac9275e}} 
+Ptr$<$ Stream\+Query $>$ {\bfseries query}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Select\+Operator.\+cpp\end{DoxyCompactItemize}

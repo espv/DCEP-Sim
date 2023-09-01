@@ -1,0 +1,62 @@
+\hypertarget{classns3_1_1_cep_window_operator}{}\doxysection{ns3\+::Cep\+Window\+Operator Class Reference}
+\label{classns3_1_1_cep_window_operator}\index{ns3::CepWindowOperator@{ns3::CepWindowOperator}}
+
+
+Inheritance diagram for ns3\+::Cep\+Window\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Cep\+Window\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_a59b4cae59ed137518c59482662c62847}\label{classns3_1_1_cep_window_operator_a59b4cae59ed137518c59482662c62847}} 
+void {\bfseries init} (int size, int jump, Window\+Type size\+\_\+type, int emit\+\_\+size, Window\+Type emit\+\_\+type, const std\+::string \&external\+\_\+timestamp\+\_\+key) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_ab2c2ca126be4b88de680d8d4e978184a}\label{classns3_1_1_cep_window_operator_ab2c2ca126be4b88de680d8d4e978184a}} 
+void {\bfseries add\+Sequence} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_sequence_partial_state}{Sequence\+Partial\+State}} $>$ sequence)
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_a02fcf2fddd367c8393d2d4a5051c179d}\label{classns3_1_1_cep_window_operator_a02fcf2fddd367c8393d2d4a5051c179d}} 
+void {\bfseries add\+Sequence} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_sequence_partial_state}{Sequence\+Partial\+State}} $>$ sequence, int group\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_a2997ec40db9653596cd15805a5d3ba3c}\label{classns3_1_1_cep_window_operator_a2997ec40db9653596cd15805a5d3ba3c}} 
+void {\bfseries insert\+Tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_sequence_partial_state}{Sequence\+Partial\+State}} $>$ sequence, Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_aecd5525e054d2ee484c52b9708e49df8}\label{classns3_1_1_cep_window_operator_aecd5525e054d2ee484c52b9708e49df8}} 
+void {\bfseries undo\+Insert\+Tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_sequence_partial_state}{Sequence\+Partial\+State}} $>$ sequence, Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_a3d59d26ea20e89478871b66922ae88fa}\label{classns3_1_1_cep_window_operator_a3d59d26ea20e89478871b66922ae88fa}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_ac229e7a958a8fb3ea50a2cfdb38b46be}\label{classns3_1_1_cep_window_operator_ac229e7a958a8fb3ea50a2cfdb38b46be}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_a3e09bbdc84e8a03254e1d9b23e63eee9}\label{classns3_1_1_cep_window_operator_a3e09bbdc84e8a03254e1d9b23e63eee9}} 
+void {\bfseries Extract\+Diff\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_aa26af30283873a69732b986b69684f7f}\label{classns3_1_1_cep_window_operator_aa26af30283873a69732b986b69684f7f}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_a288951be58d6421946671e105680d462}\label{classns3_1_1_cep_window_operator_a288951be58d6421946671e105680d462}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_a97824ae575f7acd2b5ec7b1e5df6be3c}\label{classns3_1_1_cep_window_operator_a97824ae575f7acd2b5ec7b1e5df6be3c}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_sequence_partial_state}{Sequence\+Partial\+State}} $>$ $>$ {\bfseries sequences}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_window_operator_ae8704260dbd73b2c0a1031ed619f1020}\label{classns3_1_1_cep_window_operator_ae8704260dbd73b2c0a1031ed619f1020}} 
+std\+::map$<$ int, std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_sequence_partial_state}{Sequence\+Partial\+State}} $>$ $>$ $>$ {\bfseries group\+Id\+To\+Sequences}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Window\+Operator.\+cpp\end{DoxyCompactItemize}

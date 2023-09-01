@@ -1,0 +1,6 @@
+#!/bin/bash
+for filename in ./*; do
+	echo $filename
+	dot -Tpng $filename -o $filename.png
+done
+

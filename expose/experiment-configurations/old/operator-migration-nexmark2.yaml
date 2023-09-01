@@ -1,0 +1,55 @@
+stream-definitions: []
+experiments:
+- id: 1
+  flow: []
+spequeries:
+  outputs:
+          - {name: Output 0, node: 1, schema: schema1, edge: stream_name7}
+  inputs:
+          - {name: input 0, node: 5, schema: schema2, edge: stream_name0}
+  queries:
+  - operators:
+    - name: Filter 0
+      type: filter
+      parameters: {op: '', arg2: '', arg1: ''}
+    - name: Aggregate 0
+      type: aggregate
+      parameters: {}
+    - name: Aggregate 1
+      type: aggregate
+      parameters: {}
+    - name: Aggregate 2
+      type: aggregate
+      parameters: {}
+    - name: Select 0
+      type: select
+      parameters:
+        fields: []
+    name: NewName0
+    edges:
+    - stream: stream_name1
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Aggregate 0, type: intermediate}
+    - stream: stream_name0
+      from: {name: input 0, type: intermediate}
+      to: {name: Filter 0, type: intermediate}
+    - stream: stream_name5
+      from: {name: Aggregate 1, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    - stream: stream_name4
+      from: {name: Aggregate 0, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    - stream: stream_name3
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Aggregate 2, type: intermediate}
+    - stream: stream_name2
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Aggregate 1, type: intermediate}
+    - stream: stream_name7
+      from: {name: Select 0, type: intermediate}
+      to: {name: Output 0, type: intermediate}
+    - stream: stream_name6
+      from: {name: Aggregate 2, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    id: 0
+

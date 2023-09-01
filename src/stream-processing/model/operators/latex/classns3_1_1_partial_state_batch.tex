@@ -1,0 +1,79 @@
+\hypertarget{classns3_1_1_partial_state_batch}{}\doxysection{ns3\+::Partial\+State\+Batch Class Reference}
+\label{classns3_1_1_partial_state_batch}\index{ns3::PartialStateBatch@{ns3::PartialStateBatch}}
+
+
+Inheritance diagram for ns3\+::Partial\+State\+Batch\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Partial\+State\+Batch\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_af5e94f34dfc51ffbb26829c1c37a4ee4}\label{classns3_1_1_partial_state_batch_af5e94f34dfc51ffbb26829c1c37a4ee4}} 
+{\bfseries Partial\+State\+Batch} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ op, Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a09673484b1fac5cbe21cd457b2f00274}\label{classns3_1_1_partial_state_batch_a09673484b1fac5cbe21cd457b2f00274}} 
+size\+\_\+t {\bfseries Get\+Serialized\+Size} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a66428009fa07f17efd3655509865f7fe}\label{classns3_1_1_partial_state_batch_a66428009fa07f17efd3655509865f7fe}} 
+Ptr$<$ Stream\+Query $>$ {\bfseries Get\+Query} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a7f48d45e4592c3f420abe5cb467ca413}\label{classns3_1_1_partial_state_batch_a7f48d45e4592c3f420abe5cb467ca413}} 
+void {\bfseries merge} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$)
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a508c15e448444323624392316b029ae6}\label{classns3_1_1_partial_state_batch_a508c15e448444323624392316b029ae6}} 
+Time {\bfseries will\+Be\+Sent\+By} (Time sent\+At)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_ad7652c6ef440678709966c70eff88f2d}\label{classns3_1_1_partial_state_batch_ad7652c6ef440678709966c70eff88f2d}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a156aa587d56539dfc22a2a64a3ba4142}\label{classns3_1_1_partial_state_batch_a156aa587d56539dfc22a2a64a3ba4142}} 
+Dcep\+Header {\bfseries dcep\+Header}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a42ded65775962359aa956c9b8ffe333b}\label{classns3_1_1_partial_state_batch_a42ded65775962359aa956c9b8ffe333b}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries op}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_afa75cd55fb10f0ca1eb4128ce6a969a4}\label{classns3_1_1_partial_state_batch_afa75cd55fb10f0ca1eb4128ce6a969a4}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ {\bfseries mp}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_adaf6ada29eb3990070d5b05442124869}\label{classns3_1_1_partial_state_batch_adaf6ada29eb3990070d5b05442124869}} 
+int {\bfseries id} = cnt\+\_\+id++
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a7cd1ad870613aa5f3474d1c9dc242808}\label{classns3_1_1_partial_state_batch_a7cd1ad870613aa5f3474d1c9dc242808}} 
+bool {\bfseries in\+\_\+migration} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a57e7a29040d4422cec70b3b60945e175}\label{classns3_1_1_partial_state_batch_a57e7a29040d4422cec70b3b60945e175}} 
+bool {\bfseries active\+\_\+op} = true
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a42e10911c213c951e144710ba37c5b7b}\label{classns3_1_1_partial_state_batch_a42e10911c213c951e144710ba37c5b7b}} 
+bool {\bfseries op\+\_\+final\+\_\+batch} = true
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_ab67d4d9a52351e535e241f7972fbae85}\label{classns3_1_1_partial_state_batch_ab67d4d9a52351e535e241f7972fbae85}} 
+int {\bfseries old\+\_\+host}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a37fd177dee94b90934584325af7afd06}\label{classns3_1_1_partial_state_batch_a37fd177dee94b90934584325af7afd06}} 
+int {\bfseries next\+\_\+host}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a313871c130eef885b4f40ea632c102dd}\label{classns3_1_1_partial_state_batch_a313871c130eef885b4f40ea632c102dd}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_wrapper}{Partial\+State\+Wrapper}} $>$ $>$ {\bfseries partial\+\_\+states}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partial_state_batch_a2ffcf6090721cb53fb4dc2be7612f4f1}\label{classns3_1_1_partial_state_batch_a2ffcf6090721cb53fb4dc2be7612f4f1}} 
+static int {\bfseries cnt\+\_\+id} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Partial\+State.\+cpp\end{DoxyCompactItemize}

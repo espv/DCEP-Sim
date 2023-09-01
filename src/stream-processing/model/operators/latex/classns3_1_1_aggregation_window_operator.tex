@@ -1,0 +1,149 @@
+\hypertarget{classns3_1_1_aggregation_window_operator}{}\doxysection{ns3\+::Aggregation\+Window\+Operator Class Reference}
+\label{classns3_1_1_aggregation_window_operator}\index{ns3::AggregationWindowOperator@{ns3::AggregationWindowOperator}}
+
+
+Inheritance diagram for ns3\+::Aggregation\+Window\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Aggregation\+Window\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a3401b23374b68184262a6999386e97f2}\label{classns3_1_1_aggregation_window_operator_a3401b23374b68184262a6999386e97f2}} 
+virtual void {\bfseries init} (int size, int jump, Window\+Type size\+\_\+type, int emit\+\_\+size, Window\+Type emit\+\_\+type, const std\+::string \&external\+\_\+timestamp\+\_\+key)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_adbcf8ce4c48c53628b3bbffa52ef2ead}\label{classns3_1_1_aggregation_window_operator_adbcf8ce4c48c53628b3bbffa52ef2ead}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a362e070bf8a3083e700b3d060502310b}\label{classns3_1_1_aggregation_window_operator_a362e070bf8a3083e700b3d060502310b}} 
+void {\bfseries emit\+\_\+point} (bool recurring)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_aff60919d9c3690524b483fd6caafae8c}\label{classns3_1_1_aggregation_window_operator_aff60919d9c3690524b483fd6caafae8c}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state}{Partial\+State}} $>$ $>$ {\bfseries get\+Partial\+States} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a9348e1c0a1bc4e71582ceb8175fe68de}\label{classns3_1_1_aggregation_window_operator_a9348e1c0a1bc4e71582ceb8175fe68de}} 
+bool {\bfseries insert\+Tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_afbebcfb0cafae19feeadd2c2ea4a1ea0}\label{classns3_1_1_aggregation_window_operator_afbebcfb0cafae19feeadd2c2ea4a1ea0}} 
+void {\bfseries add\+Window\+Extent} (int newest\+\_\+window\+\_\+extent)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_afd4314b8e8ff4715a32e00a6dbb59c11}\label{classns3_1_1_aggregation_window_operator_afd4314b8e8ff4715a32e00a6dbb59c11}} 
+void {\bfseries Add\+Window\+Extent} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ group, int deadline)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a4e7668b8c90cde6e68d309df6885d8f2}\label{classns3_1_1_aggregation_window_operator_a4e7668b8c90cde6e68d309df6885d8f2}} 
+bool {\bfseries Check\+For\+Existing\+Extents\+And\+Merge} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ extent)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a8a33a658a04b9bf3bde116d6733f6680}\label{classns3_1_1_aggregation_window_operator_a8a33a658a04b9bf3bde116d6733f6680}} 
+bool {\bfseries Check\+For\+Existing\+Extents\+And\+Replace} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ extent)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a5578e9603818582747980267e70cc073}\label{classns3_1_1_aggregation_window_operator_a5578e9603818582747980267e70cc073}} 
+int {\bfseries do\+Emit\+Extent} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ extent)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a8fb3c6cac4c0cdd9c45fb0cd744b0420}\label{classns3_1_1_aggregation_window_operator_a8fb3c6cac4c0cdd9c45fb0cd744b0420}} 
+bool {\bfseries evict\+Extents} (int group\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a063f40c84751a80dada00f905e2837bc}\label{classns3_1_1_aggregation_window_operator_a063f40c84751a80dada00f905e2837bc}} 
+bool {\bfseries first\+Extent\+Expired} (int group\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a5c9dba62773dab4016e227930b80d00e}\label{classns3_1_1_aggregation_window_operator_a5c9dba62773dab4016e227930b80d00e}} 
+void {\bfseries jump\+Extents} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a8cdf15e7c6abf13034ae63d36927781e}\label{classns3_1_1_aggregation_window_operator_a8cdf15e7c6abf13034ae63d36927781e}} 
+int {\bfseries emit\+Extents} (int group\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a9d963a169dd38bf834bd8fd19a5d80a4}\label{classns3_1_1_aggregation_window_operator_a9d963a169dd38bf834bd8fd19a5d80a4}} 
+void {\bfseries Set\+Active} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_ae5cfaa4465a23d0f7f1c58ff0955202f}\label{classns3_1_1_aggregation_window_operator_ae5cfaa4465a23d0f7f1c58ff0955202f}} 
+std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_aggregation_window_extent}{Aggregation\+Window\+Extent}} $>$ {\bfseries get\+Asf\+Extent\+Copies} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_addcf71a9b384aeaa0f7bd07acc76bbac}\label{classns3_1_1_aggregation_window_operator_addcf71a9b384aeaa0f7bd07acc76bbac}} 
+void {\bfseries add\+Extent} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_aed56b1c3701041373fe495424c2989ba}\label{classns3_1_1_aggregation_window_operator_aed56b1c3701041373fe495424c2989ba}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_abeff69167680ffbeb673d6e505a91379}\label{classns3_1_1_aggregation_window_operator_abeff69167680ffbeb673d6e505a91379}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a90965e050190f64027811e1c5140246c}\label{classns3_1_1_aggregation_window_operator_a90965e050190f64027811e1c5140246c}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_aff3fc1b9fac23021bffb4db927248c5c}\label{classns3_1_1_aggregation_window_operator_aff3fc1b9fac23021bffb4db927248c5c}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ {\bfseries Extract\+Preamble\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_ac5910bd78921c38350ccedc47033a869}\label{classns3_1_1_aggregation_window_operator_ac5910bd78921c38350ccedc47033a869}} 
+void {\bfseries Extract\+Diff\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a94645b22da249ee62aaa0982b1192274}\label{classns3_1_1_aggregation_window_operator_a94645b22da249ee62aaa0982b1192274}} 
+void {\bfseries Extract\+Lazy\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a81cdba5e2152ba01175516eabb4dfe53}\label{classns3_1_1_aggregation_window_operator_a81cdba5e2152ba01175516eabb4dfe53}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a3c4f1246b183a0a20ca20e56e5c4ae75}\label{classns3_1_1_aggregation_window_operator_a3c4f1246b183a0a20ca20e56e5c4ae75}} 
+void {\bfseries Disable\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a20968111abb3add4b39eddc4a6abe11e}\label{classns3_1_1_aggregation_window_operator_a20968111abb3add4b39eddc4a6abe11e}} 
+void {\bfseries Clear\+State} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_aba6735bc6ceea00ed4501e38679d177e}\label{classns3_1_1_aggregation_window_operator_aba6735bc6ceea00ed4501e38679d177e}} 
+void {\bfseries Migration\+Interrupted} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a5786ca31ed05f8831dc049af7b6e10e9}\label{classns3_1_1_aggregation_window_operator_a5786ca31ed05f8831dc049af7b6e10e9}} 
+Time {\bfseries get\+\_\+base\+\_\+processing\+\_\+time} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_af057a5b41661560bdebc3aaeff6311d9}\label{classns3_1_1_aggregation_window_operator_af057a5b41661560bdebc3aaeff6311d9}} 
+Time {\bfseries get\+\_\+emit\+\_\+time\+\_\+added} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_ab5de2301bfb3609428439417f0d6e753}\label{classns3_1_1_aggregation_window_operator_ab5de2301bfb3609428439417f0d6e753}} 
+Time {\bfseries get\+\_\+forward\+\_\+time\+\_\+added} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a255b32984c66c0437a52867cf24ce892}\label{classns3_1_1_aggregation_window_operator_a255b32984c66c0437a52867cf24ce892}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_ae4ddd805e25956c770d214becc40c621}\label{classns3_1_1_aggregation_window_operator_ae4ddd805e25956c770d214becc40c621}} 
+int {\bfseries emit\+\_\+size} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a59898539f5e61768cbad0b1b63248cf6}\label{classns3_1_1_aggregation_window_operator_a59898539f5e61768cbad0b1b63248cf6}} 
+Time {\bfseries last\+\_\+emit\+\_\+time}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a9755508bfe4b2b9b4b6bec3ac7cbf2bf}\label{classns3_1_1_aggregation_window_operator_a9755508bfe4b2b9b4b6bec3ac7cbf2bf}} 
+bool {\bfseries activated\+\_\+time\+\_\+emission} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a23874b8693d7d0b187be10932a736626}\label{classns3_1_1_aggregation_window_operator_a23874b8693d7d0b187be10932a736626}} 
+Time {\bfseries first\+\_\+extent\+\_\+time} = Time(0)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a1978c2bac881620186b2bcf8347a3687}\label{classns3_1_1_aggregation_window_operator_a1978c2bac881620186b2bcf8347a3687}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_aggregate_select_field}{Aggregate\+Select\+Field}} $>$ $>$ {\bfseries aggregation\+\_\+arguments}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a587dba5d8b4a766b1652b4c68fe885ed}\label{classns3_1_1_aggregation_window_operator_a587dba5d8b4a766b1652b4c68fe885ed}} 
+std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_aggregation_window_extent}{Aggregation\+Window\+Extent}} $>$ {\bfseries asf\+\_\+extent\+\_\+copies}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_ad574be1203ac53bafbc7cb0b1070d6d6}\label{classns3_1_1_aggregation_window_operator_ad574be1203ac53bafbc7cb0b1070d6d6}} 
+std\+::map$<$ int, std\+::deque$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ $>$ $>$ {\bfseries group\+Id\+To\+Window\+Extents}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_acd4b52b72959b4720880df7fc27af7d1}\label{classns3_1_1_aggregation_window_operator_acd4b52b72959b4720880df7fc27af7d1}} 
+std\+::map$<$ int, std\+::deque$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ $>$ $>$ {\bfseries group\+Id\+To\+Extents\+In\+Migration}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_a69ba9aa30107af1a6fed77ccb9b44f99}\label{classns3_1_1_aggregation_window_operator_a69ba9aa30107af1a6fed77ccb9b44f99}} 
+std\+::map$<$ int, std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ $>$ $>$ {\bfseries pending\+\_\+extents}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregation_window_operator_ae578e1e52a98c08639e3b41be77dd6b6}\label{classns3_1_1_aggregation_window_operator_ae578e1e52a98c08639e3b41be77dd6b6}} 
+int {\bfseries cnt\+\_\+extents} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Window\+Operator.\+cpp\end{DoxyCompactItemize}

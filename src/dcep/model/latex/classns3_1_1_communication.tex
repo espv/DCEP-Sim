@@ -1,0 +1,209 @@
+\hypertarget{classns3_1_1_communication}{}\doxysection{ns3\+::Communication Class Reference}
+\label{classns3_1_1_communication}\index{ns3::Communication@{ns3::Communication}}
+
+
+Inheritance diagram for ns3\+::Communication\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classns3_1_1_communication__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns3\+::Communication\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classns3_1_1_communication__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_aa02f4f04b9b85f23baa3b33e5f659d40}\label{classns3_1_1_communication_aa02f4f04b9b85f23baa3b33e5f659d40}} 
+void {\bfseries Configure} (void)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a4b1be946b1b9d411d843391ad30220d4}\label{classns3_1_1_communication_a4b1be946b1b9d411d843391ad30220d4}} 
+void {\bfseries set\+Node} (Ptr$<$ Node $>$ node)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_ad1b15fe7463df914cf03df95402f3bc5}\label{classns3_1_1_communication_ad1b15fe7463df914cf03df95402f3bc5}} 
+void {\bfseries set\+Port} (uint16\+\_\+t)
+\item 
+void \mbox{\hyperlink{classns3_1_1_communication_ab1e37245671d37695c653c629bfeee11}{Handle\+Read\+State}} (Ptr$<$ Socket $>$ socket)
+\begin{DoxyCompactList}\small\item\em Handle a packet reception. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classns3_1_1_communication_ac86839bff129942d10f6eda2b1f9f7f9}\label{classns3_1_1_communication_ac86839bff129942d10f6eda2b1f9f7f9}} 
+void {\bfseries Handle\+Read\+Tuples} (Ptr$<$ Socket $>$ socket)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a59aaa6c205e453e0c81316c9b968be1e}\label{classns3_1_1_communication_a59aaa6c205e453e0c81316c9b968be1e}} 
+void {\bfseries Handle\+Read\+Fetch} (Ptr$<$ Socket $>$ socket)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_ac53088f47fa21385c33c070c5c9fb372}\label{classns3_1_1_communication_ac53088f47fa21385c33c070c5c9fb372}} 
+void {\bfseries After\+Sending} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_afd918f98dc52d69d0b40f8cadbe55965}\label{classns3_1_1_communication_afd918f98dc52d69d0b40f8cadbe55965}} 
+Data\+Rate {\bfseries Get\+Tuple\+Data\+Rate} (int to\+\_\+node)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a70d53f4f6670303b06bedf99142f655a}\label{classns3_1_1_communication_a70d53f4f6670303b06bedf99142f655a}} 
+Data\+Rate {\bfseries Get\+Migration\+Data\+Rate} (int to\+\_\+node)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_acaf0aaff931d062415edf2d0e41d82e1}\label{classns3_1_1_communication_acaf0aaff931d062415edf2d0e41d82e1}} 
+Data\+Rate {\bfseries Get\+Fetch\+Data\+Rate} (int to\+\_\+node)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_af92b6d28564d52d089c460d036a32f64}\label{classns3_1_1_communication_af92b6d28564d52d089c460d036a32f64}} 
+Ptr$<$ Net\+Device $>$ {\bfseries Get\+Tuple\+Net\+Device} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a086e3e391581d9c67434b6caae1d445f}\label{classns3_1_1_communication_a086e3e391581d9c67434b6caae1d445f}} 
+Ptr$<$ Net\+Device $>$ {\bfseries Get\+Migration\+Net\+Device} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a71133a7532c88e84f37dbc1a17d13f92}\label{classns3_1_1_communication_a71133a7532c88e84f37dbc1a17d13f92}} 
+Ptr$<$ Net\+Device $>$ {\bfseries Get\+Fetch\+Net\+Device} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a27044ed236f90f7e2ea6ec21dd8b5f39}\label{classns3_1_1_communication_a27044ed236f90f7e2ea6ec21dd8b5f39}} 
+void {\bfseries Handle\+Read\+Fake\+Transmit} (int node\+\_\+id, Ptr$<$ Packet $>$ packet)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a447bca140e2e27ccca7e16d71fc46de4}\label{classns3_1_1_communication_a447bca140e2e27ccca7e16d71fc46de4}} 
+void {\bfseries Connection\+Succeeded} (Ptr$<$ Socket $>$ socket)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a91e701cbdb78a7f13f7a0aa7cd56679d}\label{classns3_1_1_communication_a91e701cbdb78a7f13f7a0aa7cd56679d}} 
+void {\bfseries Connection\+Failed} (Ptr$<$ Socket $>$ socket)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a19a2e46fb4e3db400b5a747dc1e0833f}\label{classns3_1_1_communication_a19a2e46fb4e3db400b5a747dc1e0833f}} 
+void {\bfseries Handle\+Accept} (Ptr$<$ Socket $>$ s, const Address \&from)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_aae0cfd3b263d71dab5e55f876e0edfdb}\label{classns3_1_1_communication_aae0cfd3b263d71dab5e55f876e0edfdb}} 
+void {\bfseries Handle\+Accept\+State} (Ptr$<$ Socket $>$ s, const Address \&from)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a3797adc0821782366a33ce3d5c61c982}\label{classns3_1_1_communication_a3797adc0821782366a33ce3d5c61c982}} 
+void {\bfseries Handle\+Peer\+Error} (Ptr$<$ Socket $>$ s)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_af474aeeba75b891670e42eedfd3dd6b6}\label{classns3_1_1_communication_af474aeeba75b891670e42eedfd3dd6b6}} 
+void {\bfseries Handle\+Peer\+Close} (Ptr$<$ Socket $>$ s)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_ab5da356cc1f3779ad95e7d3a4151a3a4}\label{classns3_1_1_communication_ab5da356cc1f3779ad95e7d3a4151a3a4}} 
+void {\bfseries do\+Send\+Request} (int old\+\_\+host, int new\+\_\+host, std\+::size\+\_\+t size, \mbox{\hyperlink{classns3_1_1_dcep_header}{Dcep\+Header}} \&dcep\+Header, int type)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a09d172f8bae9e3026b61a598fe0e6326}\label{classns3_1_1_communication_a09d172f8bae9e3026b61a598fe0e6326}} 
+void {\bfseries Send\+State} (int old\+\_\+host, int new\+\_\+host, std\+::size\+\_\+t size, \mbox{\hyperlink{classns3_1_1_dcep_header}{Dcep\+Header}} \&dcep\+Header)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_adca769fa948f6aa2f28bccf7d8cde8c5}\label{classns3_1_1_communication_adca769fa948f6aa2f28bccf7d8cde8c5}} 
+void {\bfseries Send\+Fetch\+Request} (int old\+\_\+host, int new\+\_\+host, std\+::size\+\_\+t size, \mbox{\hyperlink{classns3_1_1_dcep_header}{Dcep\+Header}} \&dcep\+Header)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a6944d81fab3c5682c30b9f16fb556841}\label{classns3_1_1_communication_a6944d81fab3c5682c30b9f16fb556841}} 
+void {\bfseries Setup\+Connections} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_ad977df26dc81f057f55dce1fbe6d480d}\label{classns3_1_1_communication_ad977df26dc81f057f55dce1fbe6d480d}} 
+void {\bfseries Not\+Sending\+Anymore} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a5f68c25afcb4ff1a481c98c9d81f1422}\label{classns3_1_1_communication_a5f68c25afcb4ff1a481c98c9d81f1422}} 
+void {\bfseries Send\+Next\+State} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a3744dd6e5c91c4d07b9f7dc8e7349d20}\label{classns3_1_1_communication_a3744dd6e5c91c4d07b9f7dc8e7349d20}} 
+void {\bfseries Shut\+Down} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a2e4c42cf1b0f530644c03eb6ad85e026}\label{classns3_1_1_communication_a2e4c42cf1b0f530644c03eb6ad85e026}} 
+void {\bfseries Socket\+Closed\+Normal} (Ptr$<$ Socket $>$ socket)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a23596eacff34c83ff635040ce692f3c9}\label{classns3_1_1_communication_a23596eacff34c83ff635040ce692f3c9}} 
+void {\bfseries Socket\+Closed\+Error} (Ptr$<$ Socket $>$ socket)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_aecd5e354473dd16ceda9825d2da8adf1}\label{classns3_1_1_communication_aecd5e354473dd16ceda9825d2da8adf1}} 
+void {\bfseries Schedule\+Send} (Ptr$<$ Packet $>$ p, Inet\+Socket\+Address addr)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a8f830bd8c7a0e57bf1f9e6913c983b69}\label{classns3_1_1_communication_a8f830bd8c7a0e57bf1f9e6913c983b69}} 
+Ipv4\+Address {\bfseries Get\+Local\+Address} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a436fb461cde872c03ad9b1f14d2f2840}\label{classns3_1_1_communication_a436fb461cde872c03ad9b1f14d2f2840}} 
+Ipv4\+Address {\bfseries Get\+Sink\+Address} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a45ddb979f4d9941c9cd3e8dbc89e01a2}\label{classns3_1_1_communication_a45ddb979f4d9941c9cd3e8dbc89e01a2}} 
+void {\bfseries Handle\+State\+Sent} (Ptr$<$ Socket $>$ s, uint32\+\_\+t state\+\_\+sent)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_ad9d5180c5e61c939672a276a93399d3a}\label{classns3_1_1_communication_ad9d5180c5e61c939672a276a93399d3a}} 
+void {\bfseries Handle\+Tuple\+Sent} (Ptr$<$ Socket $>$ s, uint32\+\_\+t state\+\_\+sent)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a200a324c7aada067076b11f1a1788b74}\label{classns3_1_1_communication_a200a324c7aada067076b11f1a1788b74}} 
+void {\bfseries Handle\+Fetch\+Sent} (Ptr$<$ Socket $>$ s, uint32\+\_\+t state\+\_\+sent)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a50b9149d9557a498c24f664e02f85a1f}\label{classns3_1_1_communication_a50b9149d9557a498c24f664e02f85a1f}} 
+void {\bfseries Tx\+Buffer\+Available} (Ptr$<$ Socket $>$ s, uint32\+\_\+t bytes\+\_\+available)
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a950327fabd5f90135f8f2ba49f584632}\label{classns3_1_1_communication_a950327fabd5f90135f8f2ba49f584632}} 
+void {\bfseries send} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_aacfab43958e54205261f282449b96190}\label{classns3_1_1_communication_aacfab43958e54205261f282449b96190}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a116cdfc06370166d92cc0ccddf0453e3}\label{classns3_1_1_communication_a116cdfc06370166d92cc0ccddf0453e3}} 
+std\+::size\+\_\+t {\bfseries node\+Id\+To\+Ip\+And\+Port\+Iterator} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a011584f92a0acc293a2f2e6bc7df75d9}\label{classns3_1_1_communication_a011584f92a0acc293a2f2e6bc7df75d9}} 
+bool {\bfseries currently\+\_\+migrating} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_aa61818b7db03597c37e7288885738709}\label{classns3_1_1_communication_aa61818b7db03597c37e7288885738709}} 
+bool {\bfseries in\+\_\+migration} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a210e4d950c15a040d9ed90128c59b6e5}\label{classns3_1_1_communication_a210e4d950c15a040d9ed90128c59b6e5}} 
+int {\bfseries migration\+\_\+node} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_afcc27ef785de731d0b9f986a0a1a9a2f}\label{classns3_1_1_communication_afcc27ef785de731d0b9f986a0a1a9a2f}} 
+int {\bfseries migrating\+\_\+query\+\_\+id} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_aec9b9f22b13d55729260748ddeb4b862}\label{classns3_1_1_communication_aec9b9f22b13d55729260748ddeb4b862}} 
+std\+::deque$<$ \mbox{\hyperlink{classns3_1_1_send_state_callback}{Send\+State\+Callback}} $>$ {\bfseries send\+State\+Queue}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_abffa48f631268551281c802361fb9579}\label{classns3_1_1_communication_abffa48f631268551281c802361fb9579}} 
+static std\+::map$<$ int, int $>$ {\bfseries ip\+To\+Node\+Id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_ae1dd3b26d6a91dff92151eb5d3912275}\label{classns3_1_1_communication_ae1dd3b26d6a91dff92151eb5d3912275}} 
+static std\+::map$<$ int, int $>$ {\bfseries ip\+To\+Tuples\+Node\+Id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a37a52e3143cf8f0e4d388c4295d9c707}\label{classns3_1_1_communication_a37a52e3143cf8f0e4d388c4295d9c707}} 
+static std\+::map$<$ int, int $>$ {\bfseries ip\+To\+Migration\+Node\+Id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_ad759e6f099eb5174dd7322de85ad76ad}\label{classns3_1_1_communication_ad759e6f099eb5174dd7322de85ad76ad}} 
+static std\+::map$<$ int, int $>$ {\bfseries ip\+To\+Fetch\+Node\+Id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_a49f5d43075423ee138a9d8f789bd35f2}\label{classns3_1_1_communication_a49f5d43075423ee138a9d8f789bd35f2}} 
+static std\+::map$<$ int, bool $>$ {\bfseries node\+Setup}
+\item 
+\mbox{\Hypertarget{classns3_1_1_communication_af4729c327861608a6cd51f7dda56d520}\label{classns3_1_1_communication_af4729c327861608a6cd51f7dda56d520}} 
+static int {\bfseries total\+\_\+sent} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns3_1_1_communication_ab1e37245671d37695c653c629bfeee11}\label{classns3_1_1_communication_ab1e37245671d37695c653c629bfeee11}} 
+\index{ns3::Communication@{ns3::Communication}!HandleReadState@{HandleReadState}}
+\index{HandleReadState@{HandleReadState}!ns3::Communication@{ns3::Communication}}
+\doxysubsubsection{\texorpdfstring{HandleReadState()}{HandleReadState()}}
+{\footnotesize\ttfamily void ns3\+::\+Communication\+::\+Handle\+Read\+State (\begin{DoxyParamCaption}\item[{Ptr$<$ Socket $>$}]{socket }\end{DoxyParamCaption})}
+
+
+
+Handle a packet reception. 
+
+This function is called by lower layers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & the socket the packet was received to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+communication.\+h\item 
+communication.\+cc\end{DoxyCompactItemize}

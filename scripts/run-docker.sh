@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo docker run -it --rm --name=example  --mount type=bind,source=$(realpath ../expose/Datasets),target=/code/expose/Datasets --mount type=bind,source=$(realpath ../expose/Results),target=/code/expose/Results --mount type=bind,source=$(realpath ../expose/experiment-configurations),target=/code/expose/experiment-configurations   --net=host -e DISPLAY -v /tmp/.X11-unix  --env CODE=/code   --env XAUTH_COOKIE=$(./get-xauth-cookie.sh)      vepsen/dcep-sim:0.1

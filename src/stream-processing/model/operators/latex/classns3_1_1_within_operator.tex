@@ -1,0 +1,59 @@
+\hypertarget{classns3_1_1_within_operator}{}\doxysection{ns3\+::Within\+Operator Class Reference}
+\label{classns3_1_1_within_operator}\index{ns3::WithinOperator@{ns3::WithinOperator}}
+
+
+Inheritance diagram for ns3\+::Within\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Within\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_a368d05dea18848485dd208fe9e4bb6f3}\label{classns3_1_1_within_operator_a368d05dea18848485dd208fe9e4bb6f3}} 
+{\bfseries Within\+Operator} (long ms, std\+::string timestamp\+\_\+attribute)
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_aa9b8474ece3203b0fc75c163313a0b12}\label{classns3_1_1_within_operator_aa9b8474ece3203b0fc75c163313a0b12}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_a99601f294696811e5801defcc7423e5e}\label{classns3_1_1_within_operator_a99601f294696811e5801defcc7423e5e}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_a83e1d5c1014cac027dd432b0626ab18e}\label{classns3_1_1_within_operator_a83e1d5c1014cac027dd432b0626ab18e}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_a8a0b20a4853e8e2b69d4c710f483b974}\label{classns3_1_1_within_operator_a8a0b20a4853e8e2b69d4c710f483b974}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_ae2a638c0ae555930baf1c38dfdc944c9}\label{classns3_1_1_within_operator_ae2a638c0ae555930baf1c38dfdc944c9}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_a096614cb9404cea6293faacd83a4baaa}\label{classns3_1_1_within_operator_a096614cb9404cea6293faacd83a4baaa}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_a242b6ca36b804dfeffd297184827afd2}\label{classns3_1_1_within_operator_a242b6ca36b804dfeffd297184827afd2}} 
+long {\bfseries ms}
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_a5d8a698a932436fe2979c7f4d22104b1}\label{classns3_1_1_within_operator_a5d8a698a932436fe2979c7f4d22104b1}} 
+int {\bfseries tuple\+\_\+index} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_ab9dda0e0e0c572230c3247644633c034}\label{classns3_1_1_within_operator_ab9dda0e0e0c572230c3247644633c034}} 
+int {\bfseries index} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_within_operator_ac354b117843802c4db9fdb7134bbec6d}\label{classns3_1_1_within_operator_ac354b117843802c4db9fdb7134bbec6d}} 
+std\+::string {\bfseries timestamp\+\_\+attribute}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Within\+Operator.\+cpp\end{DoxyCompactItemize}

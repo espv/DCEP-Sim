@@ -1,0 +1,4459 @@
+stream-definitions:
+- name: StopStream
+  tuple-format:
+  - {name: streamList, type: string}
+  - {name: node, type: int}
+- name: Person
+  tuple-format:
+  - {name: id, type: int}
+  - {name: name, type: string}
+  - {name: emailAddress, type: string}
+  - {name: creditCard, type: string}
+  - {name: city, type: string}
+  - {name: state, type: string}
+- name: Auction
+  tuple-format:
+  - {name: id, type: int}
+  - {name: itemName, type: string}
+  - {name: description, type: string}
+  - {name: initialBid, type: long}
+  - {name: reserve, type: int}
+  - {name: expires, type: long-timestamp}
+  - {name: expires2, type: long}
+  - {name: seller, type: int}
+  - {name: category, type: int}
+- name: Bid
+  tuple-format:
+  - {name: auction, type: int}
+  - {name: bidder, type: int}
+  - {name: price, type: long}
+  - {name: dateTime, type: long-timestamp}
+  - {name: dateTime2, type: long}
+- name: Category
+  tuple-format:
+  - {name: id, type: int}
+  - {name: name, type: string}
+  - {name: description, type: string}
+  - {name: parentCategory, type: int}
+- name: BikeTrip
+  tuple-format:
+  - {name: a_tripduration, type: long}
+  - {name: b_starttime, type: timestamp}
+  - {name: c_stoptime, type: timestamp}
+  - {name: d_start_station_id, type: long}
+  - {name: e_start_station_name, type: string}
+  - {name: f_start_station_latitude, type: double}
+  - {name: g_start_station_longitude, type: double}
+  - {name: h_end_station_id, type: long}
+  - {name: i_end_station_name, type: string}
+  - {name: j_end_station_latitude, type: double}
+  - {name: k_end_station_longitude, type: double}
+  - {name: l_bikeid, type: long}
+  - {name: m_usertype, type: string}
+  - {name: n_birth_year, type: long}
+  - {name: o_gender, type: long}
+- name: BusRecord
+  tuple-format:
+  - {name: a_ts, type: long}
+  - {name: b_line_id, type: long}
+  - {name: c_direction, type: long}
+  - {name: d_journey_pattern_id, type: string}
+  - {name: e_time_frame, type: timestamp}
+  - {name: f_vehicle_journey_id, type: long}
+  - {name: g_operator, type: string}
+  - {name: h_congested, type: long}
+  - {name: i_longitude, type: double}
+  - {name: j_latitude, type: double}
+  - {name: k_delay, type: long}
+  - {name: l_block_id, type: long}
+  - {name: m_vehicle_id, type: long}
+  - {name: n_stop_id, type: long}
+  - {name: o_at_stop, type: long}
+- name: OutQuery
+  tuple-format:
+  - {name: avgPrice, type: long}
+  - {name: maxPrice, type: long}
+  - {name: minPrice, type: long}
+  - {name: bidder, type: long}
+  - {name: auction, type: long}
+- name: OutQuery2
+  tuple-format:
+  - {name: price, type: long}
+  - {name: bidder, type: long}
+  - {name: auction, type: long}
+- name: OutQuery3
+  tuple-format:
+  - {name: l_bikeid, type: long}
+  - {name: h_end_station_id, type: long}
+- name: OutQuery4
+  tuple-format:
+  - {name: m_vehicle_id, type: long}
+experiments:
+- id: 1
+  flow:
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: adapt
+    arguments:
+    - {nodeId: int, queryId: int}
+  - node: -1
+    task: wait
+    arguments:
+    - {ms: int}
+  - node: -1
+    task: loopTasks
+    arguments:
+    - ''
+    - - node: -1
+        task: loopTasks
+        arguments:
+        - ''
+        - - node: -1
+            task: sendCsvDsAsStream
+            arguments:
+            - {datasetId: int, iterations: int}
+      - node: -1
+        task: retEndOfStream
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: disconnectNode
+        arguments:
+        - {msBeforeNotifyDisconnect: int, msBeforeDisconnect: int}
+      - node: -1
+        task: wait
+        arguments:
+        - {ms: int}
+      - node: -1
+        task: sendCsvDsAsStream
+        arguments:
+        - {datasetId: int, iterations: int}
+  - node: -1
+    task: endExperiment
+    arguments: []
+spequeries:
+  outputs:
+  - {schema: stream_name1, node: 0, edge: stream_name1, name: Output 0}
+  inputs:
+  - {schema: stream_name0, node: 0, edge: stream_name0, name: input 0}
+  queries:
+  - operators:
+    - name: query1
+      type: select
+      parameters:
+        fields: []
+    name: query1i
+    edges:
+    - stream: stream_name1
+      from: {name: query1, type: intermediate}
+      to: {name: Output 0, type: intermediate}
+    - stream: stream_name0
+      from: {name: input 0, type: intermediate}
+      to: {name: query1, type: intermediate}
+    id: query1i
+

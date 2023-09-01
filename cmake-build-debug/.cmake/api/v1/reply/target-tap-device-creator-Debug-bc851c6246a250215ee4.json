@@ -1,0 +1,294 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/home/espen/ns-3/ns3-wip/build/src/fd-net-device/ns3.36.1-tap-device-creator-debug"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"include",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/fd-net-device/CMakeLists.txt",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 190,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 138,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 361,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 363,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 123,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 539,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1162,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 314,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1157,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 116,
+				"parent" : 2
+			},
+			{
+				"file" : 1,
+				"parent" : 11
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 12
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 196,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 57,
+				"parent" : 12
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 540,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 608,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 749,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIE -fdiagnostics-color=always   -fno-semantic-interposition"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				},
+				{
+					"fragment" : "-std=gnu++20"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "HAVE_PACKET_H"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "HAVE_SQLITE3"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "NS3_ASSERT_ENABLE"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "NS3_BUILD_PROFILE_DEBUG"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "NS3_LOG_ENABLE"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "PROJECT_SOURCE_PATH=\"/home/espen/ns-3/ns3-wip\""
+				},
+				{
+					"backtrace" : 14,
+					"define" : "RAW_SOCK_CREATOR=\"/home/espen/ns-3/ns3-wip/build/src/fd-net-device/ns3.36.1-raw-sock-creator-debug\""
+				},
+				{
+					"backtrace" : 15,
+					"define" : "TAP_DEV_CREATOR=\"/home/espen/ns-3/ns3-wip/build/src/fd-net-device/ns3.36.1-tap-device-creator-debug\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "__LINUX__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 17,
+					"path" : "/usr"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "/home/espen/ns-3/ns3-wip/build/include"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/usr/include/python3.10"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"id" : "tap-device-creator::@556bfae050776c5ab597",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "tap-device-creator",
+	"nameOnDisk" : "ns3.36.1-tap-device-creator-debug",
+	"paths" : 
+	{
+		"build" : "src/fd-net-device",
+		"source" : "src/fd-net-device"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/fd-net-device/helper/creator-utils.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/fd-net-device/helper/encode-decode.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/fd-net-device/helper/tap-device-creator.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

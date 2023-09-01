@@ -1,0 +1,575 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./helper/group-mobility-helper.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./helper/mobility-helper.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./helper/ns2-mobility-helper.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/box.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/constant-acceleration-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/constant-position-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/constant-velocity-helper.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/constant-velocity-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/gauss-markov-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/geographic-positions.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/hierarchical-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/position-allocator.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/random-direction-2d-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/random-walk-2d-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/random-waypoint-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/rectangle.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/steady-state-random-waypoint-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/waypoint-mobility-model.cc.o"
+		},
+		{
+			"path" : "src/mobility/CMakeFiles/libmobility-obj.dir/./model/waypoint.cc.o"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"build_lib",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"include",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/mobility/CMakeLists.txt",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 138,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 361,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 363,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 539,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1162,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 314,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1157,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 116,
+				"parent" : 3
+			},
+			{
+				"file" : 2,
+				"parent" : 11
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 19,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 57,
+				"parent" : 12
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 540,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 608,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 749,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIC -fdiagnostics-color=always   -fno-semantic-interposition"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				},
+				{
+					"fragment" : "-std=gnu++20"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "HAVE_SQLITE3"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "NS3_ASSERT_ENABLE"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "NS3_BUILD_PROFILE_DEBUG"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "NS3_LOG_ENABLE"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "PROJECT_SOURCE_PATH=\"/home/espen/ns-3/ns3-wip\""
+				},
+				{
+					"backtrace" : 14,
+					"define" : "__LINUX__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 15,
+					"path" : "/usr"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/espen/ns-3/ns3-wip/build/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/usr/include/python3.10"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19
+			]
+		}
+	],
+	"id" : "libmobility-obj::@2e8c3d564dbe2f6b990d",
+	"name" : "libmobility-obj",
+	"paths" : 
+	{
+		"build" : "src/mobility",
+		"source" : "src/mobility"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/helper/group-mobility-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/helper/mobility-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/helper/ns2-mobility-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/box.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/constant-acceleration-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/constant-position-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/constant-velocity-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/constant-velocity-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/gauss-markov-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/geographic-positions.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/hierarchical-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/position-allocator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/random-direction-2d-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/random-walk-2d-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/random-waypoint-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/rectangle.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/steady-state-random-waypoint-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/waypoint-mobility-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/mobility/model/waypoint.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/helper/group-mobility-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/helper/mobility-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/helper/ns2-mobility-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/box.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/constant-acceleration-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/constant-position-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/constant-velocity-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/constant-velocity-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/gauss-markov-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/geographic-positions.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/hierarchical-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/position-allocator.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/random-direction-2d-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/random-walk-2d-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/random-waypoint-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/rectangle.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/steady-state-random-waypoint-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/waypoint-mobility-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/mobility/model/waypoint.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

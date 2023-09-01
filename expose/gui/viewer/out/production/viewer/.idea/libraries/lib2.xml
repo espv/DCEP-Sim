@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/xalan.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/underscore-1.78-SNAPSHOT-jar-with-dependencies.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcommon-1.0.0-pre2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfreechart-1.0.0-pre2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xml-apis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/docconverter-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xmlrpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-20180813.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jgraph.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jdom_OLD.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/medusaXmlRpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/saxpath.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxen-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxen-jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/snakeyaml-1.28.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jgraphaddons.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-dataformat-yaml-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/underscore-1.78.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

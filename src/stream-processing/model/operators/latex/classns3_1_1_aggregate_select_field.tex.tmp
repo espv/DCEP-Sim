@@ -1,0 +1,37 @@
+\hypertarget{classns3_1_1_aggregate_select_field}{}\doxysection{ns3\+::Aggregate\+Select\+Field Class Reference}
+\label{classns3_1_1_aggregate_select_field}\index{ns3::AggregateSelectField@{ns3::AggregateSelectField}}
+
+
+Inheritance diagram for ns3\+::Aggregate\+Select\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Aggregate\+Select\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregate_select_field_a79ade55eb4a1fa529b59dad43725c10c}\label{classns3_1_1_aggregate_select_field_a79ade55eb4a1fa529b59dad43725c10c}} 
+{\bfseries Aggregate\+Select\+Field} (std\+::string alias, const std\+::string \&input\+Field, Aggregation aggregate, const std\+::string \&output\+Field, Ptr$<$ Stream\+Query $>$ query)
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregate_select_field_a977991c6572dde1c39adf11fd86503b6}\label{classns3_1_1_aggregate_select_field_a977991c6572dde1c39adf11fd86503b6}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_select_field}{Select\+Field}} $>$ {\bfseries copy} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregate_select_field_acb9518519c54eb8a6c907fe6e8295c36}\label{classns3_1_1_aggregate_select_field_acb9518519c54eb8a6c907fe6e8295c36}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_aggregate_select_field_a6c580629890db8046a287fdbe9e2e7f4}\label{classns3_1_1_aggregate_select_field_a6c580629890db8046a287fdbe9e2e7f4}} 
+int {\bfseries aggregation\+\_\+arguments\+\_\+index} = -\/1
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Select\+Operator.\+cpp\end{DoxyCompactItemize}

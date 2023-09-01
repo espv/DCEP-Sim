@@ -1,0 +1,73 @@
+\hypertarget{classns3_1_1_partitioner}{}\doxysection{ns3\+::Partitioner Class Reference}
+\label{classns3_1_1_partitioner}\index{ns3::Partitioner@{ns3::Partitioner}}
+
+
+Inheritance diagram for ns3\+::Partitioner\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Partitioner\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_a845a66d3aa61ad90b5da4116ac7c6880}\label{classns3_1_1_partitioner_a845a66d3aa61ad90b5da4116ac7c6880}} 
+{\bfseries Partitioner} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ group\+Operator, int depth, long long\+\_\+value)
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_a16eebb6830ddfbd97d92d3e362006ce5}\label{classns3_1_1_partitioner_a16eebb6830ddfbd97d92d3e362006ce5}} 
+{\bfseries Partitioner} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ group\+Operator, int depth, double double\+\_\+value)
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_adffdf6ebeffbe04d34396bdfd7dbdb89}\label{classns3_1_1_partitioner_adffdf6ebeffbe04d34396bdfd7dbdb89}} 
+{\bfseries Partitioner} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ group\+Operator, int depth, std\+::string string\+\_\+value)
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_a21493012a5254168609f81247353caa5}\label{classns3_1_1_partitioner_a21493012a5254168609f81247353caa5}} 
+virtual void {\bfseries partition\+Tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ t)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_a9146a7aa2a983283668be6d9841b9f0d}\label{classns3_1_1_partitioner_a9146a7aa2a983283668be6d9841b9f0d}} 
+size\+\_\+t {\bfseries Get\+Serialized\+Size} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_ad18b93dcef1fe30f17a8553f4be05f64}\label{classns3_1_1_partitioner_ad18b93dcef1fe30f17a8553f4be05f64}} 
+size\+\_\+t {\bfseries Get\+Utility} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_addb0031b949abd16804bd349f8621e2c}\label{classns3_1_1_partitioner_addb0031b949abd16804bd349f8621e2c}} 
+virtual Ptr$<$ \mbox{\hyperlink{classns3_1_1_partitioner}{Partitioner}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ group\+\_\+operator, bool shed\+\_\+unessential\+\_\+attributes)
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_ac3b14c95257729e0982a363540374888}\label{classns3_1_1_partitioner_ac3b14c95257729e0982a363540374888}} 
+virtual Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ {\bfseries Get\+Group} (int group\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_a88d89d95801788d32f9bad3afb9a7d91}\label{classns3_1_1_partitioner_a88d89d95801788d32f9bad3afb9a7d91}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_a92dbeeafd4bda31234c5a2877573aee8}\label{classns3_1_1_partitioner_a92dbeeafd4bda31234c5a2877573aee8}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ {\bfseries group\+Operator} = nullptr
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_ae427ec71bdd53581f59c21a469658b94}\label{classns3_1_1_partitioner_ae427ec71bdd53581f59c21a469658b94}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ {\bfseries group} = Group\+::no\+\_\+group
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_a1e8bf91a90e8dabfa59f364aac473b91}\label{classns3_1_1_partitioner_a1e8bf91a90e8dabfa59f364aac473b91}} 
+int {\bfseries depth} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_ab3379c155de1d59f8b50826b4efb3749}\label{classns3_1_1_partitioner_ab3379c155de1d59f8b50826b4efb3749}} 
+int {\bfseries max\+\_\+depth} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_a916815512a023b3abfa4bc47df670679}\label{classns3_1_1_partitioner_a916815512a023b3abfa4bc47df670679}} 
+long {\bfseries long\+\_\+value}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_ad8743829a38a911d57ba39df3c638b2e}\label{classns3_1_1_partitioner_ad8743829a38a911d57ba39df3c638b2e}} 
+double {\bfseries double\+\_\+value}
+\item 
+\mbox{\Hypertarget{classns3_1_1_partitioner_ad4ca3c798fa5b0281ffc5c6349876f38}\label{classns3_1_1_partitioner_ad4ca3c798fa5b0281ffc5c6349876f38}} 
+std\+::string {\bfseries string\+\_\+value}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Group\+Operator.\+cpp\end{DoxyCompactItemize}

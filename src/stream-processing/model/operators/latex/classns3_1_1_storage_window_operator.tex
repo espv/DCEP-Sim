@@ -1,0 +1,77 @@
+\hypertarget{classns3_1_1_storage_window_operator}{}\doxysection{ns3\+::Storage\+Window\+Operator Class Reference}
+\label{classns3_1_1_storage_window_operator}\index{ns3::StorageWindowOperator@{ns3::StorageWindowOperator}}
+
+
+Inheritance diagram for ns3\+::Storage\+Window\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Storage\+Window\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a523973473bd17e471678edc77b8ef94f}\label{classns3_1_1_storage_window_operator_a523973473bd17e471678edc77b8ef94f}} 
+void {\bfseries init} (int size, int jump, Window\+Type size\+\_\+type, Window\+Type emit\+\_\+type, const std\+::string \&external\+\_\+timestamp\+\_\+key)
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a909708ca8414b0dba61a41f5b17d1a30}\label{classns3_1_1_storage_window_operator_a909708ca8414b0dba61a41f5b17d1a30}} 
+void {\bfseries update\+Window} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a9bc67e8d231193c70a1b3076ccfc96a9}\label{classns3_1_1_storage_window_operator_a9bc67e8d231193c70a1b3076ccfc96a9}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_ae8fab78cce5e5245fb7a54629191a34b}\label{classns3_1_1_storage_window_operator_ae8fab78cce5e5245fb7a54629191a34b}} 
+bool {\bfseries insert\+Tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a80686c9f15078b8451b903f8a5d92596}\label{classns3_1_1_storage_window_operator_a80686c9f15078b8451b903f8a5d92596}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state}{Partial\+State}} $>$ $>$ {\bfseries get\+Partial\+States} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a7239e4329953a1be95841d21ecaa5d6a}\label{classns3_1_1_storage_window_operator_a7239e4329953a1be95841d21ecaa5d6a}} 
+void {\bfseries Disable\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_add0966689c986c7f427ab0d727c80b68}\label{classns3_1_1_storage_window_operator_add0966689c986c7f427ab0d727c80b68}} 
+void {\bfseries Clear\+State} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a51389cb4a8596dd8eda4ca75a06b8719}\label{classns3_1_1_storage_window_operator_a51389cb4a8596dd8eda4ca75a06b8719}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_ad2fd11250b88f75073d88baab410ff66}\label{classns3_1_1_storage_window_operator_ad2fd11250b88f75073d88baab410ff66}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a53226e3ce76ff3db88626d8f3b2e02d0}\label{classns3_1_1_storage_window_operator_a53226e3ce76ff3db88626d8f3b2e02d0}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a6e2939d095896cdef39132d7042059c0}\label{classns3_1_1_storage_window_operator_a6e2939d095896cdef39132d7042059c0}} 
+void {\bfseries Extract\+Diff\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_ae72f0f054d6ebbbe01fd9874b51e394b}\label{classns3_1_1_storage_window_operator_ae72f0f054d6ebbbe01fd9874b51e394b}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ {\bfseries Extract\+Preamble\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_adad6bcebfbf2b6e78916379a78895c96}\label{classns3_1_1_storage_window_operator_adad6bcebfbf2b6e78916379a78895c96}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a738fb5034057225bfc2b4431537f6d27}\label{classns3_1_1_storage_window_operator_a738fb5034057225bfc2b4431537f6d27}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a2ad3d3fcf4ae766dd10e60b5e383127a}\label{classns3_1_1_storage_window_operator_a2ad3d3fcf4ae766dd10e60b5e383127a}} 
+std\+::deque$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ $>$ {\bfseries tuples}
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a45519ff2465191368f621c7e7e8ee168}\label{classns3_1_1_storage_window_operator_a45519ff2465191368f621c7e7e8ee168}} 
+bool {\bfseries evicted\+\_\+tuples} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_storage_window_operator_a1e1dd537ce10f86cdb5d7cb7b8f01181}\label{classns3_1_1_storage_window_operator_a1e1dd537ce10f86cdb5d7cb7b8f01181}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_join_operator}{Join\+Operator}} $>$ {\bfseries join\+Operator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Window\+Operator.\+cpp\end{DoxyCompactItemize}

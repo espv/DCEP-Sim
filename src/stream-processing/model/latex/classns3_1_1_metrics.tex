@@ -1,0 +1,244 @@
+\hypertarget{classns3_1_1_metrics}{}\doxysection{ns3\+::Metrics Class Reference}
+\label{classns3_1_1_metrics}\index{ns3::Metrics@{ns3::Metrics}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a727cdd62c931f57e161ee7c4ab781ef9}\label{classns3_1_1_metrics_a727cdd62c931f57e161ee7c4ab781ef9}} 
+static void {\bfseries Write\+To\+File} (std\+::string run\+\_\+id, std\+::string migration\+\_\+mechanism)
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a980aa847c299cecaa6a4a07150dffb64}\label{classns3_1_1_metrics_a980aa847c299cecaa6a4a07150dffb64}} 
+static void {\bfseries Add\+Tuple\+Latency} (long delay)
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a2f96ce32130254c983705d3051a9c90a}\label{classns3_1_1_metrics_a2f96ce32130254c983705d3051a9c90a}} 
+static std\+::vector$<$ std\+::pair$<$ Time, long $>$ $>$ \& {\bfseries Get\+Tuple\+Latencies} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_afcdf6e853dc0e8d85811ecce496a6486}\label{classns3_1_1_metrics_afcdf6e853dc0e8d85811ecce496a6486}} 
+static void {\bfseries Print\+Metrics} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a5eec4ef752417dd1f8d010caa3be476d}\label{classns3_1_1_metrics_a5eec4ef752417dd1f8d010caa3be476d}} 
+static void {\bfseries Trace\+Ingestion} (Ptr$<$ Tuple\+Wrapper $>$ tuple\+Wrapper, int node\+\_\+id, Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream_query}{Stream\+Query}} $>$ query, Ptr$<$ Operator $>$ op)
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_ad17b59c543cb15eadaebb899f2e57ebc}\label{classns3_1_1_metrics_ad17b59c543cb15eadaebb899f2e57ebc}} 
+static void {\bfseries Trace\+Received} (Ptr$<$ Tuple\+Wrapper $>$ tuple\+Wrapper, int node\+\_\+id, Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream_query}{Stream\+Query}} $>$ query, Ptr$<$ Operator $>$ op)
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a0eb579adb8c3e08bc51865e5155646d2}\label{classns3_1_1_metrics_a0eb579adb8c3e08bc51865e5155646d2}} 
+static void {\bfseries Trace\+Partial\+State\+Sent} (Ptr$<$ Partial\+State\+Wrapper $>$ pw, int node\+\_\+id, Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream_query}{Stream\+Query}} $>$ query, Ptr$<$ Operator $>$ op)
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_ae91e413ddcf382a13e9c0ed8e879f4d4}\label{classns3_1_1_metrics_ae91e413ddcf382a13e9c0ed8e879f4d4}} 
+static void {\bfseries Trace\+Partial\+State\+Received} (Ptr$<$ Partial\+State\+Wrapper $>$ pw, int node\+\_\+id, Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream_query}{Stream\+Query}} $>$ query, Ptr$<$ Operator $>$ op)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_ada62915522de86ede082035d99f88346}\label{classns3_1_1_metrics_ada62915522de86ede082035d99f88346}} 
+static std\+::vector$<$ std\+::vector$<$ std\+::pair$<$ Time, long $>$ $>$ $>$ {\bfseries results}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_ad1159a36713a2b9dd715b771eedc19f8}\label{classns3_1_1_metrics_ad1159a36713a2b9dd715b771eedc19f8}} 
+static std\+::map$<$ Trace\+Event, std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ int, bool $>$ $>$ $>$ $>$ {\bfseries trace\+Event\+To\+Stream\+Id\+To\+Query\+Id\+To\+Operator\+Id\+To\+Traced}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a9fc19745664547cc41cf0f8399b060c5}\label{classns3_1_1_metrics_a9fc19745664547cc41cf0f8399b060c5}} 
+static std\+::map$<$ Trace\+Event, std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ int, std\+::string $>$ $>$ $>$ $>$ {\bfseries trace\+Event\+To\+Stream\+Id\+To\+Query\+Id\+To\+Operator\+Id\+To\+Filename}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a818181dda0a60b4139dfbdf080ef0e98}\label{classns3_1_1_metrics_a818181dda0a60b4139dfbdf080ef0e98}} 
+static std\+::map$<$ Trace\+Event, std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ std\+::string, bool $>$ $>$ $>$ $>$ {\bfseries trace\+Event\+To\+Stream\+Id\+To\+Query\+Id\+To\+Operator\+Name\+To\+Traced}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a9cf6513f5db6ed489a7e8f899cdc7eba}\label{classns3_1_1_metrics_a9cf6513f5db6ed489a7e8f899cdc7eba}} 
+static std\+::map$<$ Trace\+Event, std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ std\+::string, std\+::string $>$ $>$ $>$ $>$ {\bfseries trace\+Event\+To\+Stream\+Id\+To\+Query\+Id\+To\+Operator\+Name\+To\+Filename}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a576e020d9dd05eb44145ed77b2964789}\label{classns3_1_1_metrics_a576e020d9dd05eb44145ed77b2964789}} 
+static std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ Time, long $>$ $>$ $>$ $>$ $>$ {\bfseries stream\+Id\+To\+Query\+Id\+To\+Operator\+Id\+To\+Ingestion\+Times}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_aa348647454b8a9e1de63951cdaae619d}\label{classns3_1_1_metrics_aa348647454b8a9e1de63951cdaae619d}} 
+static std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ Time, long $>$ $>$ $>$ $>$ $>$ {\bfseries stream\+Id\+To\+Query\+Id\+To\+Operator\+Id\+To\+Received\+Times}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_abf41956618fcefafe32f8d643c0b1f79}\label{classns3_1_1_metrics_abf41956618fcefafe32f8d643c0b1f79}} 
+static std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ Time, long $>$ $>$ $>$ $>$ $>$ {\bfseries stream\+Id\+To\+Query\+Id\+To\+Operator\+Id\+To\+Partial\+States\+Sent\+Times}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_ad3a85ca0430e3477d76efe0a0db58cd6}\label{classns3_1_1_metrics_ad3a85ca0430e3477d76efe0a0db58cd6}} 
+static std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ Time, long $>$ $>$ $>$ $>$ $>$ {\bfseries stream\+Id\+To\+Query\+Id\+To\+Operator\+Id\+To\+Partial\+States\+Received\+Times}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_af90007df6933ecc14bf9a877b9afa722}\label{classns3_1_1_metrics_af90007df6933ecc14bf9a877b9afa722}} 
+static std\+::map$<$ int, std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_trace_received_tuple_event}{Trace\+Received\+Tuple\+Event}} $>$ $>$ {\bfseries sink\+\_\+received\+\_\+tuples}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a0668bc89c68d394a4eab04820611fec9}\label{classns3_1_1_metrics_a0668bc89c68d394a4eab04820611fec9}} 
+static std\+::map$<$ int, \mbox{\hyperlink{classns3_1_1_trace_received_tuple_event}{Trace\+Received\+Tuple\+Event}} $\ast$ $>$ {\bfseries received\+\_\+tuple\+\_\+trace\+\_\+events} = \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a60f7ff64bc0d0b821cbb34e5bac18325}\label{classns3_1_1_metrics_a60f7ff64bc0d0b821cbb34e5bac18325}} 
+static std\+::map$<$ int, \mbox{\hyperlink{classns3_1_1_trace_processed_tuple_event}{Trace\+Processed\+Tuple\+Event}} $\ast$ $>$ {\bfseries processed\+\_\+tuple\+\_\+trace\+\_\+events} = \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a3c5a043de34fab36ccbf3707f3a24c8b}\label{classns3_1_1_metrics_a3c5a043de34fab36ccbf3707f3a24c8b}} 
+static int {\bfseries extents\+\_\+outputted} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a81b380ed5804c9d5a274f6e3d1975455}\label{classns3_1_1_metrics_a81b380ed5804c9d5a274f6e3d1975455}} 
+static int {\bfseries tuples\+\_\+in\+\_\+extents\+\_\+emitted} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a3676e3b28410445858e3368956820fda}\label{classns3_1_1_metrics_a3676e3b28410445858e3368956820fda}} 
+static std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_trace_output_latency_event}{Trace\+Output\+Latency\+Event}} $>$ {\bfseries latency\+\_\+data} = \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_aa4d6a0a184ad855be33f0eeeb08e30aa}\label{classns3_1_1_metrics_aa4d6a0a184ad855be33f0eeeb08e30aa}} 
+static std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_trace_output_latency_event}{Trace\+Output\+Latency\+Event}} $>$ {\bfseries aggregation\+\_\+latency\+\_\+data} = \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a2a7a4e976cd71df33ef899761b556f25}\label{classns3_1_1_metrics_a2a7a4e976cd71df33ef899761b556f25}} 
+static std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_trace_output_deviation_event}{Trace\+Output\+Deviation\+Event}} $>$ {\bfseries deviation\+\_\+data} = \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_ab8521154075f06c3bf4cc9c06b4673e5}\label{classns3_1_1_metrics_ab8521154075f06c3bf4cc9c06b4673e5}} 
+static long {\bfseries window\+\_\+emission\+\_\+delay} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_aa41cf593557572503592f445a88d547e}\label{classns3_1_1_metrics_aa41cf593557572503592f445a88d547e}} 
+static std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_trace_output_latency_event}{Trace\+Output\+Latency\+Event}} $>$ {\bfseries window\+\_\+emission\+\_\+delays}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_af0e0475c1153e6bfe5816a85eadb7cf0}\label{classns3_1_1_metrics_af0e0475c1153e6bfe5816a85eadb7cf0}} 
+static int {\bfseries count\+\_\+accumulator} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a6eb2d4b9bc49c71ed25c5ed4a0da0308}\label{classns3_1_1_metrics_a6eb2d4b9bc49c71ed25c5ed4a0da0308}} 
+static std\+::map$<$ int, Time $>$ {\bfseries forwarded\+\_\+tuples}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a200f7dc7e1ae7128a27b08681b139668}\label{classns3_1_1_metrics_a200f7dc7e1ae7128a27b08681b139668}} 
+static Time {\bfseries forwarded\+\_\+tuples\+\_\+input\+\_\+latency}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a6ec244654a177b2dba7026b42aba9532}\label{classns3_1_1_metrics_a6ec244654a177b2dba7026b42aba9532}} 
+static std\+::map$<$ int, std\+::map$<$ int, Time $>$ $>$ {\bfseries forwarded\+\_\+tuple\+\_\+input\+\_\+latency}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_afc6cfd8a4174ca636712d172bd8ee68d}\label{classns3_1_1_metrics_afc6cfd8a4174ca636712d172bd8ee68d}} 
+static std\+::map$<$ Operator\+Type, std\+::map$<$ int, Time $>$ $>$ {\bfseries total\+\_\+input\+\_\+tuple\+\_\+latency}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_ab77a9aff7c81a06c7e81e9af20a8c708}\label{classns3_1_1_metrics_ab77a9aff7c81a06c7e81e9af20a8c708}} 
+static std\+::map$<$ int, std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_trace_received_partial_state_event}{Trace\+Received\+Partial\+State\+Event}} $\ast$ $>$ $>$ {\bfseries received\+\_\+partial\+\_\+state\+\_\+trace\+\_\+events} = \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a75b0b99572726222ef201c27d79888a3}\label{classns3_1_1_metrics_a75b0b99572726222ef201c27d79888a3}} 
+static std\+::map$<$ int, std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_trace_sent_partial_state_event}{Trace\+Sent\+Partial\+State\+Event}} $\ast$ $>$ $>$ {\bfseries sent\+\_\+partial\+\_\+state\+\_\+trace\+\_\+events} = \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a96f2f47b94169a8f8228942059ce2d30}\label{classns3_1_1_metrics_a96f2f47b94169a8f8228942059ce2d30}} 
+static std\+::vector$<$ Time $>$ {\bfseries migration\+\_\+starts}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a9734f2294df5e19ebe9afb358c3a4b59}\label{classns3_1_1_metrics_a9734f2294df5e19ebe9afb358c3a4b59}} 
+static std\+::vector$<$ Time $>$ {\bfseries migration\+\_\+stops}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_abb4d2e958441e5fcbddb55bac2e02b24}\label{classns3_1_1_metrics_abb4d2e958441e5fcbddb55bac2e02b24}} 
+static bool {\bfseries trace\+\_\+migration} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_acee477f839d5dc2a0d07c2b2a719d9ac}\label{classns3_1_1_metrics_acee477f839d5dc2a0d07c2b2a719d9ac}} 
+static bool {\bfseries trace\+\_\+enabled} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_af9eb9dfbe303d8dcfb9647710a3cff67}\label{classns3_1_1_metrics_af9eb9dfbe303d8dcfb9647710a3cff67}} 
+static std\+::string {\bfseries migration\+\_\+time\+\_\+plot\+\_\+name} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a44bb567606b0990ee155deba7a97dd63}\label{classns3_1_1_metrics_a44bb567606b0990ee155deba7a97dd63}} 
+static int {\bfseries result\+\_\+latency} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a780e861ebf209dff7c8a631c1640df7d}\label{classns3_1_1_metrics_a780e861ebf209dff7c8a631c1640df7d}} 
+static int {\bfseries result\+\_\+deviation} = -\/1
+\item 
+static std\+::chrono\+::steady\+\_\+clock\+::duration {\bfseries total\+\_\+time\+\_\+group}
+\item 
+static std\+::chrono\+::steady\+\_\+clock\+::duration {\bfseries total\+\_\+time\+\_\+window}
+\item 
+static std\+::chrono\+::steady\+\_\+clock\+::duration {\bfseries total\+\_\+time\+\_\+select}
+\item 
+static std\+::chrono\+::steady\+\_\+clock\+::duration {\bfseries total\+\_\+time\+\_\+join}
+\item 
+static std\+::chrono\+::steady\+\_\+clock\+::duration {\bfseries total\+\_\+time\+\_\+filter}
+\item 
+static std\+::chrono\+::steady\+\_\+clock\+::duration {\bfseries total\+\_\+time\+\_\+set\+Field\+To\+Value\+Of\+Tuple}
+\item 
+static std\+::chrono\+::steady\+\_\+clock\+::duration {\bfseries total\+\_\+time}
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_a6cfc9cf83f18c6f8765dfb25a46fd74a}\label{classns3_1_1_metrics_a6cfc9cf83f18c6f8765dfb25a46fd74a}} 
+static std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point {\bfseries total\+\_\+time\+\_\+end} = std\+::chrono\+::steady\+\_\+clock\+::now()
+\item 
+\mbox{\Hypertarget{classns3_1_1_metrics_abbbccef44bf6b48c62434bc963475561}\label{classns3_1_1_metrics_abbbccef44bf6b48c62434bc963475561}} 
+static std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point {\bfseries total\+\_\+time\+\_\+begin}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classns3_1_1_metrics_a0dffd8d91ccf60319cb302c1cc80a596}\label{classns3_1_1_metrics_a0dffd8d91ccf60319cb302c1cc80a596}} 
+\index{ns3::Metrics@{ns3::Metrics}!total\_time@{total\_time}}
+\index{total\_time@{total\_time}!ns3::Metrics@{ns3::Metrics}}
+\doxysubsubsection{\texorpdfstring{total\_time}{total\_time}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration ns3\+::\+Metrics\+::total\+\_\+time\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                std::chrono::steady\_clock::now() -\/ std::chrono::steady\_clock::now()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classns3_1_1_metrics_ad1e04d3e95c9154ce80a84dbb5a9af86}\label{classns3_1_1_metrics_ad1e04d3e95c9154ce80a84dbb5a9af86}} 
+\index{ns3::Metrics@{ns3::Metrics}!total\_time\_filter@{total\_time\_filter}}
+\index{total\_time\_filter@{total\_time\_filter}!ns3::Metrics@{ns3::Metrics}}
+\doxysubsubsection{\texorpdfstring{total\_time\_filter}{total\_time\_filter}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration ns3\+::\+Metrics\+::total\+\_\+time\+\_\+filter\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                std::chrono::steady\_clock::now() -\/ std::chrono::steady\_clock::now()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classns3_1_1_metrics_a27a9d4ea1edd714cc56dba8f06fe8f90}\label{classns3_1_1_metrics_a27a9d4ea1edd714cc56dba8f06fe8f90}} 
+\index{ns3::Metrics@{ns3::Metrics}!total\_time\_group@{total\_time\_group}}
+\index{total\_time\_group@{total\_time\_group}!ns3::Metrics@{ns3::Metrics}}
+\doxysubsubsection{\texorpdfstring{total\_time\_group}{total\_time\_group}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration ns3\+::\+Metrics\+::total\+\_\+time\+\_\+group\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                std::chrono::steady\_clock::now() -\/ std::chrono::steady\_clock::now()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classns3_1_1_metrics_ad19d617fbbdc77977d178ff931a41124}\label{classns3_1_1_metrics_ad19d617fbbdc77977d178ff931a41124}} 
+\index{ns3::Metrics@{ns3::Metrics}!total\_time\_join@{total\_time\_join}}
+\index{total\_time\_join@{total\_time\_join}!ns3::Metrics@{ns3::Metrics}}
+\doxysubsubsection{\texorpdfstring{total\_time\_join}{total\_time\_join}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration ns3\+::\+Metrics\+::total\+\_\+time\+\_\+join\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                std::chrono::steady\_clock::now() -\/ std::chrono::steady\_clock::now()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classns3_1_1_metrics_a7b5118a3c749c23dde773624a93a0ec0}\label{classns3_1_1_metrics_a7b5118a3c749c23dde773624a93a0ec0}} 
+\index{ns3::Metrics@{ns3::Metrics}!total\_time\_select@{total\_time\_select}}
+\index{total\_time\_select@{total\_time\_select}!ns3::Metrics@{ns3::Metrics}}
+\doxysubsubsection{\texorpdfstring{total\_time\_select}{total\_time\_select}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration ns3\+::\+Metrics\+::total\+\_\+time\+\_\+select\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                std::chrono::steady\_clock::now() -\/ std::chrono::steady\_clock::now()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classns3_1_1_metrics_aa46c1c718c41f4c1abe4afff1fbcdf48}\label{classns3_1_1_metrics_aa46c1c718c41f4c1abe4afff1fbcdf48}} 
+\index{ns3::Metrics@{ns3::Metrics}!total\_time\_setFieldToValueOfTuple@{total\_time\_setFieldToValueOfTuple}}
+\index{total\_time\_setFieldToValueOfTuple@{total\_time\_setFieldToValueOfTuple}!ns3::Metrics@{ns3::Metrics}}
+\doxysubsubsection{\texorpdfstring{total\_time\_setFieldToValueOfTuple}{total\_time\_setFieldToValueOfTuple}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration ns3\+::\+Metrics\+::total\+\_\+time\+\_\+set\+Field\+To\+Value\+Of\+Tuple\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                std::chrono::steady\_clock::now() -\/ std::chrono::steady\_clock::now()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classns3_1_1_metrics_aad4dc3413b9a4b403976856ed2181cd5}\label{classns3_1_1_metrics_aad4dc3413b9a4b403976856ed2181cd5}} 
+\index{ns3::Metrics@{ns3::Metrics}!total\_time\_window@{total\_time\_window}}
+\index{total\_time\_window@{total\_time\_window}!ns3::Metrics@{ns3::Metrics}}
+\doxysubsubsection{\texorpdfstring{total\_time\_window}{total\_time\_window}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration ns3\+::\+Metrics\+::total\+\_\+time\+\_\+window\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                std::chrono::steady\_clock::now() -\/ std::chrono::steady\_clock::now()}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Metrics.\+h\item 
+Metrics.\+cc\end{DoxyCompactItemize}

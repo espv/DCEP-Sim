@@ -1,0 +1,737 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindBoost.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/Boost-1.80.0/BoostConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/Boost-1.80.0/BoostConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_regex-1.80.0/boost_regex-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_regex-1.80.0/boost_regex-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/BoostDetectToolset-1.80.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_regex-1.80.0/libboost_regex-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_regex-1.80.0/libboost_regex-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_serialization-1.80.0/boost_serialization-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_serialization-1.80.0/boost_serialization-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/BoostDetectToolset-1.80.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_serialization-1.80.0/libboost_serialization-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_serialization-1.80.0/libboost_serialization-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config.cmake"
+		},
+		{
+			"path" : "build-support/macros-and-definitions.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/colored-messages.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/ProcessorCount.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-cmake-package.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-module-macros.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-contributions.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-lock.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-configtable.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-versioning.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets-noconfig.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/FindHarfBuzz.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindLibXml2.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPython3.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPython/Support.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "build-support/config-store-config-template.h"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindBoost.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/Boost-1.80.0/BoostConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/Boost-1.80.0/BoostConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindGSL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/FindSphinx.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CheckIncludeFiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CheckFunctionExists.cmake"
+		},
+		{
+			"path" : "build-support/core-config-template.h"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakePackageConfigHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/WriteBasicConfigVersionFile.cmake"
+		},
+		{
+			"path" : "build-support/Config.cmake.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/BasicConfigVersion-ExactVersion.cmake.in"
+		},
+		{
+			"path" : "src/CMakeLists.txt"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake"
+		},
+		{
+			"path" : "src/dcep/CMakeLists.txt"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindBoost.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/Boost-1.80.0/BoostConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/Boost-1.80.0/BoostConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_headers-1.80.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_regex-1.80.0/boost_regex-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_regex-1.80.0/boost_regex-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_serialization-1.80.0/boost_serialization-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/boost_serialization-1.80.0/boost_serialization-config.cmake"
+		},
+		{
+			"path" : "src/stream-processing/CMakeLists.txt"
+		},
+		{
+			"path" : "src/core/CMakeLists.txt"
+		},
+		{
+			"path" : "src/olsr/CMakeLists.txt"
+		},
+		{
+			"path" : "src/internet/CMakeLists.txt"
+		},
+		{
+			"path" : "src/network/CMakeLists.txt"
+		},
+		{
+			"path" : "src/stats/CMakeLists.txt"
+		},
+		{
+			"path" : "src/bridge/CMakeLists.txt"
+		},
+		{
+			"path" : "src/traffic-control/CMakeLists.txt"
+		},
+		{
+			"path" : "src/config-store/CMakeLists.txt"
+		},
+		{
+			"path" : "src/netanim/CMakeLists.txt"
+		},
+		{
+			"path" : "src/mobility/CMakeLists.txt"
+		},
+		{
+			"path" : "src/wimax/CMakeLists.txt"
+		},
+		{
+			"path" : "src/propagation/CMakeLists.txt"
+		},
+		{
+			"path" : "src/wifi/CMakeLists.txt"
+		},
+		{
+			"path" : "src/energy/CMakeLists.txt"
+		},
+		{
+			"path" : "src/spectrum/CMakeLists.txt"
+		},
+		{
+			"path" : "src/antenna/CMakeLists.txt"
+		},
+		{
+			"path" : "src/csma/CMakeLists.txt"
+		},
+		{
+			"path" : "src/lte/CMakeLists.txt"
+		},
+		{
+			"path" : "src/fd-net-device/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "src/buildings/CMakeLists.txt"
+		},
+		{
+			"path" : "src/virtual-net-device/CMakeLists.txt"
+		},
+		{
+			"path" : "src/point-to-point/CMakeLists.txt"
+		},
+		{
+			"path" : "src/applications/CMakeLists.txt"
+		},
+		{
+			"path" : "src/uan/CMakeLists.txt"
+		},
+		{
+			"path" : "src/lr-wpan/CMakeLists.txt"
+		},
+		{
+			"path" : "src/wave/CMakeLists.txt"
+		},
+		{
+			"path" : "src/point-to-point-layout/CMakeLists.txt"
+		},
+		{
+			"path" : "src/test/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/CMakeLists.txt"
+		},
+		{
+			"path" : "utils/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/espen/ns-3/ns3-wip/cmake-build-debug",
+		"source" : "/home/espen/ns-3/ns3-wip"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

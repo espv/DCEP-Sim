@@ -1,0 +1,24 @@
+digraph "ns3::MigrationMechanism"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ns3::MigrationMechanism",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Object",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ns3::AllAtOnceMigrationMechanism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_all_at_once_migration_mechanism.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ns3::DropStateMigrationMechanism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_drop_state_migration_mechanism.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ns3::LazyLatencyMigration\lMechanism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_lazy_latency_migration_mechanism.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ns3::LazyUtilityMigration\lMechanism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_lazy_utility_migration_mechanism.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ns3::MecesMigrationMechanism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_meces_migration_mechanism.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="ns3::MegaphoneMigrationMechanism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_megaphone_migration_mechanism.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="ns3::RhinoMigrationMechanism",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_rhino_migration_mechanism.html",tooltip=" "];
+}

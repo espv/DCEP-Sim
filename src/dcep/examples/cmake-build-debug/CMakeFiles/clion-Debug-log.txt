@@ -1,0 +1,30 @@
+/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/espen/Editors/clion-2021.2.3/bin/ninja/linux/x64/ninja -G Ninja -S /home/espen/ns-3/ns3-wip/src/dcep/examples -B /home/espen/ns-3/ns3-wip/src/dcep/examples/cmake-build-debug
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Error at CMakeLists.txt:2 (build_lib_example):
+  Unknown CMake command "build_lib_example".
+
+
+CMake Warning (dev) in CMakeLists.txt:
+  No cmake_minimum_required command is present.  A line of code such as
+
+    cmake_minimum_required(VERSION 3.25)
+
+  should be added at the top of the file.  The version specified may be lower
+  if you wish to support older CMake versions for this project.  For more
+  information run "cmake --help-policy CMP0000".
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring incomplete, errors occurred!
+See also "/home/espen/ns-3/ns3-wip/src/dcep/examples/cmake-build-debug/CMakeFiles/CMakeOutput.log".

@@ -1,0 +1,532 @@
+tracepoints: []
+stream-definitions:
+- stream-id: 0
+  name: StopStream
+  tuple-format:
+  - {name: streamList, type: string}
+  - {name: node, type: int}
+- stream-id: 1
+  name: Person
+  tuple-format:
+  - {name: dateTime, type: timestamp}
+  - {name: id, type: int}
+  - {name: name, type: string}
+  - {name: emailAddress, type: string}
+  - {name: creditCard, type: string}
+  - {name: city, type: string}
+  - {name: state, type: string}
+- stream-id: 2
+  name: Auction
+  tuple-format:
+  - {name: dateTime, type: timestamp}
+  - {name: id, type: int}
+  - {name: itemName, type: string}
+  - {name: description, type: string}
+  - {name: initialBid, type: long}
+  - {name: reserve, type: int}
+  - {name: expires, type: timestamp}
+  - {name: seller, type: int}
+  - {name: category, type: int}
+- stream-id: 3
+  name: Bid
+  tuple-format:
+  - {name: dateTime, type: timestamp}
+  - {name: auction, type: int}
+  - {name: bidder, type: int}
+  - {name: price, type: long}
+- stream-id: 4
+  name: Category
+  tuple-format:
+  - {name: id, type: int}
+  - {name: name, type: string}
+  - {name: description, type: string}
+  - {name: parentCategory, type: int}
+- stream-id: 5
+  name: BikeTrip
+  tuple-format:
+  - {name: a_tripduration, type: long}
+  - {name: b_starttime, type: string}
+  - {name: c_stoptime, type: string}
+  - {name: d_start_station_id, type: long}
+  - {name: e_start_station_name, type: string}
+  - {name: f_start_station_latitude, type: double}
+  - {name: g_start_station_longitude, type: double}
+  - {name: h_end_station_id, type: long}
+  - {name: i_end_station_name, type: string}
+  - {name: j_end_station_latitude, type: double}
+  - {name: k_end_station_longitude, type: double}
+  - {name: l_bikeid, type: long}
+  - {name: m_usertype, type: string}
+  - {name: n_birth_year, type: long}
+  - {name: o_gender, type: long}
+- stream-id: 15
+  name: BikeTrip_2
+  tuple-format:
+  - {name: a_tripduration, type: long}
+  - {name: b_starttime, type: string}
+  - {name: c_stoptime, type: string}
+  - {name: d_start_station_id, type: long}
+  - {name: e_start_station_name, type: string}
+  - {name: f_start_station_latitude, type: double}
+  - {name: g_start_station_longitude, type: double}
+  - {name: h_end_station_id, type: long}
+  - {name: i_end_station_name, type: string}
+  - {name: j_end_station_latitude, type: double}
+  - {name: k_end_station_longitude, type: double}
+  - {name: l_bikeid, type: long}
+  - {name: m_usertype, type: string}
+  - {name: n_birth_year, type: long}
+  - {name: o_gender, type: long}
+- stream-id: 6
+  name: BusRecord
+  tuple-format:
+  - {name: a_ts, type: long}
+  - {name: b_line_id, type: long}
+  - {name: c_direction, type: long}
+  - {name: d_journey_pattern_id, type: string}
+  - {name: e_time_frame, type: timestamp}
+  - {name: f_vehicle_journey_id, type: long}
+  - {name: g_operator, type: string}
+  - {name: h_congested, type: long}
+  - {name: i_longitude, type: double}
+  - {name: j_latitude, type: double}
+  - {name: k_delay, type: long}
+  - {name: l_block_id, type: long}
+  - {name: m_vehicle_id, type: long}
+  - {name: n_stop_id, type: long}
+  - {name: o_at_stop, type: long}
+- stream-id: 18
+  name: OutQuery
+  tuple-format:
+  - {name: avgPrice, type: long}
+  - {name: maxPrice, type: long}
+  - {name: minPrice, type: long}
+  - {name: bidder, type: long}
+  - {name: auction, type: long}
+- stream-id: 19
+  name: OutQuery2
+  tuple-format:
+  - {name: price, type: long}
+  - {name: bidder, type: long}
+  - {name: auction, type: long}
+- stream-id: 20
+  name: OutQuery3
+  tuple-format:
+  - {name: l_bikeid, type: long}
+  - {name: h_end_station_id, type: long}
+- stream-id: 21
+  name: OutQuery4
+  tuple-format:
+  - {name: id, type: long}
+  - {name: auction, type: long}
+  - {name: avg_price, type: long}
+experiments:
+- id: 1
+  flow:
+  - node: coordinator
+    task: deployQueries
+    arguments: [5, 144]
+  - node: coordinator
+    task: addPotentialHost
+    arguments:
+    - [2, 3, 4]
+    - 144
+  - node: coordinator
+    task: addSinkNode
+    arguments:
+    - [5]
+    - 144
+  - node: coordinator
+    task: addSourceNode
+    arguments:
+    - [1]
+    - 144
+  - node: coordinator
+    task: adapt
+    arguments: [144, 3, drop-state]
+  - node: coordinator
+    task: wait
+    arguments: [10000]
+  - node: coordinator
+    task: loopTasks
+    arguments:
+    - 1
+    - - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 2, 50000]
+      - node: 3
+        task: retEndOfStream
+        arguments: [10000]
+      - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 3, 10000]
+      - node: coordinator
+        task: enableTrace
+        arguments: []
+      - node: 5
+        task: retEndOfStream
+        arguments: [100000000]
+      - node: coordinator
+        task: wait
+        arguments: [2000000000]
+- id: 2
+  flow:
+  - node: coordinator
+    task: deployQueries
+    arguments: [5, 144]
+  - node: coordinator
+    task: addPotentialHost
+    arguments:
+    - [2, 3, 4]
+    - 144
+  - node: coordinator
+    task: addSinkNode
+    arguments:
+    - [5]
+    - 144
+  - node: coordinator
+    task: addSourceNode
+    arguments:
+    - [1]
+    - 144
+  - node: coordinator
+    task: adapt
+    arguments: [144, 3, drop-state]
+  - node: coordinator
+    task: wait
+    arguments: [10000]
+  - node: coordinator
+    task: loopTasks
+    arguments:
+    - 1
+    - - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 2, 50000]
+      - node: 3
+        task: retEndOfStream
+        arguments: [10000]
+      - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 3, 10000]
+      - node: coordinator
+        task: enableTrace
+        arguments: []
+      - node: coordinator
+        task: adapt
+        arguments: [144, 4, lazy]
+      - node: 5
+        task: retEndOfStream
+        arguments: [100000000]
+      - node: coordinator
+        task: wait
+        arguments: [2000000000]
+- id: 3
+  flow:
+  - node: coordinator
+    task: deployQueries
+    arguments: [5, 144]
+  - node: coordinator
+    task: addPotentialHost
+    arguments:
+    - [2, 3, 4]
+    - 144
+  - node: coordinator
+    task: addSinkNode
+    arguments:
+    - [5]
+    - 144
+  - node: coordinator
+    task: addSourceNode
+    arguments:
+    - [1]
+    - 144
+  - node: coordinator
+    task: adapt
+    arguments: [144, 3, drop-state]
+  - node: coordinator
+    task: wait
+    arguments: [10000]
+  - node: coordinator
+    task: loopTasks
+    arguments:
+    - 1
+    - - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 2, 50000]
+      - node: 3
+        task: retEndOfStream
+        arguments: [10000]
+      - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 3, 10000]
+      - node: coordinator
+        task: enableTrace
+        arguments: []
+      - node: coordinator
+        task: adapt
+        arguments: [144, 4, all-at-once]
+      - node: 5
+        task: retEndOfStream
+        arguments: [100000000]
+      - node: coordinator
+        task: wait
+        arguments: [2000000000]
+- id: 4
+  flow:
+  - node: coordinator
+    task: deployQueries
+    arguments: [5, 144]
+  - node: coordinator
+    task: addPotentialHost
+    arguments:
+    - [2, 3, 4]
+    - 144
+  - node: coordinator
+    task: addSinkNode
+    arguments:
+    - [5]
+    - 144
+  - node: coordinator
+    task: addSourceNode
+    arguments:
+    - [1]
+    - 144
+  - node: coordinator
+    task: adapt
+    arguments: [144, 3, drop-state]
+  - node: coordinator
+    task: wait
+    arguments: [10000]
+  - node: coordinator
+    task: loopTasks
+    arguments:
+    - 1
+    - - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 2, 500000]
+      - node: 3
+        task: retEndOfStream
+        arguments: [10000]
+      - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 3, 100000]
+      - node: coordinator
+        task: enableTrace
+        arguments: []
+      - node: coordinator
+        task: adapt
+        arguments: [144, 4, micro-batch-no-fetch]
+      - node: 5
+        task: retEndOfStream
+        arguments: [100000000]
+      - node: coordinator
+        task: wait
+        arguments: [2000000000]
+- id: 5
+  flow:
+  - node: coordinator
+    task: deployQueries
+    arguments: [5, 144]
+  - node: coordinator
+    task: addPotentialHost
+    arguments:
+    - [2, 3, 4]
+    - 144
+  - node: coordinator
+    task: addSinkNode
+    arguments:
+    - [5]
+    - 144
+  - node: coordinator
+    task: addSourceNode
+    arguments:
+    - [1]
+    - 144
+  - node: coordinator
+    task: adapt
+    arguments: [144, 3, drop-state]
+  - node: coordinator
+    task: wait
+    arguments: [10000]
+  - node: coordinator
+    task: loopTasks
+    arguments:
+    - 1
+    - - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 2, 500000]
+      - node: 3
+        task: retEndOfStream
+        arguments: [10000]
+      - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 3, 100000]
+      - node: coordinator
+        task: enableTrace
+        arguments: []
+      - node: coordinator
+        task: adapt
+        arguments: [144, 4, meces]
+      - node: 5
+        task: retEndOfStream
+        arguments: [100000000]
+      - node: coordinator
+        task: wait
+        arguments: [2000000000]
+- id: 6
+  flow:
+  - node: coordinator
+    task: deployQueries
+    arguments: [5, 144]
+  - node: coordinator
+    task: addPotentialHost
+    arguments:
+    - [2, 3, 4]
+    - 144
+  - node: coordinator
+    task: addSinkNode
+    arguments:
+    - [5]
+    - 144
+  - node: coordinator
+    task: addSourceNode
+    arguments:
+    - [1]
+    - 144
+  - node: coordinator
+    task: adapt
+    arguments: [144, 4, drop-state]
+  - node: coordinator
+    task: wait
+    arguments: [10000]
+  - node: coordinator
+    task: loopTasks
+    arguments:
+    - 1
+    - - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 2, 500000]
+      - node: 3
+        task: retEndOfStream
+        arguments: [10000]
+      - node: 1
+        task: sendNRowsDsAsSpecificStream
+        arguments: [40, 3, 100000]
+      - node: coordinator
+        task: enableTrace
+        arguments: []
+      - node: coordinator
+        task: disconnectNode
+        arguments: [2000, 2000]
+      - node: 5
+        task: retEndOfStream
+        arguments: [100000000]
+      - node: coordinator
+        task: wait
+        arguments: [2000000000]
+datasets:
+- {file: nexmark-dataset-5k.yaml, name: NexMark 4k tuples (YAML), id: 8, type: yaml}
+- {file: auction-5k.csv, name: NexMark 4k tuples (YAML), id: 45, type: csv}
+- {file: 201808-citibike-tripdata.csv, name: Citibike August 2018, id: 9, type: csv}
+- {file: 201808-citibike-tripdata_stream2.csv, name: Citibike August 2018, id: 21,
+  type: csv}
+- {file: citibike-dataset.csv, name: Citibike 4k tuples (YAML), id: 10, type: csv}
+- {file: citibike-dataset-part1.csv, name: Citibike 4k tuples (YAML), id: 11, type: csv}
+- {file: citibike-dataset-part2.csv, name: Citibike 4k tuples (YAML), id: 12, type: csv}
+- {file: citibike-dataset-5k.csv, name: Citibike 5k tuples (YAML), id: 13, type: csv}
+- {file: 201808-citibike-tripdata-part1.csv, name: Citibike 4k tuples (YAML), id: 14,
+  type: csv}
+- {file: 201808-citibike-tripdata-part2.csv, name: Citibike 4k tuples (YAML), id: 15,
+  type: csv}
+- {file: 201808-citibike-tripdata-03-04-part1.csv, name: Citibike 4k tuples (YAML),
+  id: 16, type: csv}
+- {file: 201808-citibike-tripdata-03-04-part1_short.csv, name: Citibike 4k tuples
+    (YAML), id: 30, type: csv}
+- {file: 201808-citibike-tripdata-03-04-part1_stream2.csv, name: Citibike 4k tuples
+    (YAML), id: 20, type: csv}
+- {file: 201808-citibike-tripdata-03-04-part1_stream2_short.csv, name: Citibike 4k
+    tuples (YAML), id: 31, type: csv}
+- {file: 201808-citibike-tripdata-04-06-part2.csv, name: Citibike 4k tuples (YAML),
+  id: 17, type: csv}
+- {file: 201808-citibike-tripdata-04-06-part2_stream2.csv, name: Citibike 4k tuples
+    (YAML), id: 19, type: csv}
+- {file: Bus1-1hour/siri.20121106.csv, name: Bus dataset (YAML), id: 18, type: csv}
+- {file: nexmark-dataset-1M.csv, name: NexMark, id: 40, type: csv}
+- {file: nexmark-dataset-1M.csv, name: NexMark, id: 41, type: csv}
+spequeries:
+  outputs: []
+  inputs: []
+  queries:
+  - operators:
+    - name: Output 0
+      type: output
+      parameters: {stream-id: -1}
+    - name: Select 0
+      type: select
+      parameters:
+        fields: [A.id, B.auction, avg(B.price) avg_price]
+    - name: input 1
+      type: input
+      parameters: {stream-id: 2, alias: A}
+    - name: Join 0
+      type: join
+      parameters: {}
+    - name: Window 0
+      type: window
+      parameters: {external-timestamp-field: '', size: 1000000, emit-type: TUPLE_COUNT,
+        emit-size: -1, size-type: TUPLE_COUNT, jump: 1}
+    - name: Window 1
+      type: window
+      parameters: {external-timestamp-field: '', size: 1000000, emit-type: TUPLE_COUNT,
+        emit-size: -1, size-type: TUPLE_COUNT, jump: 1}
+    - name: Filter 2
+      type: filter
+      parameters:
+        op: equals
+        arg2: {value-type: int, type: attribute, value: A.id}
+        arg1: {value-type: int, type: attribute, value: B.auction}
+    - name: input 0
+      type: input
+      parameters: {stream-id: 3, alias: B}
+    - name: Print 0
+      type: print
+      parameters: {}
+    name: NewName0
+    edges:
+    - stream: stream_name0
+      from: {name: Filter 2, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    - stream: join-filter
+      from: {name: Join 0, type: intermediate}
+      to: {name: Filter 2, type: intermediate}
+    - stream: Auction
+      from: {name: input 1, type: intermediate}
+      to: {name: Window 1, type: intermediate}
+    - stream: Output 0
+      from: {name: Output 0, type: output}
+    - stream: OutQuery4
+      from: {name: Select 0, type: intermediate}
+      to: {name: Print 0, type: intermediate}
+    - stream: Bid
+      from: {name: input 0, type: intermediate}
+      to: {name: Window 0, type: intermediate}
+    - stream: Final
+      from: {name: Print 0, type: intermediate}
+      to: {name: Output 0, type: intermediate}
+    - stream: window0_out
+      from: {name: Window 0, type: intermediate}
+      to: {name: Join 0, type: intermediate}
+    - stream: window1_out
+      from: {name: Window 1, type: intermediate}
+      to: {name: Join 0, type: intermediate}
+    id: 5
+plots:
+- {operator-name: Output 0, query-id: '144', control-experiment-id: '1', stream-id: '21',
+  name: plot1, type: Output-latency}
+- {control-experiment-id: '1', name: plot2, type: Migration-time}
+- {operator-name: Join 0, query-id: '144', control-experiment-id: '1', stream-id: '3',
+  name: plot3, type: Input-latency}
+network:
+  bandwidth: {migration: '1000000', tuples: '1000000000'}
+  latency: {migration: '0', tuples: '0'}
+

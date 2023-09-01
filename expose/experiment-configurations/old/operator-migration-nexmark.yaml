@@ -1,0 +1,388 @@
+# This file describes stream processing experiments.
+
+# Each stream processing system must have a program that:
+# - parses this yaml file,
+# - interprets the necessary tasks, and
+# - inserts tracepoints to trace metrics such as execution time and throughput (optional).
+
+# The only system specific detail that must be placed in this file is SQL queries
+# that use a particular syntax for schemas.
+
+name: Experiment configuration
+
+experiments:
+  - name: experiment 0 --- NexMark with naïve operator migration V1 (one source node)
+    id: 10
+    flow:
+      - {task: deployQueries, arguments: [5, 144], node: coordinator}
+      - {task: addPotentialHost, node: coordinator, arguments: [[2,3,4], 144]}
+      - {task: addSinkNode, node: coordinator, arguments: [[5], 144]}
+      - {task: addSourceNode, node: coordinator, arguments: [[1], 144]}
+      - {task: adapt, node: coordinator, arguments: [144, 3]}
+      - {task: wait, node: coordinator, arguments: [10000]}
+
+      - {task: loopTasks, node: coordinator, arguments:
+         [1, [
+          #{task: adapt, arguments: [144], node: 2},
+          #{task: wait, arguments: [200000000], node: coordinator},
+          {task: loopTasks, node: coordinator, arguments: [1, [
+              {task: sendCsvDsAsStream, arguments: [16, 1, false], node: 1}
+              #{task: sendCsvDsAsStream, arguments: [11, 1, false], node: 1}
+          ]]},
+          {task: retEndOfStream, arguments: [10000], node: 3},
+          #{task: wait, arguments: [1000000000], node: 2},
+          #{task: wait, arguments: [1000000000], node: 2},
+          #{task: wait, arguments: [1000000000], node: 2},
+          #{task: wait, arguments: [2100000000], node: 2},
+          {task: disconnectNode, arguments: [1000, 1000000000], node: 3},
+          # 9500/8
+          #{task: disconnectNode, arguments: [600, 600], node: 3},
+          #{task: wait, arguments: [1000000000], node: 2},
+          #{task: wait, arguments: [1000000000], node: 2},
+          #{task: wait, arguments: [1000000000], node: 2},
+          #{task: wait, arguments: [1000000000], node: 2},
+          #{task: wait, arguments: [18000000], node: coordinator},
+          #{task: adapt, arguments: [144], node: 2},
+          {task: wait, arguments: [5000], node: 2},
+          {task: sendCsvDsAsStream, arguments: [17, 1, false], node: 1},
+          #{task: retWhenReceived, arguments: [84], node: 5},
+          #{task: loopTasks, node: coordinator, arguments: [1, [
+          #    {task: sendDsAsStream, arguments: [8, 1, false], node: 1}
+          #]]},
+          #{task: wait, node: coordinator, arguments: [1000000000]}
+      ]]}
+      - {task: endExperiment, node: coordinator}
+
+stream-definitions:
+  - id: 0
+    stream-id: 0
+    name: StopStream
+    tuple-format: [{name: streamList, type: string}, {name: node, type: int}]
+
+  - id: 1
+    stream-id: 1
+    name: Person
+    tuple-format: [{name: id, type: int}, {name: name, type: string}, {name: emailAddress, type: string},
+                   {name: creditCard, type: string}, {name: city, type: string}, {name: state, type: string}]
+
+  - id: 2
+    stream-id: 2
+    name: Auction
+    rowtime-column: {column: expires, nanoseconds-per-tick: 1000000000}
+    tuple-format: [{name: id, type: int}, {name: itemName, type: string}, {name: description, type: string},
+                   {name: initialBid, type: long}, {name: reserve, type: int}, {name: expires, type: long-timestamp},
+                   {name: expires2, type: long}, {name: seller, type: int}, {name: category, type: int}]
+
+  - id: 3
+    stream-id: 3
+    name: Bid
+    rowtime-column: {column: dateTime, nanoseconds-per-tick: 1000000000}
+    tuple-format: [{name: auction, type: int}, {name: bidder, type: int}, {name: price, type: long},
+                   {name: dateTime, type: long-timestamp}, {name: dateTime2, type: long}]
+
+  - id: 4
+    stream-id: 4
+    name: Category
+    tuple-format: [{name: id, type: int}, {name: name, type: string}, {name: description, type: string},
+                   {name: parentCategory, type: int}]
+
+  - id: 5
+    stream-id: 5
+    timestamps: [{column: b_starttime, format: "%Y-%m-%d %H:%M:%S.%f", offset: 0}, {column: c_stoptime, format: "%Y-%m-%d %H:%M:%S.%f", offset: 0}]
+    name: BikeTrip
+    tuple-format: [{name: a_tripduration, type: long}, {name: b_starttime, type: timestamp},
+                   {name: c_stoptime, type: timestamp}, {name: d_start_station_id, type: long},
+                   {name: e_start_station_name, type: string}, {name: f_start_station_latitude, type: double},
+                   {name: g_start_station_longitude, type: double}, {name: h_end_station_id, type: long},
+                   {name: i_end_station_name, type: string}, {name: j_end_station_latitude, type: double},
+                   {name: k_end_station_longitude, type: double}, {name: l_bikeid, type: long},
+                   {name: m_usertype, type: string}, {name: n_birth_year, type: long}, {name: o_gender, type: long}]
+
+  - id: 6
+    stream-id: 6
+    timestamps: [{column: e_time_frame, format: "%Y-%m-%d %H:%M:%S.%f", offset: 0}]
+    name: BusRecord
+    tuple-format: [ {name: a_ts, type: long}, {name: b_line_id, type: long}, {name: c_direction, type: long},
+                    {name: d_journey_pattern_id, type: string}, {name: e_time_frame, type: timestamp},
+                    {name: f_vehicle_journey_id, type: long}, {name: g_operator, type: string}, {name: h_congested, type: long},
+                    {name: i_longitude, type: double}, {name: j_latitude, type: double},
+                    {name: k_delay, type: long}, {name: l_block_id, type: long}, {name: m_vehicle_id, type: long},
+                    {name: n_stop_id, type: long}, {name: o_at_stop, type: long}]
+
+  - id: 18
+    stream-id: 18
+    name: OutQuery
+    tuple-format: [{name: avgPrice, type: long}, {name: maxPrice, type: long}, {name: minPrice, type: long}, {name: bidder, type: long}, {name: auction, type: long}]
+
+  - id: 19
+    stream-id: 19
+    name: OutQuery2
+    tuple-format: [{name: price, type: long}, {name: bidder, type: long}, {name: auction, type: long}]
+
+  - id: 20
+    stream-id: 20
+    name: OutQuery3
+    tuple-format: [ { name: l_bikeid, type: long }, { name: h_end_station_id, type: long } ]
+
+  - id: 21
+    stream-id: 21
+    name: OutQuery4
+    tuple-format: [ { name: m_vehicle_id, type: long } ]
+
+datasets:
+  - name: NexMark 4k tuples (YAML)
+    type: yaml
+    id: 8
+    stream-id: 2
+    file: nexmark-dataset-5k.yaml
+
+  - name: Citibike August 2018
+    type: csv
+    stream-id: 5
+    id: 9
+    file: 201808-citibike-tripdata.csv
+
+  - name: Citibike 4k tuples (YAML)
+    type: csv
+    stream-id: 5
+    id: 10
+    file: citibike-dataset.csv
+
+  - name: Citibike 4k tuples (YAML)
+    type: csv
+    stream-id: 5
+    id: 11
+    file: citibike-dataset-part1.csv
+
+  - name: Citibike 4k tuples (YAML)
+    type: csv
+    stream-id: 5
+    id: 12
+    file: citibike-dataset-part2.csv
+
+  - name: Citibike 5k tuples (YAML)
+    type: csv
+    stream-id: 5
+    id: 13
+    file: citibike-dataset-5k.csv
+
+  - name: Citibike 4k tuples (YAML)
+    type: csv
+    stream-id: 5
+    id: 14
+    file: 201808-citibike-tripdata-part1.csv
+
+  - name: Citibike 4k tuples (YAML)
+    type: csv
+    stream-id: 5
+    id: 15
+    file: 201808-citibike-tripdata-part2.csv
+
+  - name: Citibike 4k tuples (YAML)
+    type: csv
+    stream-id: 5
+    id: 16
+    file: 201808-citibike-tripdata-03-04-part1.csv
+
+  - name: Citibike 4k tuples (YAML)
+    type: csv
+    stream-id: 5
+    id: 17
+    file: 201808-citibike-tripdata-04-06-part2.csv
+
+  - name: Bus dataset (YAML)
+    type: csv
+    stream-id: 6
+    id: 18
+    file: Bus1-1hour/siri.20121106.csv
+
+spequeries:
+  outputs:
+  - {schema: stream_name7, node: 0, edge: stream_name7, name: Output 0}
+  inputs:
+  - {schema: stream_name0, node: 0, edge: stream_name0, name: input 0}
+  queries:
+  - operators:
+    - name: input 0
+      type: input
+    - name: Output 0
+      type: output
+    - name: Filter 0
+      type: filter
+      parameters: {op: equals, arg2: {type: int, value: "342", value-type: int}, arg1: {type: int, value: s1.attribute1, value-type: int}}
+    - name: Aggregate 0
+      type: aggregation
+      parameters: {field: field1, aggregation-type: avg}
+    - name: Aggregate 1
+      type: aggregation
+      parameters: {field: field2, aggregation-type: max}
+    - name: Aggregate 2
+      type: aggregation
+      parameters: {field: field0, aggregation-type: min}
+    - name: Select 0
+      type: select
+      parameters:
+        fields: [field3, field4]
+    name: NewName0
+    edges:
+    - stream: stream_name1
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Aggregate 0, type: intermediate}
+    - stream: BikeTrip
+      from: {name: input 0, type: input}
+      to: {name: Filter 0, type: intermediate}
+    - stream: stream_name5
+      from: {name: Aggregate 1, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    - stream: stream_name4
+      from: {name: Aggregate 0, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    - stream: stream_name3
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Aggregate 2, type: intermediate}
+    - stream: stream_name2
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Aggregate 1, type: intermediate}
+    - stream: stream_name7
+      from: {name: Select 0, type: intermediate}
+      to: {name: Output 0, type: output}
+    - stream: stream_name6
+      from: {name: Aggregate 2, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    id: 5
+#  inputs: []
+#  outputs: []
+#  queries:
+#  - name: query1i
+#    operators:
+#    - name: query1
+#      type: select
+#      parameters:
+#      - fields: [field1, field2, field3]
+#    edges: []
+
+tracepoints:
+  - id: 0
+    name: Start experiment
+    active: true
+    category:
+      isScalingEvent: false
+      isMilestoneEvent: false
+
+  - id: 1
+    name: Receive Event
+    active: true
+    arguments:
+      - name: tid
+        type: int
+      - name: CurCepEvent
+        type: int
+    description:
+    category:
+      isScalingEvent: false
+      isMilestoneEvent: true
+
+  - id: 2
+    name: Transmit event
+    active: true
+    arguments:
+      - name: tid
+        type: int
+      - name: CurCepEvent
+        type: int
+    description:
+    category:
+      isScalingEvent: false
+      isMilestoneEvent: true
+
+  - id: 3
+    name: Start operator migration
+    active: true
+    arguments:
+      - name: tid
+        type: int
+    description:
+    category:
+      isScalingEvent: false
+      isMilestoneEvent: true
+
+  - id: 4
+    name: Stop operator migration
+    active: true
+    arguments:
+      - name: tid
+        type: int
+    description:
+    category:
+      isScalingEvent: false
+      isMilestoneEvent: true
+
+  - id: 6
+    name: Created Complex Event
+    active: false
+    arguments:
+      - name: tid
+        type: int
+      - name: CurCepEvent
+        type: int
+    description: A complex event was created
+    category:
+      isScalingEvent: false
+      isMilestoneEvent: true
+
+  - id: 100
+    name: Finished Processing Event
+    active: true
+    arguments:
+      - name: tid
+        type: int
+      - name: CurCepEvent
+        type: int
+    description:
+    category:
+      isScalingEvent: false
+      isMilestoneEvent: true
+
+  - id: 221
+    name: Add Query
+    active: true
+    arguments:
+      - name: CepQuery
+        type: int
+    x_variable: numberQueries
+    description: Traced when deploying a query. This is a simulation and scaling event.
+    category:
+      isScalingEvent: true
+      isMilestoneEvent: false
+
+  - id: 200
+    name: Finished one set
+    active: true
+    description: Traced when one set of streams have ended
+    category:
+      isScalingEvent: false
+      isMilestoneEvent: false
+
+  - id: 201
+    name: Increase number of subscribers
+    active: true
+    description: Traced when the number of subscribers increases
+    category:
+      isScalingEvent: true
+      isMilestoneEvent: false
+
+  - id: 202
+    name: Increase number of publishers
+    active: true
+    description: Traced when the number of publishers increases
+    category:
+      isScalingEvent: true
+      isMilestoneEvent: false
+
+  - id: 203
+    name: Increase number of publishers and subscribers
+    active: true
+    description: Traced when the number of publishers and subscribers increases
+    category:
+      isScalingEvent: true
+      isMilestoneEvent: false

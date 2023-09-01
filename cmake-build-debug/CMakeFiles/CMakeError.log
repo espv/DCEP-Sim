@@ -1,0 +1,49 @@
+Performing C++ SOURCE FILE Test HAVE_UINT128_T failed with the following output:
+Change Dir: /home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uRGYDQ
+
+Run Build Command(s):/home/espen/Editors/clion-2021.2.3/bin/ninja/linux/x64/ninja cmTC_9253e && [1/2] Building CXX object CMakeFiles/cmTC_9253e.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_9253e.dir/src.cxx.o 
+/usr/bin/c++ -DHAVE_UINT128_T  -fPIE -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/cmTC_9253e.dir/src.cxx.o -c /home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uRGYDQ/src.cxx
+/home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uRGYDQ/src.cxx: In function ‘int main(int, char**)’:
+/home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uRGYDQ/src.cxx:5:18: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint8_t’?
+    5 |             if ((uint128_t *) 0) return 0;
+      |                  ^~~~~~~~~
+      |                  uint8_t
+/home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uRGYDQ/src.cxx:5:29: error: expected primary-expression before ‘)’ token
+    5 |             if ((uint128_t *) 0) return 0;
+      |                             ^
+/home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uRGYDQ/src.cxx:5:30: error: expected ‘)’ before numeric constant
+    5 |             if ((uint128_t *) 0) return 0;
+      |                ~             ^~
+      |                              )
+/home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uRGYDQ/src.cxx:6:25: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint8_t’?
+    6 |             if (sizeof (uint128_t)) return 0;
+      |                         ^~~~~~~~~
+      |                         uint8_t
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <stdint.h>
+       int main(int argc, char **argv)
+         {
+            (void)argc; (void)argv;
+            if ((uint128_t *) 0) return 0;
+            if (sizeof (uint128_t)) return 0;
+            return 1;
+         }
+
+Determining if the include file net/netmap_user.h exists failed with the following output:
+Change Dir: /home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ayJsON
+
+Run Build Command(s):/home/espen/Editors/clion-2021.2.3/bin/ninja/linux/x64/ninja cmTC_728e9 && [1/2] Building CXX object CMakeFiles/cmTC_728e9.dir/CheckIncludeFile.cxx.o
+FAILED: CMakeFiles/cmTC_728e9.dir/CheckIncludeFile.cxx.o 
+/usr/bin/c++   -fPIE -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/cmTC_728e9.dir/CheckIncludeFile.cxx.o -c /home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ayJsON/CheckIncludeFile.cxx
+/home/espen/ns-3/ns3-wip/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ayJsON/CheckIncludeFile.cxx:1:10: fatal error: net/netmap_user.h: No such file or directory
+    1 | #include <net/netmap_user.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+

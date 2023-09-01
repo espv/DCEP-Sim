@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project name="Borealis Gui" default="build" basedir=".">
+
+   <property file="build.properties"/>
+   <property name="dist.dir"  location="dist" />
+   <property name="lib.dir"   value="./lib/"/>
+   <property name="class.dir" value="./classes/"/>
+
+
+   <path id="class.path">
+       <fileset dir="lib">
+           <include name="**/*.jar" />
+       </fileset>
+   </path>
+ 
+   <target name="build" description="Compiles all Java files">
+   <mkdir dir="${dist.dir}"/>
+	 <mkdir dir="${class.dir}"/>
+
+	 <javac debug="true" deprecation="on" destdir="${class.dir}" >
+            <src path="."/>
+            <classpath refid="class.path"/>
+         </javac>
+   </target>
+
+   <target name="clean"    description="clean up" >
+      <!-- Delete the ${class.dir} directory trees -->
+      <delete dir="${class.dir}"/>
+      <delete dir="${dist.dir}"/>
+   </target>
+
+    <target name="-init">
+
+    </target>
+
+  <!-- compiling of files -->
+    <target name="-post-init-comp" depends="-init">
+
+        <!--
+          turn all of the source java class.dir into class files
+          located in the directory we made*
+        -->
+        <javac srcdir="${src}" destdir="${class.dir}"/>
+	</target>
+
+   <path id="libraries.path">    
+        <fileset dir="${lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+   <!-- creation of the jar file -->
+    <target name="jar" depends="build">
+	    <mkdir dir="${dist.dir}/${lib.dir}"/>
+	    <copy todir="${dist.dir}/${lib.dir}" flatten="true">
+            <path refid="libraries.path"/>
+        </copy>
+
+	<manifestclasspath property="manifest.classpath" jarfile="${jar.file}">
+		<classpath refid="libraries.path"/>
+	</manifestclasspath>
+
+	<jar destfile="${dist.dir}/gui.jar" basedir="${class.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+                <attribute name="Class-Path" value="${manifest.classpath}"/>
+            </manifest>
+        </jar>
+
+        <!-- remove the class folder -->
+        <delete dir="${class.dir}"/>
+    </target>
+
+</project>

@@ -1,0 +1,103 @@
+/home/espen/Editors/clion-2021.2.3/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/espen/Editors/clion-2021.2.3/bin/ninja/linux/x64/ninja -G Ninja -S /home/espen/ns-3/ns3-wip -B /home/espen/ns-3/ns3-wip/cmake-build-debug
+-- Using default output directory /home/espen/ns-3/ns3-wip/build
+-- Proceeding without cmake-format
+-- find_external_library: SQLite3 was found.
+-- yaml-cpp was found
+-- Harfbuzz is required by GTK3 and was not found.
+-- LibXML2 was not found. Continuing without it.
+-- LibRT was found.
+-- Visualizer requires Python bindings
+-- Found Boost: /usr/local/lib/cmake/Boost-1.80.0/BoostConfig.cmake (found version "1.80.0")  
+-- GSL was not found. Continuing without it.
+-- docs: doxygen documentation not enabled due to missing dependencies: dot;dia
+-- Failed to locate sphinx-build executable (missing: SPHINX_EXECUTABLE) 
+-- docs: sphinx documentation not enabled due to missing dependencies: Sphinx;epstopdf;latexmk;convert;dvipng
+-- Precompiled headers were enabled
+-- Processing src/dcep
+-- YAML LIBRARIES: yaml-cpp
+-- YAML library: 
+-- YAML library: 
+-- YAML library: 
+-- YAML library: /usr/local/OFF
+-- Found Boost: /usr/local/lib/cmake/Boost-1.80.0/BoostConfig.cmake (found version "1.80.0") found components: regex serialization 
+-- Boost found
+-- /usr/local/include
+-- Boost::regex;Boost::serialization
+-- Processing src/stream-processing
+-- Processing src/core
+-- Boost Units have been found.
+-- Processing src/olsr
+-- Processing src/internet
+-- Processing src/network
+-- Processing src/stats
+-- Processing src/bridge
+-- Processing src/traffic-control
+-- Processing src/config-store
+-- Processing src/netanim
+-- Processing src/mobility
+-- Processing src/wimax
+-- Processing src/propagation
+-- Processing src/wifi
+-- Processing src/energy
+-- Processing src/spectrum
+-- Processing src/antenna
+-- Processing src/csma
+-- Processing src/lte
+-- Processing src/fd-net-device
+-- Checking for module 'libdpdk'
+--   No package 'libdpdk' found
+-- Processing src/buildings
+-- Processing src/virtual-net-device
+-- Processing src/point-to-point
+-- Processing src/applications
+-- Processing src/uan
+-- Processing src/lr-wpan
+-- Processing src/wave
+-- Processing src/point-to-point-layout
+-- Processing src/test
+-- ---- Summary of optional ns-3 features:
+Build profile                 : debug
+Build directory               : /home/espen/ns-3/ns3-wip/build
+BRITE Integration             : OFF (missing dependency)
+DES Metrics event collection  : OFF (not requested)
+DPDK NetDevice                : OFF (not requested)
+Emulation FdNetDevice         : ON
+Examples                      : OFF (not requested)
+File descriptor NetDevice     : ON
+GNU Scientific Library (GSL)  : OFF (missing dependency)
+YAML-CPP  : OFF (not requested)
+GtkConfigStore                : OFF (missing dependency)
+LibXml2 support               : OFF (missing dependency)
+MPI Support                   : OFF (not requested)
+ns-3 Click Integration        : OFF (missing dependency)
+ns-3 OpenFlow Integration     : OFF (missing dependency)
+Netmap emulation FdNetDevice  : OFF (missing dependency)
+PyViz visualizer              : OFF (missing dependency)
+Python API Scanning Support   : OFF (not requested)
+Python Bindings               : OFF (not requested)
+Real Time Simulator           : ON
+SQLite support                : ON
+Tap Bridge                    : ON
+Tap FdNetDevice               : ON
+Tests                         : OFF (not requested)
+
+
+Modules configured to be built:
+antenna                   applications              bridge                    
+buildings                 config-store              core                      
+csma                      dcep                      energy                    
+fd-net-device             internet                  lr-wpan                   
+lte                       mobility                  netanim                   
+network                   olsr                      point-to-point            
+point-to-point-layout     propagation               spectrum                  
+stats                     stream-processing         traffic-control           
+uan                       virtual-net-device        wave                      
+wifi                      wimax                     
+
+Modules that cannot be built:
+mpi                       test                      
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/espen/ns-3/ns3-wip/cmake-build-debug

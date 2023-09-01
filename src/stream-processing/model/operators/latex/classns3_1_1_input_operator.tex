@@ -1,0 +1,53 @@
+\hypertarget{classns3_1_1_input_operator}{}\doxysection{ns3\+::Input\+Operator Class Reference}
+\label{classns3_1_1_input_operator}\index{ns3::InputOperator@{ns3::InputOperator}}
+
+
+Inheritance diagram for ns3\+::Input\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Input\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_a6b089371a124cec5b1642594476d6637}\label{classns3_1_1_input_operator_a6b089371a124cec5b1642594476d6637}} 
+{\bfseries Input\+Operator} (std\+::string alias)
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_a0472bcf420f178e39e4aa0d5cc5806e7}\label{classns3_1_1_input_operator_a0472bcf420f178e39e4aa0d5cc5806e7}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_aa36023637c362c36070f5fef51297c8e}\label{classns3_1_1_input_operator_aa36023637c362c36070f5fef51297c8e}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_a2d7cf213be4ef2d0dc282101807be28e}\label{classns3_1_1_input_operator_a2d7cf213be4ef2d0dc282101807be28e}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_af5b07bf39219f3e597a4bf154e095c94}\label{classns3_1_1_input_operator_af5b07bf39219f3e597a4bf154e095c94}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_af77b5fe4bba70129f3adb4ab1b4a5ef6}\label{classns3_1_1_input_operator_af77b5fe4bba70129f3adb4ab1b4a5ef6}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_ac2a7cd02efe55a07b164985a333d77ae}\label{classns3_1_1_input_operator_ac2a7cd02efe55a07b164985a333d77ae}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_a6ddfa258353b5de992c04d218bf2dc34}\label{classns3_1_1_input_operator_a6ddfa258353b5de992c04d218bf2dc34}} 
+std\+::string {\bfseries alias}
+\item 
+\mbox{\Hypertarget{classns3_1_1_input_operator_a73543f62019b9efc51af9632d9318dc4}\label{classns3_1_1_input_operator_a73543f62019b9efc51af9632d9318dc4}} 
+int {\bfseries number\+\_\+tuples} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Input\+Operator.\+cpp\end{DoxyCompactItemize}

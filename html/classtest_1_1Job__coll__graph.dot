@@ -1,0 +1,7 @@
+digraph "test.Job"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{test.Job\n|+ is_break\l+ is_skip\l+ skip_reason\l+ is_example\l+ is_pyexample\l+ shell_command\l+ display_name\l+ basedir\l+ tempdir\l+ cwd\l+ tmp_file_name\l+ returncode\l+ elapsed_time\l+ build_path\l|+ __init__()\l+ set_is_break()\l+ set_is_skip()\l+ set_skip_reason()\l+ set_is_example()\l+ set_is_pyexample()\l+ set_shell_command()\l+ set_build_path()\l+ set_display_name()\l+ set_basedir()\l+ set_tempdir()\l+ set_cwd()\l+ set_tmp_file_name()\l+ set_returncode()\l+ set_elapsed_time()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

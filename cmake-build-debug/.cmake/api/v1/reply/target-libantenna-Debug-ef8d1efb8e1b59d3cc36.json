@@ -1,0 +1,307 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-antenna-debug.so"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"build_lib",
+			"install",
+			"target_link_libraries",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"include",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/antenna/CMakeLists.txt",
+			"src/core/CMakeLists.txt",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 75,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 459,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 1
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 357,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 6
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 138,
+				"parent" : 8
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 361,
+				"parent" : 9
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 363,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 539,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 1162,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 314,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 1157,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 116,
+				"parent" : 8
+			},
+			{
+				"file" : 3,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 19,
+				"parent" : 17
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 57,
+				"parent" : 17
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 540,
+				"parent" : 9
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 608,
+				"parent" : 9
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 749,
+				"parent" : 9
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "libcore::@0618756b1ff51bca1a0e"
+		},
+		{
+			"id" : "libantenna-obj::@000737a0949b1597daab"
+		}
+	],
+	"id" : "libantenna::@000737a0949b1597daab",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/espen/ns-3/ns3-wip/build/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,--no-as-needed",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-core-debug.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,--as-needed",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,--no-as-needed",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/librt.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "libantenna",
+	"nameOnDisk" : "libns3.36.1-antenna-debug.so",
+	"paths" : 
+	{
+		"build" : "src/antenna",
+		"source" : "src/antenna"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/antenna/CMakeFiles/libantenna-obj.dir/model/angles.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/antenna/CMakeFiles/libantenna-obj.dir/model/antenna-model.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/antenna/CMakeFiles/libantenna-obj.dir/model/cosine-antenna-model.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/antenna/CMakeFiles/libantenna-obj.dir/model/isotropic-antenna-model.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/antenna/CMakeFiles/libantenna-obj.dir/model/parabolic-antenna-model.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/antenna/CMakeFiles/libantenna-obj.dir/model/phased-array-model.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/antenna/CMakeFiles/libantenna-obj.dir/model/three-gpp-antenna-model.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/antenna/CMakeFiles/libantenna-obj.dir/model/uniform-planar-array.cc.o",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

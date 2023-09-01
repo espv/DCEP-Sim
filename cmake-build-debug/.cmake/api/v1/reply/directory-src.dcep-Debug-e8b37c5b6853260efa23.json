@@ -1,0 +1,77 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/dcep/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 459,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-dcep-debug.so"
+			],
+			"targetId" : "libdcep::@fb8fb3e39f9fa27ac9bd",
+			"targetIndex" : 22,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/dcep/model/communication.h",
+				"src/dcep/model/placement.h",
+				"src/dcep/model/cep-engine.h",
+				"src/dcep/model/dcep.h",
+				"src/dcep/model/common.h",
+				"src/dcep/model/message-types.h",
+				"src/dcep/model/dcep-header.h",
+				"src/dcep/helper/dcep-app-helper.h",
+				"src/dcep/model/utility/CSVIterator.h",
+				"src/dcep/model/utility/knapsack_solver.h",
+				"src/dcep/model/utility/utility.h",
+				"src/dcep/model/dcep-apps/expose-coordinator.h",
+				"src/dcep/model/dcep-apps/expose-wrapper.h",
+				"src/dcep/model/dcep-apps/dataset-manipulator.h",
+				"build/include/ns3/dcep-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/dcep",
+		"source" : "src/dcep"
+	}
+}

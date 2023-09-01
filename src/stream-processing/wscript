@@ -1,0 +1,64 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+# def options(opt):
+#     pass
+
+def configure(conf):
+    conf.env['yaml-cpp'] = conf.check(mandatory=True, lib='yaml-cpp', uselib_store='YAML_CPP')
+    conf.env['boost_regex'] = conf.check(mandatory=True, lib='boost_regex', uselib_store='BOOST_REGEX')
+    conf.env['boost_system'] = conf.check(mandatory=True, lib='boost_system', uselib_store='BOOST_SYSTEM')
+    conf.env['boost_serialization'] = conf.check(mandatory=True, lib='boost_serialization', uselib_store='BOOST_SERIALIZATION')
+
+
+def build(bld):
+    module = bld.create_ns3_module('stream-processing', ['core'])
+    module.use.append("YAML_CPP")
+    module.use.append("BOOST_REGEX")
+    module.use.append("BOOST_SYSTEM")
+    module.use.append("BOOST_SERIALIZATION")
+    module.source = [
+       'model/operators/SelectOperator.cpp',
+       'model/operators/GroupOperator.cpp',
+       'model/operators/CepPatternOperator.cpp',
+       'model/operators/DefineOperator.cpp',
+       'model/operators/WithinOperator.cpp',
+       'model/operators/ForwardOperator.cpp',
+       'model/operators/SinkOperator.cpp',
+       'model/operators/JoinOperator.cpp',
+       'model/operators/FilterOperator.cpp',
+       'model/operators/Stream.cpp',
+       'model/operators/PrintOperator.cpp',
+       'model/operators/Operator.cpp',
+       'model/operators/WindowOperator.cpp',
+       'model/operators/MigrationPlan.cpp',
+       'model/operators/PartialState.cpp',
+       'model/processing/CpuCore.cpp',
+       'model/processing/NodeResourceManager.cpp',
+       'model/Tuple.cpp',
+       'model/Query.cpp',
+        ]
+
+    module_test = bld.create_ns3_module_test_library('stream-processing')
+    module_test.source = [
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'stream-processing'
+    headers.source = [
+       'model/operators/Operator.h',
+       'model/operators/SerializedOperator.h',
+       'model/stream-processing-common.h',
+       'model/Metrics.h',
+       'model/Tuple.h',
+       'model/Query.h',
+       'model/processing/CpuCore.h',
+       'model/processing/NodeResourceManager.h',
+       'model/utility/string-functions.h',
+       'model/utility/random.h',
+        ]
+
+    if bld.env['ENABLE_EXAMPLES']:
+            bld.recurse('examples')
+
+    bld.ns3_python_bindings()
+

@@ -1,0 +1,74 @@
+\hypertarget{classns3_1_1_cep_pattern_operator}{}\doxysection{ns3\+::Cep\+Pattern\+Operator Class Reference}
+\label{classns3_1_1_cep_pattern_operator}\index{ns3::CepPatternOperator@{ns3::CepPatternOperator}}
+
+
+Inheritance diagram for ns3\+::Cep\+Pattern\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Cep\+Pattern\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_ab21df9a62495089b68fbae5d53bc567a}\label{classns3_1_1_cep_pattern_operator_ab21df9a62495089b68fbae5d53bc567a}} 
+{\bfseries Cep\+Pattern\+Operator} (const std\+::string \&pattern, bool multiple\+\_\+sequences, bool emit\+\_\+all\+\_\+tuples)
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_aa8e2cd0de32533f537be3ba1d463d2bf}\label{classns3_1_1_cep_pattern_operator_aa8e2cd0de32533f537be3ba1d463d2bf}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_addb4a52d83664e00a2a8dda3f6561e49}\label{classns3_1_1_cep_pattern_operator_addb4a52d83664e00a2a8dda3f6561e49}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ stream) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a5fa7663c03822e6998f54824c032f1de}\label{classns3_1_1_cep_pattern_operator_a5fa7663c03822e6998f54824c032f1de}} 
+size\+\_\+t {\bfseries calculate\+Utility} (int group\+\_\+id, int partial\+\_\+state\+\_\+index) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_af9c119f7fc40781346a0de67f661c76d}\label{classns3_1_1_cep_pattern_operator_af9c119f7fc40781346a0de67f661c76d}} 
+void {\bfseries parse\+Pattern} (const std\+::string \&pattern)
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a9080161e5cbbff4d177de9e323dad280}\label{classns3_1_1_cep_pattern_operator_a9080161e5cbbff4d177de9e323dad280}} 
+size\+\_\+t {\bfseries Get\+Serialized\+Size} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a8bf8e44d9fb7ccf29844be29d4aa4ee7}\label{classns3_1_1_cep_pattern_operator_a8bf8e44d9fb7ccf29844be29d4aa4ee7}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state}{Partial\+State}} $>$ $>$ {\bfseries get\+Partial\+States} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a897b726e918474445401c16e4fbfc0fb}\label{classns3_1_1_cep_pattern_operator_a897b726e918474445401c16e4fbfc0fb}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a26fa568c1146877ddd0dae8fefed1668}\label{classns3_1_1_cep_pattern_operator_a26fa568c1146877ddd0dae8fefed1668}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_ae53b0ae21f42e4beefec5eb748bcede2}\label{classns3_1_1_cep_pattern_operator_ae53b0ae21f42e4beefec5eb748bcede2}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_ae397ed9b0d0872334f4b366e526354e4}\label{classns3_1_1_cep_pattern_operator_ae397ed9b0d0872334f4b366e526354e4}} 
+std\+::string {\bfseries pattern}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a86a2015383195e07304d1d710c6e0a7b}\label{classns3_1_1_cep_pattern_operator_a86a2015383195e07304d1d710c6e0a7b}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_define_operator}{Define\+Operator}} $>$ $>$ {\bfseries define\+Operators}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_ad3a38d0cce61ef97687c328fac12add7}\label{classns3_1_1_cep_pattern_operator_ad3a38d0cce61ef97687c328fac12add7}} 
+boost\+::regex {\bfseries regex}
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a4d519d2e38e6bdfd3c7495d04f764cbe}\label{classns3_1_1_cep_pattern_operator_a4d519d2e38e6bdfd3c7495d04f764cbe}} 
+bool {\bfseries multiple\+\_\+sequences} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a44ee3c55cab51eecbdffdfaf31b77bea}\label{classns3_1_1_cep_pattern_operator_a44ee3c55cab51eecbdffdfaf31b77bea}} 
+bool {\bfseries emit\+\_\+all\+\_\+tuples} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a5a47e36a715727c1676d6b435882723d}\label{classns3_1_1_cep_pattern_operator_a5a47e36a715727c1676d6b435882723d}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ {\bfseries group\+Operator} = nullptr
+\item 
+\mbox{\Hypertarget{classns3_1_1_cep_pattern_operator_a9bd37a801a0c0c9846ffdd7ce6d0fb90}\label{classns3_1_1_cep_pattern_operator_a9bd37a801a0c0c9846ffdd7ce6d0fb90}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_within_operator}{Within\+Operator}} $>$ {\bfseries within\+Operator} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Cep\+Pattern\+Operator.\+cpp\end{DoxyCompactItemize}

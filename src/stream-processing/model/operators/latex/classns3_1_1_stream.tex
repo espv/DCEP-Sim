@@ -1,0 +1,115 @@
+\hypertarget{classns3_1_1_stream}{}\doxysection{ns3\+::Stream Class Reference}
+\label{classns3_1_1_stream}\index{ns3::Stream@{ns3::Stream}}
+
+
+Inheritance diagram for ns3\+::Stream\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Stream\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a0a1467e98aeb5e517ce1ea243465f58e}\label{classns3_1_1_stream_a0a1467e98aeb5e517ce1ea243465f58e}} 
+{\bfseries Stream} (std\+::vector$<$ int $>$ output\+\_\+stream\+\_\+ids)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a5eb4b2590b69d3c01dbb358f29d9ced0}\label{classns3_1_1_stream_a5eb4b2590b69d3c01dbb358f29d9ced0}} 
+{\bfseries Stream} (std\+::vector$<$ int $>$ output\+\_\+stream\+\_\+ids, int node\+\_\+id, Ptr$<$ Stream\+Query $>$ q)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a95c9b21bc7ddca967388f0b3683f854a}\label{classns3_1_1_stream_a95c9b21bc7ddca967388f0b3683f854a}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries Add\+Operator} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ op, const Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ \&new\+\_\+stream)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_aea8543d7133d7f4b2e88150f8318e728}\label{classns3_1_1_stream_aea8543d7133d7f4b2e88150f8318e728}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries filter} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_filter_argument}{Filter\+Argument}} $>$fa1, Op op, Ptr$<$ \mbox{\hyperlink{classns3_1_1_filter_argument}{Filter\+Argument}} $>$ fa2)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a82978f64493ac3c930a4ae91087d03f7}\label{classns3_1_1_stream_a82978f64493ac3c930a4ae91087d03f7}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries group} (std\+::vector$<$ std\+::string $>$ groups)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_af81b04bc2d247503b57709ec21059686}\label{classns3_1_1_stream_af81b04bc2d247503b57709ec21059686}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries group} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_af2cab1460f52ae57d95c3dd27fb184a1}\label{classns3_1_1_stream_af2cab1460f52ae57d95c3dd27fb184a1}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries join} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ joining\+Stream)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_aaa700f0a51dbdc71a61ffc145b40f9db}\label{classns3_1_1_stream_aaa700f0a51dbdc71a61ffc145b40f9db}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries send\+To} (int node\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a54e6b7ecea3091a844c4e2e7c26a934b}\label{classns3_1_1_stream_a54e6b7ecea3091a844c4e2e7c26a934b}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries print} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_ab67844a645bb92987e6c6c641c356b44}\label{classns3_1_1_stream_ab67844a645bb92987e6c6c641c356b44}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries passthrough} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a68c55e2b51186772413188fc979c74b5}\label{classns3_1_1_stream_a68c55e2b51186772413188fc979c74b5}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries input} (std\+::string alias)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a07e13d131c484b38fabe3e4ec7c22527}\label{classns3_1_1_stream_a07e13d131c484b38fabe3e4ec7c22527}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries sink} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a7cbb84199348a9ca7336cb0670cf5598}\label{classns3_1_1_stream_a7cbb84199348a9ca7336cb0670cf5598}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries cep} (std\+::string pattern, bool multiple\+\_\+sequences, bool emit\+\_\+all\+\_\+tuples)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a61b26515efbd274ed1bcfad82e5a9e3a}\label{classns3_1_1_stream_a61b26515efbd274ed1bcfad82e5a9e3a}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries define} (std\+::string alias, Ptr$<$ \mbox{\hyperlink{classns3_1_1_filter_argument}{Filter\+Argument}} $>$ fa1, Op op, Ptr$<$ \mbox{\hyperlink{classns3_1_1_filter_argument}{Filter\+Argument}} $>$ fa2)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a56c22dd67d5d48f0c243220f930dc03a}\label{classns3_1_1_stream_a56c22dd67d5d48f0c243220f930dc03a}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries define} (std\+::string alias)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a2136725201d6c64a4666972a836fe764}\label{classns3_1_1_stream_a2136725201d6c64a4666972a836fe764}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries within} (long ms, std\+::string timestamp\+\_\+attribute)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_ad0cddf84a94f0ae18434c4de7df9898a}\label{classns3_1_1_stream_ad0cddf84a94f0ae18434c4de7df9898a}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries window} (int size, int jump, Window\+Type size\+\_\+type, int emit\+\_\+size, Window\+Type emit\+\_\+type, const std\+::string \&external\+\_\+timestamp\+\_\+key)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_adf2fa5a6083b83131598b8d5efd27416}\label{classns3_1_1_stream_adf2fa5a6083b83131598b8d5efd27416}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries window} (int size, int jump, Window\+Type size\+\_\+type, Window\+Type emit\+\_\+type, const std\+::string \&external\+\_\+timestamp\+\_\+key)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_afccef1c88d77dfd5a39c3cd495b2d9c5}\label{classns3_1_1_stream_afccef1c88d77dfd5a39c3cd495b2d9c5}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries select} (std\+::string select\+\_\+stmt, int output\+\_\+stream\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a2344b610f84a2da26fe8329a905fe974}\label{classns3_1_1_stream_a2344b610f84a2da26fe8329a905fe974}} 
+std\+::vector$<$ int $>$ {\bfseries get\+Output\+Stream\+Id} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_af4dc6a9d1ae51138c682b077996c3399}\label{classns3_1_1_stream_af4dc6a9d1ae51138c682b077996c3399}} 
+std\+::vector$<$ int $>$ {\bfseries get\+Input\+Stream\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_aabf8c8981a78c503a43609b75b8a139c}\label{classns3_1_1_stream_aabf8c8981a78c503a43609b75b8a139c}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a6a9c404022b78296f8c0c42964a33532}\label{classns3_1_1_stream_a6a9c404022b78296f8c0c42964a33532}} 
+std\+::vector$<$ int $>$ {\bfseries output\+\_\+stream\+\_\+ids}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a71ce7653b588363f23a71fbd130541fe}\label{classns3_1_1_stream_a71ce7653b588363f23a71fbd130541fe}} 
+std\+::unordered\+\_\+map$<$ int, int $>$ {\bfseries output\+\_\+stream\+\_\+id\+\_\+to\+\_\+tuple\+\_\+position}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a71b9e1bc90cf63c3279591590c6a8b8c}\label{classns3_1_1_stream_a71b9e1bc90cf63c3279591590c6a8b8c}} 
+std\+::vector$<$ int $>$ {\bfseries input\+\_\+stream\+\_\+ids}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a71fe2fc97b1017b2e7e9a31b078ca0a9}\label{classns3_1_1_stream_a71fe2fc97b1017b2e7e9a31b078ca0a9}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries next\+\_\+stream}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a2cc0cb938c2c7c309b939a6d77066ecd}\label{classns3_1_1_stream_a2cc0cb938c2c7c309b939a6d77066ecd}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries previous\+\_\+stream}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_aa037c82b35fb2dbb6d0a9ec3df3094bd}\label{classns3_1_1_stream_aa037c82b35fb2dbb6d0a9ec3df3094bd}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ $>$ {\bfseries operators}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_a5f21e60a32dfbf98724cec3cb6b9ae7e}\label{classns3_1_1_stream_a5f21e60a32dfbf98724cec3cb6b9ae7e}} 
+int {\bfseries node\+\_\+id} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_ac0db46b8f2d2234b94c68dbd72c22b61}\label{classns3_1_1_stream_ac0db46b8f2d2234b94c68dbd72c22b61}} 
+Ptr$<$ Stream\+Query $>$ {\bfseries query}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Stream.\+cpp\end{DoxyCompactItemize}

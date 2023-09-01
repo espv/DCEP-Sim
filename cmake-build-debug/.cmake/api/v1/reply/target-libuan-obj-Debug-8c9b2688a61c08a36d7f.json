@@ -1,0 +1,626 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./helper/acoustic-modem-energy-model-helper.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./helper/uan-helper.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/acoustic-modem-energy-model.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-channel.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-header-common.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-header-rc.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-mac-aloha.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-mac-cw.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-mac-rc-gw.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-mac-rc.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-mac.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-net-device.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-noise-model-default.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-noise-model.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-phy-dual.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-phy-gen.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-phy.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-prop-model-ideal.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-prop-model-thorp.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-prop-model.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-transducer-hd.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-transducer.cc.o"
+		},
+		{
+			"path" : "src/uan/CMakeFiles/libuan-obj.dir/./model/uan-tx-mode.cc.o"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"build_lib",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"include",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/uan/CMakeLists.txt",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 138,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 361,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 363,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 539,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1162,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 314,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1157,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 116,
+				"parent" : 3
+			},
+			{
+				"file" : 2,
+				"parent" : 11
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 19,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 57,
+				"parent" : 12
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 540,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 608,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 749,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIC -fdiagnostics-color=always   -fno-semantic-interposition"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				},
+				{
+					"fragment" : "-std=gnu++20"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "HAVE_SQLITE3"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "NS3_ASSERT_ENABLE"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "NS3_BUILD_PROFILE_DEBUG"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "NS3_LOG_ENABLE"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "PROJECT_SOURCE_PATH=\"/home/espen/ns-3/ns3-wip\""
+				},
+				{
+					"backtrace" : 14,
+					"define" : "__LINUX__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 15,
+					"path" : "/usr"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/espen/ns-3/ns3-wip/build/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/usr/include/python3.10"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22
+			]
+		}
+	],
+	"id" : "libuan-obj::@b2ca6ee95032a5560205",
+	"name" : "libuan-obj",
+	"paths" : 
+	{
+		"build" : "src/uan",
+		"source" : "src/uan"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/helper/acoustic-modem-energy-model-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/helper/uan-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/acoustic-modem-energy-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-channel.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-header-common.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-header-rc.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-mac-aloha.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-mac-cw.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-mac-rc-gw.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-mac-rc.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-mac.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-net-device.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-noise-model-default.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-noise-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-phy-dual.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-phy-gen.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-phy.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-prop-model-ideal.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-prop-model-thorp.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-prop-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-transducer-hd.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-transducer.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/uan/model/uan-tx-mode.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/helper/acoustic-modem-energy-model-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/helper/uan-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/acoustic-modem-energy-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-channel.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-header-common.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-header-rc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-mac-aloha.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-mac-cw.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-mac-rc-gw.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-mac-rc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-mac.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-net-device.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-noise-model-default.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-noise-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-phy-dual.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-phy-gen.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-phy.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-prop-model-ideal.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-prop-model-thorp.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-prop-model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-transducer-hd.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-transducer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/uan/model/uan-tx-mode.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

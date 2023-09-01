@@ -1,0 +1,461 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-lr-wpan-debug.so"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"build_lib",
+			"install",
+			"target_link_libraries",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"include",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/lr-wpan/CMakeLists.txt",
+			"src/network/CMakeLists.txt",
+			"src/stats/CMakeLists.txt",
+			"src/spectrum/CMakeLists.txt",
+			"src/core/CMakeLists.txt",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 75,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 459,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 1
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 149,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 6
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 71,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 9
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 1,
+				"file" : 4,
+				"line" : 78,
+				"parent" : 11
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 12
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 5,
+				"line" : 357,
+				"parent" : 14
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 15
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 138,
+				"parent" : 17
+			},
+			{
+				"command" : 4,
+				"file" : 6,
+				"line" : 361,
+				"parent" : 18
+			},
+			{
+				"command" : 4,
+				"file" : 6,
+				"line" : 363,
+				"parent" : 18
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 539,
+				"parent" : 18
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 1162,
+				"parent" : 18
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 314,
+				"parent" : 18
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 1157,
+				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 116,
+				"parent" : 17
+			},
+			{
+				"file" : 6,
+				"parent" : 25
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 19,
+				"parent" : 26
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 57,
+				"parent" : 26
+			},
+			{
+				"command" : 8,
+				"file" : 6,
+				"line" : 540,
+				"parent" : 18
+			},
+			{
+				"command" : 8,
+				"file" : 6,
+				"line" : 608,
+				"parent" : 18
+			},
+			{
+				"command" : 8,
+				"file" : 6,
+				"line" : 749,
+				"parent" : 18
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "libcore::@0618756b1ff51bca1a0e"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "libnetwork::@311edf953348ef8fadde"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "libstats::@a16f7aa18ccba9be6aba"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "libmobility::@2e8c3d564dbe2f6b990d"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "libpropagation::@e1205667d4949730ed2e"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "libspectrum::@edd78237c376ce4d0dc6"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "libantenna::@000737a0949b1597daab"
+		},
+		{
+			"id" : "liblr-wpan-obj::@45be7a455a5f76cbc3d2"
+		}
+	],
+	"id" : "liblr-wpan::@45be7a455a5f76cbc3d2",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/espen/ns-3/ns3-wip/build/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,--no-as-needed",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-spectrum-debug.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-propagation-debug.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,--as-needed",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-mobility-debug.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-network-debug.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-stats-debug.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libsqlite3.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-antenna-debug.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-core-debug.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,--no-as-needed",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 16,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/librt.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,--as-needed",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "liblr-wpan",
+	"nameOnDisk" : "libns3.36.1-lr-wpan-debug.so",
+	"paths" : 
+	{
+		"build" : "src/lr-wpan",
+		"source" : "src/lr-wpan"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/helper/lr-wpan-helper.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-csmaca.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-error-model.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-fields.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-interference-helper.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-lqi-tag.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-mac-header.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-mac-pl-headers.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-mac-trailer.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-mac.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-net-device.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-phy.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-spectrum-signal-parameters.cc.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/src/lr-wpan/CMakeFiles/liblr-wpan-obj.dir/model/lr-wpan-spectrum-value-helper.cc.o",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

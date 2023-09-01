@@ -1,0 +1,118 @@
+\hypertarget{classns3_1_1_join_operator}{}\doxysection{ns3\+::Join\+Operator Class Reference}
+\label{classns3_1_1_join_operator}\index{ns3::JoinOperator@{ns3::JoinOperator}}
+
+
+Inheritance diagram for ns3\+::Join\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Join\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a8dad64ee74ff7ae60c1170dffb8fb2cb}\label{classns3_1_1_join_operator_a8dad64ee74ff7ae60c1170dffb8fb2cb}} 
+{\bfseries Join\+Operator} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ joining\+\_\+stream)
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a849c5cdcd23aaf87b1cc284957962572}\label{classns3_1_1_join_operator_a849c5cdcd23aaf87b1cc284957962572}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a449d6d2443447be7cf253328e7f9d899}\label{classns3_1_1_join_operator_a449d6d2443447be7cf253328e7f9d899}} 
+void {\bfseries update\+Windows} (long external\+\_\+timestamp) const
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_af0dd909b22c8c53cc6592ac0b2524bf3}\label{classns3_1_1_join_operator_af0dd909b22c8c53cc6592ac0b2524bf3}} 
+void {\bfseries update\+Window1} (long external\+\_\+timestamp) const
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a727231cbf408a501438c6a8271d4dd1a}\label{classns3_1_1_join_operator_a727231cbf408a501438c6a8271d4dd1a}} 
+void {\bfseries update\+Window2} (long external\+\_\+timestamp) const
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a937df130b5470f03cbaa554fcef5ad63}\label{classns3_1_1_join_operator_a937df130b5470f03cbaa554fcef5ad63}} 
+void {\bfseries Insert\+Pending\+Match} (std\+::pair$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$, Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$$>$ pending\+\_\+match)
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a28e7925186256b5b1814566bdab8ca5a}\label{classns3_1_1_join_operator_a28e7925186256b5b1814566bdab8ca5a}} 
+void {\bfseries Migration\+Interrupted} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a35b32cfe8d3df2e0aea9543336e14bb5}\label{classns3_1_1_join_operator_a35b32cfe8d3df2e0aea9543336e14bb5}} 
+void {\bfseries notify\+Eviction} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_ac4e8c5ec0c5ebd5aead407d6efdef339}\label{classns3_1_1_join_operator_ac4e8c5ec0c5ebd5aead407d6efdef339}} 
+void {\bfseries Forward\+Tuples\+To} (int host) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a0e8362828a177620457b4ddf17a400ff}\label{classns3_1_1_join_operator_a0e8362828a177620457b4ddf17a400ff}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a8332c40af62fe45b8f7ae97faac5b277}\label{classns3_1_1_join_operator_a8332c40af62fe45b8f7ae97faac5b277}} 
+void {\bfseries Disable\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a9583fc0bafed856cda3ec5b3b4b56ea9}\label{classns3_1_1_join_operator_a9583fc0bafed856cda3ec5b3b4b56ea9}} 
+void {\bfseries Clear\+State} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a453bad672689301b715dc60acda503e4}\label{classns3_1_1_join_operator_a453bad672689301b715dc60acda503e4}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state}{Partial\+State}} $>$ $>$ {\bfseries get\+Partial\+States} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_afffb5054719b339a38347b7fbd67867a}\label{classns3_1_1_join_operator_afffb5054719b339a38347b7fbd67867a}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a4e7d3e2b99293b238c64a2eaf1c21698}\label{classns3_1_1_join_operator_a4e7d3e2b99293b238c64a2eaf1c21698}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a5ed8645e2e6c1760e16b0e8bc832e5fd}\label{classns3_1_1_join_operator_a5ed8645e2e6c1760e16b0e8bc832e5fd}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ {\bfseries Extract\+Preamble\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a7a2eaf30b08e09c0f9fbb067a773ba26}\label{classns3_1_1_join_operator_a7a2eaf30b08e09c0f9fbb067a773ba26}} 
+void {\bfseries Extract\+Diff\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_af42cf61e495edb3b71dd4f8fa2e53cd8}\label{classns3_1_1_join_operator_af42cf61e495edb3b71dd4f8fa2e53cd8}} 
+void {\bfseries Extract\+Lazy\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a851d917bf40391b1f17bc53438da1789}\label{classns3_1_1_join_operator_a851d917bf40391b1f17bc53438da1789}} 
+void {\bfseries Extract\+Utility\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a53c6ccad3615971ebd91981b81d94700}\label{classns3_1_1_join_operator_a53c6ccad3615971ebd91981b81d94700}} 
+void {\bfseries Extract\+Essential\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a910f6cfb509c549baea016d0730ac797}\label{classns3_1_1_join_operator_a910f6cfb509c549baea016d0730ac797}} 
+void {\bfseries Extract\+Unessential\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a39b619e4bcfc4cc35e12616f64781b07}\label{classns3_1_1_join_operator_a39b619e4bcfc4cc35e12616f64781b07}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a41f1b24f3e4acc9f3150c48b18649dcb}\label{classns3_1_1_join_operator_a41f1b24f3e4acc9f3150c48b18649dcb}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_abfe059f1aa8584122a6796304ce7c5aa}\label{classns3_1_1_join_operator_abfe059f1aa8584122a6796304ce7c5aa}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_join_filter_operator}{Join\+Filter\+Operator}} $>$ $>$ {\bfseries filter\+Operators}
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a4e537a04e27bdab878a43c527ddcbc9d}\label{classns3_1_1_join_operator_a4e537a04e27bdab878a43c527ddcbc9d}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_storage_window_operator}{Storage\+Window\+Operator}} $>$ {\bfseries window\+Operator1} \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a173d784cb051413a77d0d1a387a5ec47}\label{classns3_1_1_join_operator_a173d784cb051413a77d0d1a387a5ec47}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_storage_window_operator}{Storage\+Window\+Operator}} $>$ {\bfseries window\+Operator2} \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_acd3bee80b782f3f8af8c69265577f187}\label{classns3_1_1_join_operator_acd3bee80b782f3f8af8c69265577f187}} 
+std\+::vector$<$ std\+::pair$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state}{Partial\+State}} $>$, Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state}{Partial\+State}} $>$ $>$ $>$ {\bfseries pending\+\_\+matches}
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_acc658d88a411b98dee5549ffc3a66cdf}\label{classns3_1_1_join_operator_acc658d88a411b98dee5549ffc3a66cdf}} 
+int {\bfseries join\+\_\+depth} = 1
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_a305f4592f53503bc96b72af6e39bfa0a}\label{classns3_1_1_join_operator_a305f4592f53503bc96b72af6e39bfa0a}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries stream2}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_join_operator_aaec735a72a5454e791835ada05d8e4ba}\label{classns3_1_1_join_operator_aaec735a72a5454e791835ada05d8e4ba}} 
+static int {\bfseries number\+\_\+emitted} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Join\+Operator.\+cpp\end{DoxyCompactItemize}

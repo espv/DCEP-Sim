@@ -1,0 +1,79 @@
+\hypertarget{classns3_1_1_grouper}{}\doxysection{ns3\+::Grouper Class Reference}
+\label{classns3_1_1_grouper}\index{ns3::Grouper@{ns3::Grouper}}
+
+
+Inheritance diagram for ns3\+::Grouper\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Grouper\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a112d6482d96df0a8d6cdd9ee662b2283}\label{classns3_1_1_grouper_a112d6482d96df0a8d6cdd9ee662b2283}} 
+{\bfseries Grouper} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ group\+Operator, int depth, Ptr$<$ \mbox{\hyperlink{classns3_1_1_grouper}{Grouper}} $>$ previous\+\_\+grouper, long long\+\_\+value)
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a68260d48a3da32551bf04355f5c9badd}\label{classns3_1_1_grouper_a68260d48a3da32551bf04355f5c9badd}} 
+{\bfseries Grouper} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ group\+Operator, int depth, Ptr$<$ \mbox{\hyperlink{classns3_1_1_grouper}{Grouper}} $>$ previous\+\_\+grouper, double double\+\_\+value)
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_aebafd2a8ed44d29e701cfb5e39839188}\label{classns3_1_1_grouper_aebafd2a8ed44d29e701cfb5e39839188}} 
+{\bfseries Grouper} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ group\+Operator, int depth, Ptr$<$ \mbox{\hyperlink{classns3_1_1_grouper}{Grouper}} $>$ previous\+\_\+grouper, std\+::string string\+\_\+value)
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a5cd8eebedc20d1276d2df5e096cbf3d6}\label{classns3_1_1_grouper_a5cd8eebedc20d1276d2df5e096cbf3d6}} 
+virtual void {\bfseries group\+Tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ t)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a71f2f61d61d9256b1b21152505527e6a}\label{classns3_1_1_grouper_a71f2f61d61d9256b1b21152505527e6a}} 
+void {\bfseries partition\+Tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ t)
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a973689b2ddeebdd3fa5e0b5d3963201d}\label{classns3_1_1_grouper_a973689b2ddeebdd3fa5e0b5d3963201d}} 
+virtual Ptr$<$ \mbox{\hyperlink{classns3_1_1_grouper}{Grouper}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ group\+\_\+operator, bool shed\+\_\+unessential\+\_\+attributes)
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a409a81c9d979c2809971ed2ea9ceae23}\label{classns3_1_1_grouper_a409a81c9d979c2809971ed2ea9ceae23}} 
+virtual Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ {\bfseries Get\+Group} (int group\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a52aa32089ae10262a5217ad1ff995aa7}\label{classns3_1_1_grouper_a52aa32089ae10262a5217ad1ff995aa7}} 
+size\+\_\+t {\bfseries Get\+Serialized\+Size} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a66c46bdeb071ec02c8043630df9b45dc}\label{classns3_1_1_grouper_a66c46bdeb071ec02c8043630df9b45dc}} 
+size\+\_\+t {\bfseries Get\+Utility} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_adc060bb337449a560dcf70448a0c4ab5}\label{classns3_1_1_grouper_adc060bb337449a560dcf70448a0c4ab5}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a11510f7a39105fb039a97159e8ebc177}\label{classns3_1_1_grouper_a11510f7a39105fb039a97159e8ebc177}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ {\bfseries group\+Operator} = nullptr
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a8a97b51e633f4e285b13b0d997f1034d}\label{classns3_1_1_grouper_a8a97b51e633f4e285b13b0d997f1034d}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ {\bfseries group} = Group\+::no\+\_\+group
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a12866de5a974b5545be5d681f9807c66}\label{classns3_1_1_grouper_a12866de5a974b5545be5d681f9807c66}} 
+int {\bfseries depth} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a7558e6b2b0656b7d465e5a1435716c5f}\label{classns3_1_1_grouper_a7558e6b2b0656b7d465e5a1435716c5f}} 
+int {\bfseries max\+\_\+depth} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_ac2480b5a82a8ba6fa97996db4b54a4bb}\label{classns3_1_1_grouper_ac2480b5a82a8ba6fa97996db4b54a4bb}} 
+long {\bfseries long\+\_\+value}
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_ac7128d0786e2a7f0cc0d5f13801de2b3}\label{classns3_1_1_grouper_ac7128d0786e2a7f0cc0d5f13801de2b3}} 
+double {\bfseries double\+\_\+value}
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a0db21179d07969d17cfa92e9fe610889}\label{classns3_1_1_grouper_a0db21179d07969d17cfa92e9fe610889}} 
+std\+::string {\bfseries string\+\_\+value}
+\item 
+\mbox{\Hypertarget{classns3_1_1_grouper_a2d6682607d0afb81b7d057b9891e830e}\label{classns3_1_1_grouper_a2d6682607d0afb81b7d057b9891e830e}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_partitioner}{Partitioner}} $>$ {\bfseries first\+\_\+partitioner}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Group\+Operator.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+tracepoints: []
+stream-definitions:
+- stream-id: 1
+  name: BusRecord
+  tuple-format:
+  - {name: a_ts, type: long}
+  - {name: b_line_id, type: long}
+  - {name: c_direction, type: long}
+  - {name: d_journey_pattern_id, type: string}
+  - {name: e_time_frame, type: long}
+  - {name: f_vehicle_journey_id, type: long}
+  - {name: g_operator, type: string}
+  - {name: h_congested, type: long}
+  - {name: i_longitude, type: double}
+  - {name: j_latitude, type: double}
+  - {name: k_delay, type: long}
+  - {name: l_block_id, type: long}
+  - {name: m_vehicle_id, type: long}
+  - {name: n_stop_id, type: long}
+  - {name: o_at_stop, type: long}
+- stream-id: 2
+  name: OutBusRecord
+  tuple-format:
+  - {name: a_line_id, type: long}
+  - {name: b_direction, type: long}
+  - {name: c_operator, type: long}
+- stream-id: 3
+  name: BusRecord2
+  tuple-format:
+  - {name: a_operator, type: long}
+  - {name: b_vehicle_id, type: long}
+  - {name: c_stop_id, type: long}
+experiments:
+- id: 1
+  flow:
+  - node: coordinator
+    task: deployQueries
+    arguments: [1, 455]
+  - node: coordinator
+    task: addPotentialHost
+    arguments:
+    - [2, 3, 4]
+    - 455
+  - node: coordinator
+    task: addSourceNode
+    arguments:
+    - [1]
+    - 455
+  - node: coordinator
+    task: addSinkNode
+    arguments:
+    - [5]
+    - 455
+  - node: 1
+    task: sendCsvDsAsStream
+    arguments: [1, 1]
+  - node: 5
+    task: retEndOfStream
+    arguments: [30000]
+datasets:
+- {file: Bus1-1hour/siri.20121106.csv, stream-id: 1, name: Busrecords, id: 1, type: csv}
+spequeries:
+  outputs: []
+  inputs: []
+  queries:
+  - operators:
+    - name: input 0
+      type: input
+      parameters: {stream-id: 1}
+    - name: Output 0
+      type: output
+      parameters: {stream-id: 2}
+    - name: Filter 0
+      type: filter
+      parameters:
+        op: larger_than
+        arg2: {value-type: long, type: attribute, value: BusRecord.f_vehicle_journey_id}
+        arg1: {value-type: long, type: constant, value: '343434'}
+    - name: Select 0
+      type: select
+      parameters:
+        fields: [a.id, b.id, a.name]
+    - name: Join 0
+      type: join
+      parameters:
+        op: ''
+        arg2: {value-type: long, type: attribute, value: BusRecord2.a_operator}
+        arg1: {value-type: long, type: attribute, value: BusRecord.g_operator}
+    - name: input 1
+      type: input
+      parameters: {stream-id: 3}
+    name: Query1
+    edges:
+    - stream: stream_name1
+      from: {name: Join 0, type: intermediate}
+      to: {name: Filter 0, type: intermediate}
+    - stream: OutBusRecord
+      from: {name: Select 0, type: intermediate}
+      to: {name: Output 0, type: intermediate}
+    - stream: BusRecord
+      from: {name: input 0, type: intermediate}
+      to: {name: Join 0, type: intermediate}
+    - stream: stream_name2
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    - stream: BusRecord2
+      from: {name: input 1, type: intermediate}
+      to: {name: Join 0, type: intermediate}
+    id: 1
+

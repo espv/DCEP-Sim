@@ -1,0 +1,94 @@
+\hypertarget{classns3_1_1_window_operator}{}\doxysection{ns3\+::Window\+Operator Class Reference}
+\label{classns3_1_1_window_operator}\index{ns3::WindowOperator@{ns3::WindowOperator}}
+
+
+Inheritance diagram for ns3\+::Window\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Window\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a36c263c8edec9fdaf8d9cf580a158e16}\label{classns3_1_1_window_operator_a36c263c8edec9fdaf8d9cf580a158e16}} 
+virtual Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a282bf3f6f14c7108047aa54da4efa88d}\label{classns3_1_1_window_operator_a282bf3f6f14c7108047aa54da4efa88d}} 
+virtual void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_ae80ffc3ef8d6b17c8fa082a5f0d4ab70}\label{classns3_1_1_window_operator_ae80ffc3ef8d6b17c8fa082a5f0d4ab70}} 
+virtual bool {\bfseries insert\+Tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a73f80f0d7358039ca2325a75e1934952}\label{classns3_1_1_window_operator_a73f80f0d7358039ca2325a75e1934952}} 
+void {\bfseries update\+\_\+external\+\_\+time\+\_\+window} (long external\+\_\+time)
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_aeeab09da6fe15f60ad7ce29a9037f282}\label{classns3_1_1_window_operator_aeeab09da6fe15f60ad7ce29a9037f282}} 
+virtual int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_aee833ee5f5c28965e4881aa50b23c308}\label{classns3_1_1_window_operator_aee833ee5f5c28965e4881aa50b23c308}} 
+virtual void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a096672c978b60a550d48b97d895c472b}\label{classns3_1_1_window_operator_a096672c978b60a550d48b97d895c472b}} 
+virtual void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_ab0308cb559a01e3fa02118ad1ed3545f}\label{classns3_1_1_window_operator_ab0308cb559a01e3fa02118ad1ed3545f}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a878ec8ea71f05b7710272e7ae126896f}\label{classns3_1_1_window_operator_a878ec8ea71f05b7710272e7ae126896f}} 
+int {\bfseries size} \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a5e8ce41542c7e43213a5740e594966f3}\label{classns3_1_1_window_operator_a5e8ce41542c7e43213a5740e594966f3}} 
+Window\+Type {\bfseries size\+\_\+type}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a0c281ef0bdff2d34cf1ca621edcf6faf}\label{classns3_1_1_window_operator_a0c281ef0bdff2d34cf1ca621edcf6faf}} 
+Window\+Type {\bfseries emit\+\_\+type}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_aa6bf7831d1831c572122d21da36541ea}\label{classns3_1_1_window_operator_aa6bf7831d1831c572122d21da36541ea}} 
+long {\bfseries last\+\_\+jump} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a857130aff98c1447c2e8a192510b94f5}\label{classns3_1_1_window_operator_a857130aff98c1447c2e8a192510b94f5}} 
+long {\bfseries last\+\_\+deletion} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_ab039e88e333a8fbc9afe8af3c789ec87}\label{classns3_1_1_window_operator_ab039e88e333a8fbc9afe8af3c789ec87}} 
+int {\bfseries total\+\_\+received} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_ab0a3b430914c287a7869605fb15be476}\label{classns3_1_1_window_operator_ab0a3b430914c287a7869605fb15be476}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group_operator}{Group\+Operator}} $>$ {\bfseries group\+Operator}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a62d7a9fd3d3c57aa64afb280bfb4f89a}\label{classns3_1_1_window_operator_a62d7a9fd3d3c57aa64afb280bfb4f89a}} 
+long {\bfseries current\+\_\+external\+\_\+time} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a65fef75233e4a19ac6ef978d379e6972}\label{classns3_1_1_window_operator_a65fef75233e4a19ac6ef978d379e6972}} 
+std\+::string {\bfseries external\+\_\+timestamp\+\_\+key}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_af9d6155468ce18e7dc88c1fea954de66}\label{classns3_1_1_window_operator_af9d6155468ce18e7dc88c1fea954de66}} 
+int {\bfseries external\+\_\+timestamp\+\_\+key\+\_\+index} \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a00aa10b230203cc8d2476a1002a63d93}\label{classns3_1_1_window_operator_a00aa10b230203cc8d2476a1002a63d93}} 
+int {\bfseries external\+\_\+timestamp\+\_\+tuple\+\_\+index} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_aa89f340be13da1c4013455798158cff0}\label{classns3_1_1_window_operator_aa89f340be13da1c4013455798158cff0}} 
+int {\bfseries number\+\_\+evicted} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_aa5d2cc73265c610c3b410e4e7791dada}\label{classns3_1_1_window_operator_aa5d2cc73265c610c3b410e4e7791dada}} 
+int {\bfseries jump} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_operator_a23f4c0cd6da395640bd682e5df39115b}\label{classns3_1_1_window_operator_a23f4c0cd6da395640bd682e5df39115b}} 
+static int {\bfseries global\+\_\+total\+\_\+received} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Window\+Operator.\+cpp\end{DoxyCompactItemize}

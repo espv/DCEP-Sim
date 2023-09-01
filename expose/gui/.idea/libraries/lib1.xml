@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/underscore-1.78-SNAPSHOT-jar-with-dependencies.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jgraphaddons.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jgraph.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/xmlrpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jackson-core-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/xalan.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jaxen-jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jackson-databind-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/xml-apis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jackson-annotations-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jfreechart-1.0.0-pre2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jackson-dataformat-yaml-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/snakeyaml-1.28.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/docconverter-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jcommon-1.0.0-pre2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/medusaXmlRpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jaxen-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/saxpath.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/underscore-1.78.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/json-20180813.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/out/production/viewer/lib/jdom.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

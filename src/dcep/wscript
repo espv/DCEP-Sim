@@ -1,0 +1,59 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+# def options(opt):
+#     pass
+
+def configure(conf):
+    conf.env['yaml-cpp'] = conf.check(mandatory=True, lib='yaml-cpp', uselib_store='YAML_CPP')
+    conf.env['boost_regex'] = conf.check(mandatory=True, lib='boost_regex', uselib_store='BOOST_REGEX')
+    conf.env['boost_system'] = conf.check(mandatory=True, lib='boost_system', uselib_store='BOOST_SYSTEM')
+    conf.env['boost_serialization'] = conf.check(mandatory=True, lib='boost_serialization', uselib_store='BOOST_SERIALIZATION')
+
+def build(bld):
+    module = bld.create_ns3_module('dcep', ['stream-processing', 'core', 'olsr', 'netanim'])
+    module.use.append("YAML_CPP")
+    module.use.append("BOOST_REGEX")
+    module.use.append("BOOST_SYSTEM")
+    module.use.append("BOOST_SERIALIZATION")
+    module.source = [
+        'model/communication.cc',
+        'model/placement.cc',
+        'model/cep-engine.cc',
+        'model/dcep.cc',
+        'model/dcep-header.cc',
+        'helper/dcep-app-helper.cc',
+        'model/utility/CSVIterator.cpp',
+        'model/utility/knapsack_solver.cpp',
+        'model/utility/utility.cpp',
+        'model/dcep-apps/expose-coordinator.cc',
+        'model/dcep-apps/expose-wrapper.cc',
+        ]
+
+    module_test = bld.create_ns3_module_test_library('dcep')
+    module_test.source = [
+        'test/dcep-test-suite.cc',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'dcep'
+    headers.source = [
+        'model/communication.h',
+        'model/placement.h',
+        'model/cep-engine.h',
+        'model/dcep.h',
+        'model/common.h',
+        'model/message-types.h',
+        'model/dcep-header.h',
+        'helper/dcep-app-helper.h',
+        'model/utility/CSVIterator.h',
+        'model/utility/knapsack_solver.h',
+        'model/utility/utility.h',
+        'model/dcep-apps/expose-coordinator.h',
+        'model/dcep-apps/expose-wrapper.h',
+        ]
+
+    if bld.env['ENABLE_EXAMPLES']:
+            bld.recurse('examples')
+
+    bld.ns3_python_bindings()
+

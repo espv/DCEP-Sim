@@ -1,0 +1,101 @@
+\hypertarget{classns3_1_1_window_extent}{}\doxysection{ns3\+::Window\+Extent Class Reference}
+\label{classns3_1_1_window_extent}\index{ns3::WindowExtent@{ns3::WindowExtent}}
+
+
+Inheritance diagram for ns3\+::Window\+Extent\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Window\+Extent\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a34550622daa6bb5e100ac7ee38becddf}\label{classns3_1_1_window_extent_a34550622daa6bb5e100ac7ee38becddf}} 
+{\bfseries Window\+Extent} (int created\+\_\+by)
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_ac2be100ae242972db878fd016b07922a}\label{classns3_1_1_window_extent_ac2be100ae242972db878fd016b07922a}} 
+{\bfseries Window\+Extent} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ extent, int created\+\_\+by, bool only\+\_\+skeleton)
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_aca12a41a13dbda6cc477c3c4589d4cf8}\label{classns3_1_1_window_extent_aca12a41a13dbda6cc477c3c4589d4cf8}} 
+size\+\_\+t {\bfseries Get\+Serialized\+Size} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_afefb1cbb5254c14e1533f84ec99ea2a7}\label{classns3_1_1_window_extent_afefb1cbb5254c14e1533f84ec99ea2a7}} 
+size\+\_\+t {\bfseries Get\+Utility} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_aff1cb9082e9f4bd3f8d1bd463d81e6f2}\label{classns3_1_1_window_extent_aff1cb9082e9f4bd3f8d1bd463d81e6f2}} 
+void {\bfseries merge} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ extent)
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a7fa3eb69295503a1a64399023c0a8cab}\label{classns3_1_1_window_extent_a7fa3eb69295503a1a64399023c0a8cab}} 
+void {\bfseries replace} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_extent}{Window\+Extent}} $>$ extent)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a7f6c99e8f0cce04a781e1e5f1263fb90}\label{classns3_1_1_window_extent_a7f6c99e8f0cce04a781e1e5f1263fb90}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a78d7752ac16282666158e157ad9b984c}\label{classns3_1_1_window_extent_a78d7752ac16282666158e157ad9b984c}} 
+std\+::vector$<$ \mbox{\hyperlink{classns3_1_1_aggregation_window_extent}{Aggregation\+Window\+Extent}} $>$ {\bfseries aggregation\+Window\+Extents}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a70f5ae0d2d570743f67834aa41b9832e}\label{classns3_1_1_window_extent_a70f5ae0d2d570743f67834aa41b9832e}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ {\bfseries group} = Group\+::no\+\_\+group
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_aa9c59e38f3baf1311aef64e3e519cc47}\label{classns3_1_1_window_extent_aa9c59e38f3baf1311aef64e3e519cc47}} 
+std\+::map$<$ int, Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ $>$ {\bfseries group\+To\+Partitions}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a871fd7ece78b01e25a912a2cec6dfe4d}\label{classns3_1_1_window_extent_a871fd7ece78b01e25a912a2cec6dfe4d}} 
+bool {\bfseries expired} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a9e6b7c41ba872da7df70da66f47f45e7}\label{classns3_1_1_window_extent_a9e6b7c41ba872da7df70da66f47f45e7}} 
+bool {\bfseries emitted} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a99595c0d959f662b1027d13363c3a570}\label{classns3_1_1_window_extent_a99595c0d959f662b1027d13363c3a570}} 
+bool {\bfseries merged} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_ae44f96e72a33c9a14cbe0040a6332f01}\label{classns3_1_1_window_extent_ae44f96e72a33c9a14cbe0040a6332f01}} 
+int {\bfseries id} = extent\+\_\+cnt++
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_adbb8aa64ab41a87f0f0c10cea4750120}\label{classns3_1_1_window_extent_adbb8aa64ab41a87f0f0c10cea4750120}} 
+int {\bfseries created\+\_\+by}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a505f32632356e0a18e4bf9549dcecd4d}\label{classns3_1_1_window_extent_a505f32632356e0a18e4bf9549dcecd4d}} 
+Time {\bfseries start}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a96c02e703f627c55346064ee4a0b1380}\label{classns3_1_1_window_extent_a96c02e703f627c55346064ee4a0b1380}} 
+Time {\bfseries expire\+Time}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a0b196d65466a040df122a22537909839}\label{classns3_1_1_window_extent_a0b196d65466a040df122a22537909839}} 
+Time {\bfseries upper\+\_\+bound}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_ac49a86dd10d2300072cca84871a353a7}\label{classns3_1_1_window_extent_ac49a86dd10d2300072cca84871a353a7}} 
+Time {\bfseries lower\+\_\+bound}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a6f337a4ccd40f285fa5081ff3f6f7666}\label{classns3_1_1_window_extent_a6f337a4ccd40f285fa5081ff3f6f7666}} 
+Time {\bfseries migration\+\_\+start} = Time(0)
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a0bb3e7295146e5f7a5c13af1774f1eb6}\label{classns3_1_1_window_extent_a0bb3e7295146e5f7a5c13af1774f1eb6}} 
+Time {\bfseries migration\+\_\+stop} = Time(0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a7a833d761185c3030b4ca5d0bd160608}\label{classns3_1_1_window_extent_a7a833d761185c3030b4ca5d0bd160608}} 
+static int {\bfseries extent\+\_\+cnt} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_ac63e4ac7cd58b8f860f87127fe530f3d}\label{classns3_1_1_window_extent_ac63e4ac7cd58b8f860f87127fe530f3d}} 
+static std\+::map$<$ int, std\+::map$<$ long, std\+::pair$<$ Time, int $>$ $>$ $>$ {\bfseries key\+To\+Lowerbound\+To\+Emitted}
+\item 
+\mbox{\Hypertarget{classns3_1_1_window_extent_a0de8342b584b41b5aec015e5263b52f1}\label{classns3_1_1_window_extent_a0de8342b584b41b5aec015e5263b52f1}} 
+static std\+::map$<$ int, std\+::map$<$ long, std\+::pair$<$ Time, int $>$ $>$ $>$ {\bfseries key\+To\+Lowerbound\+To\+Created}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Partial\+State.\+cpp\item 
+Window\+Operator.\+cpp\end{DoxyCompactItemize}

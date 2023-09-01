@@ -1,0 +1,258 @@
+\hypertarget{classns3_1_1_operator}{}\doxysection{ns3\+::Operator Class Reference}
+\label{classns3_1_1_operator}\index{ns3::Operator@{ns3::Operator}}
+
+
+Inheritance diagram for ns3\+::Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ac61e0954766ce142fb53d19109dde40d}\label{classns3_1_1_operator_ac61e0954766ce142fb53d19109dde40d}} 
+{\bfseries Operator} (Operator\+Type type)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ad8fbd165ec632879b95070a64d141c7b}\label{classns3_1_1_operator_ad8fbd165ec632879b95070a64d141c7b}} 
+{\bfseries Operator} (Operator\+Type type, int node\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a27579811f24f61ca599afad301426ad3}\label{classns3_1_1_operator_a27579811f24f61ca599afad301426ad3}} 
+void {\bfseries Set\+Node\+Id} (int new\+\_\+node\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ae1e14ed3785265bde0b124b4f78c2d9e}\label{classns3_1_1_operator_ae1e14ed3785265bde0b124b4f78c2d9e}} 
+void {\bfseries Set\+Cpu\+Core} (Ptr$<$ Cpu\+Core $>$ cpu\+\_\+core)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a645857d945eb2c0722b4315778daaed0}\label{classns3_1_1_operator_a645857d945eb2c0722b4315778daaed0}} 
+virtual std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state}{Partial\+State}} $>$ $>$ {\bfseries get\+Partial\+States} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a440f6f0a6bc824c3840866fdedaed2a0}\label{classns3_1_1_operator_a440f6f0a6bc824c3840866fdedaed2a0}} 
+virtual void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a07a6a32e91b3b4467896bded0dd79763}\label{classns3_1_1_operator_a07a6a32e91b3b4467896bded0dd79763}} 
+virtual void {\bfseries emit} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a395f47710dee4662a0a5cc6da44b87df}\label{classns3_1_1_operator_a395f47710dee4662a0a5cc6da44b87df}} 
+virtual void {\bfseries Emit\+To\+Next\+Op} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ next\+Op, Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper, bool add\+\_\+processing\+\_\+delay)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ad157b5b29fd3667c8a00ee6ddb7c182c}\label{classns3_1_1_operator_ad157b5b29fd3667c8a00ee6ddb7c182c}} 
+virtual void {\bfseries Migration\+Interrupted} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a8ac31418daad6d05e3fc28f63e65e59f}\label{classns3_1_1_operator_a8ac31418daad6d05e3fc28f63e65e59f}} 
+virtual size\+\_\+t {\bfseries calculate\+Utility} (int group\+\_\+id, int partial\+\_\+state\+\_\+index)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ace8dbf618aa0e8ba8d7c0b5312872767}\label{classns3_1_1_operator_ace8dbf618aa0e8ba8d7c0b5312872767}} 
+virtual Time {\bfseries get\+\_\+base\+\_\+processing\+\_\+time} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a90e1082b49cb898b32305867875f2e25}\label{classns3_1_1_operator_a90e1082b49cb898b32305867875f2e25}} 
+virtual Time {\bfseries get\+\_\+emit\+\_\+time\+\_\+added} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a95536d2f853a0c27826a4cb3fe6e2406}\label{classns3_1_1_operator_a95536d2f853a0c27826a4cb3fe6e2406}} 
+virtual Time {\bfseries get\+\_\+forward\+\_\+time\+\_\+added} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ac9d83fd4e8f2fc5d2e553ca71c4f8f98}\label{classns3_1_1_operator_ac9d83fd4e8f2fc5d2e553ca71c4f8f98}} 
+virtual Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ad6e69793108f350782bf2c777ade9071}\label{classns3_1_1_operator_ad6e69793108f350782bf2c777ade9071}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ new\+\_\+operator, Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a55c0408e9faf1d7cfb339ef125b9d18e}\label{classns3_1_1_operator_a55c0408e9faf1d7cfb339ef125b9d18e}} 
+virtual int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a10e48e84525c9180e1d2c61e30231cdb}\label{classns3_1_1_operator_a10e48e84525c9180e1d2c61e30231cdb}} 
+virtual void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a534eaee3f8b8147975061dae4b7886c5}\label{classns3_1_1_operator_a534eaee3f8b8147975061dae4b7886c5}} 
+virtual Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ {\bfseries Extract\+Preamble\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_af7f87e3d363b6e5a0e1b016382047138}\label{classns3_1_1_operator_af7f87e3d363b6e5a0e1b016382047138}} 
+virtual void {\bfseries Extract\+Diff\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a04612c29334c64f6bce0b0b8b39cce53}\label{classns3_1_1_operator_a04612c29334c64f6bce0b0b8b39cce53}} 
+virtual void {\bfseries Disable\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a196df777230f59eff13fa30847c030c8}\label{classns3_1_1_operator_a196df777230f59eff13fa30847c030c8}} 
+virtual void {\bfseries Clear\+State} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_acf24a25f51ab66e671b5dbf1e274e94d}\label{classns3_1_1_operator_acf24a25f51ab66e671b5dbf1e274e94d}} 
+virtual void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch)=0
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a008034f22a6e707ed956d3041494dfd1}\label{classns3_1_1_operator_a008034f22a6e707ed956d3041494dfd1}} 
+size\+\_\+t {\bfseries Get\+Serialized\+Size} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a60a5f9ab0481357611806863b9549423}\label{classns3_1_1_operator_a60a5f9ab0481357611806863b9549423}} 
+size\+\_\+t {\bfseries Get\+Utility} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a42e747b33cc49f84c6355d2d43cf3d48}\label{classns3_1_1_operator_a42e747b33cc49f84c6355d2d43cf3d48}} 
+bool {\bfseries Process\+On\+Host} (int host, Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+\_\+wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_aef18719631bea5dab77fd296a8d3dd5a}\label{classns3_1_1_operator_aef18719631bea5dab77fd296a8d3dd5a}} 
+void {\bfseries Fetch\+Partial\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state}{Partial\+State}} $>$ ps)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a237384fde8d86a7d43e5ffc58a4d744a}\label{classns3_1_1_operator_a237384fde8d86a7d43e5ffc58a4d744a}} 
+Ptr$<$ Expose\+Wrapper $>$ {\bfseries get\+Expose\+Wrapper} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_aab8c96d954d1f32372300811063c20c3}\label{classns3_1_1_operator_aab8c96d954d1f32372300811063c20c3}} 
+void {\bfseries Send\+To\+Next\+Op} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper, Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ next\+\_\+op, bool add\+\_\+processing\+\_\+delay)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_aa24f102ac1a198901061098a166f1b2d}\label{classns3_1_1_operator_aa24f102ac1a198901061098a166f1b2d}} 
+void {\bfseries Unassign\+Cpu\+Core} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a087e0a8ab69c2b495c34e32500dfeea6}\label{classns3_1_1_operator_a087e0a8ab69c2b495c34e32500dfeea6}} 
+virtual void {\bfseries Forward\+Tuples\+To} (int host)
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_af9995305dc0ed6ec4393b4a0dbf6f7e1}\label{classns3_1_1_operator_af9995305dc0ed6ec4393b4a0dbf6f7e1}} 
+virtual void {\bfseries Set\+Active} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a37c9c5a81058517664931f243dc5c1c1}\label{classns3_1_1_operator_a37c9c5a81058517664931f243dc5c1c1}} 
+void {\bfseries Set\+Inactive} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a3cd8888757113a448780781161b11653}\label{classns3_1_1_operator_a3cd8888757113a448780781161b11653}} 
+void {\bfseries process\+\_\+tuples} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_abfc8731a86ef82f6085ce5d6cb6c4869}\label{classns3_1_1_operator_abfc8731a86ef82f6085ce5d6cb6c4869}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a6e42f579da1d1a0d067bcf8d8a94bd71}\label{classns3_1_1_operator_a6e42f579da1d1a0d067bcf8d8a94bd71}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ $>$ {\bfseries next\+Operator}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a93a9dc06185130711cfd4648193e4f85}\label{classns3_1_1_operator_a93a9dc06185130711cfd4648193e4f85}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a53a52d61b8e08010fdbe68d5d3993748}\label{classns3_1_1_operator_a53a52d61b8e08010fdbe68d5d3993748}} 
+Ptr$<$ Stream\+Query $>$ {\bfseries query}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ae6f3892581cfb05fe4326652913dbb19}\label{classns3_1_1_operator_ae6f3892581cfb05fe4326652913dbb19}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ {\bfseries stream}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a6db7e6aac1a2b04c197f5e55c2e79f2f}\label{classns3_1_1_operator_a6db7e6aac1a2b04c197f5e55c2e79f2f}} 
+Operator\+Type {\bfseries type}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a92344879cff1b7c018be4194ca314ce6}\label{classns3_1_1_operator_a92344879cff1b7c018be4194ca314ce6}} 
+std\+::thread {\bfseries process\+\_\+running}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a9183db9f3114e91aa55e177e141a9594}\label{classns3_1_1_operator_a9183db9f3114e91aa55e177e141a9594}} 
+std\+::mutex {\bfseries rcv\+\_\+mtx}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a650832d98d3217f99f09ec182f9e34c0}\label{classns3_1_1_operator_a650832d98d3217f99f09ec182f9e34c0}} 
+std\+::mutex {\bfseries mtx}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a163c83f3a2bed4bd784a63a38b926314}\label{classns3_1_1_operator_a163c83f3a2bed4bd784a63a38b926314}} 
+std\+::condition\+\_\+variable {\bfseries cv}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ab6b5d04dd5322f426dc97ecd6dd942c1}\label{classns3_1_1_operator_ab6b5d04dd5322f426dc97ecd6dd942c1}} 
+int {\bfseries partition} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ada37d0795d64b48896be348ae1a695d1}\label{classns3_1_1_operator_ada37d0795d64b48896be348ae1a695d1}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_operator}{Window\+Operator}} $>$ {\bfseries window\+Operator}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a65ff1c9fab57117e4c947d49cb6a59f6}\label{classns3_1_1_operator_a65ff1c9fab57117e4c947d49cb6a59f6}} 
+bool {\bfseries forked} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a8eb5250d177bf7dc73aa213dff08bc84}\label{classns3_1_1_operator_a8eb5250d177bf7dc73aa213dff08bc84}} 
+Time {\bfseries emit\+\_\+time\+\_\+delta}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_aa96e2451baca87f0707e69f739aedf41}\label{classns3_1_1_operator_aa96e2451baca87f0707e69f739aedf41}} 
+Time {\bfseries time\+\_\+for\+\_\+next\+\_\+forward}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ac469342b9a9bfce814b4f5345f4955c4}\label{classns3_1_1_operator_ac469342b9a9bfce814b4f5345f4955c4}} 
+Ptr$<$ Cpu\+Core $>$ {\bfseries thread}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a61641d40ff10b98bc92d35ff2d64340b}\label{classns3_1_1_operator_a61641d40ff10b98bc92d35ff2d64340b}} 
+int {\bfseries parallel\+\_\+old\+\_\+node\+\_\+id} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ac551dd3f022337ebade50edb2ed9e45f}\label{classns3_1_1_operator_ac551dd3f022337ebade50edb2ed9e45f}} 
+int {\bfseries old\+\_\+node\+\_\+id} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_abe77253ebbea80a0df99d290ed5891f4}\label{classns3_1_1_operator_abe77253ebbea80a0df99d290ed5891f4}} 
+int {\bfseries node\+\_\+id} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a28c07eeb2ee1e9d4186aba8b5eb9d5e9}\label{classns3_1_1_operator_a28c07eeb2ee1e9d4186aba8b5eb9d5e9}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries previous\+\_\+operator}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a8f91f0b707e91ee39432d5506078dae7}\label{classns3_1_1_operator_a8f91f0b707e91ee39432d5506078dae7}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a317648ce3ed9502f2fad18fbf4ed6deb}\label{classns3_1_1_operator_a317648ce3ed9502f2fad18fbf4ed6deb}} 
+bool {\bfseries source\+\_\+sinkable} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a358da8249cb75aa911f08daf07d3c67e}\label{classns3_1_1_operator_a358da8249cb75aa911f08daf07d3c67e}} 
+bool {\bfseries stateful} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a12cfd53268e27a27b1e07eaf7ad56522}\label{classns3_1_1_operator_a12cfd53268e27a27b1e07eaf7ad56522}} 
+bool {\bfseries source} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_ac1f0615e5711dfa051d011c74346ac30}\label{classns3_1_1_operator_ac1f0615e5711dfa051d011c74346ac30}} 
+bool {\bfseries sink} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_af3e2960c273a0234fa6e7dee9e1062f7}\label{classns3_1_1_operator_af3e2960c273a0234fa6e7dee9e1062f7}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries algorithms}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a688bce097edebf6472d75089e637fd7d}\label{classns3_1_1_operator_a688bce097edebf6472d75089e637fd7d}} 
+bool {\bfseries active} = true
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a131b3896e6613806f51f5c75ae94fe87}\label{classns3_1_1_operator_a131b3896e6613806f51f5c75ae94fe87}} 
+bool {\bfseries shutting\+\_\+down} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a9260bd1415f9ed5785af7d8dd30a8887}\label{classns3_1_1_operator_a9260bd1415f9ed5785af7d8dd30a8887}} 
+bool {\bfseries in\+\_\+migration} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a5880b69bf65a1b52bb2c9604695ff464}\label{classns3_1_1_operator_a5880b69bf65a1b52bb2c9604695ff464}} 
+int {\bfseries tuples\+\_\+processed} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a6cde95fdca24411072f799efa84c48c3}\label{classns3_1_1_operator_a6cde95fdca24411072f799efa84c48c3}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ {\bfseries first\+\_\+rhino\+\_\+batch} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a5b0a06050dfb9d64430f887e6e160e31}\label{classns3_1_1_operator_a5b0a06050dfb9d64430f887e6e160e31}} 
+static Random $\ast$ {\bfseries random}
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a183627ad68767844b64feff55cacc382}\label{classns3_1_1_operator_a183627ad68767844b64feff55cacc382}} 
+static int {\bfseries id\+\_\+cnt} = 1
+\item 
+\mbox{\Hypertarget{classns3_1_1_operator_a77e1a54718109025fe814ee15db725a0}\label{classns3_1_1_operator_a77e1a54718109025fe814ee15db725a0}} 
+static std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ int, bool $>$ $>$ $>$ {\bfseries query\+Id\+To\+Operator\+Id\+To\+Group\+Id\+To\+New\+Host} = \{\}
+\item 
+static std\+::map$<$ std\+::string, Operator\+Type $>$ {\bfseries operator\+Name\+To\+Type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classns3_1_1_operator_ae6ec754be7f48d61c54c1610765b0873}\label{classns3_1_1_operator_ae6ec754be7f48d61c54c1610765b0873}} 
+\index{ns3::Operator@{ns3::Operator}!operatorNameToType@{operatorNameToType}}
+\index{operatorNameToType@{operatorNameToType}!ns3::Operator@{ns3::Operator}}
+\doxysubsubsection{\texorpdfstring{operatorNameToType}{operatorNameToType}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, Operator\+Type$>$ ns3\+::\+Operator\+::operator\+Name\+To\+Type\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\{\textcolor{stringliteral}{"{}filter"{}}, filterType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}cep"{}}, cepType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}define"{}}, defineType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}groupType"{}}, groupType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}joinType"{}}, joinType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}passthrough"{}}, passthroughType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}input"{}}, inputType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}print"{}}, printType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}select"{}}, selectType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}sink"{}}, sinkType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}window"{}}, windowType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}forward"{}}, forwardType\},}
+\DoxyCodeLine{                                                                                \{\textcolor{stringliteral}{"{}within"{}}, withinType\}}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Operator.\+cpp\end{DoxyCompactItemize}

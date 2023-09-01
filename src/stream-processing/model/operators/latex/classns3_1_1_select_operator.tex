@@ -1,0 +1,74 @@
+\hypertarget{classns3_1_1_select_operator}{}\doxysection{ns3\+::Select\+Operator Class Reference}
+\label{classns3_1_1_select_operator}\index{ns3::SelectOperator@{ns3::SelectOperator}}
+
+
+Inheritance diagram for ns3\+::Select\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Select\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a5c07836ad380f994bd644227cb8469aa}\label{classns3_1_1_select_operator_a5c07836ad380f994bd644227cb8469aa}} 
+{\bfseries Select\+Operator} (std\+::string select\+\_\+statement)
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a586b28a27a403b34caf60830d29d794d}\label{classns3_1_1_select_operator_a586b28a27a403b34caf60830d29d794d}} 
+void {\bfseries parse\+Select\+Statement} (std\+::vector$<$ int $>$ input\+\_\+stream\+\_\+ids, int output\+\_\+stream\+\_\+id, const std\+::string \&select\+\_\+statement)
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a46fd9faa41800a81f6aa0d9858ca678a}\label{classns3_1_1_select_operator_a46fd9faa41800a81f6aa0d9858ca678a}} 
+void {\bfseries init} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_window_operator}{Window\+Operator}} $>$ window\+Operator)
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a6abb0d45817d0892a3d3703e18d088dc}\label{classns3_1_1_select_operator_a6abb0d45817d0892a3d3703e18d088dc}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a59ea96dbb84923f6c14bfff5b3039f3c}\label{classns3_1_1_select_operator_a59ea96dbb84923f6c14bfff5b3039f3c}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple}{Tuple}} $>$ {\bfseries select\+Fields} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a818fa0e9fd517ddf696260e8e9ba9da8}\label{classns3_1_1_select_operator_a818fa0e9fd517ddf696260e8e9ba9da8}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple}{Tuple}} $>$ $>$ {\bfseries select\+Partitioned\+Fields} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_aca8b1e729a6f12c74f195b37eb276e48}\label{classns3_1_1_select_operator_aca8b1e729a6f12c74f195b37eb276e48}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a9b841ed88c11041aeb4a398b10d238bf}\label{classns3_1_1_select_operator_a9b841ed88c11041aeb4a398b10d238bf}} 
+Time {\bfseries get\+\_\+base\+\_\+processing\+\_\+time} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_aa55de38a0c2eefe7735ad44c94c595ca}\label{classns3_1_1_select_operator_aa55de38a0c2eefe7735ad44c94c595ca}} 
+Time {\bfseries get\+\_\+emit\+\_\+time\+\_\+added} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a8dd9f034aa57c047da5e72a89f018031}\label{classns3_1_1_select_operator_a8dd9f034aa57c047da5e72a89f018031}} 
+Time {\bfseries get\+\_\+forward\+\_\+time\+\_\+added} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a083d5efbdc56d5b9e744823883c4e51b}\label{classns3_1_1_select_operator_a083d5efbdc56d5b9e744823883c4e51b}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a1c4f4d2551adad18cc64c4c6c83cf547}\label{classns3_1_1_select_operator_a1c4f4d2551adad18cc64c4c6c83cf547}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a661e32314087fbe0341090be56313e38}\label{classns3_1_1_select_operator_a661e32314087fbe0341090be56313e38}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_a53bfc4e747691cca8c093e7ec0aee96a}\label{classns3_1_1_select_operator_a53bfc4e747691cca8c093e7ec0aee96a}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_ad2ece039a0dc3d0e359ff11943e59574}\label{classns3_1_1_select_operator_ad2ece039a0dc3d0e359ff11943e59574}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_select_field}{Select\+Field}} $>$ $>$ {\bfseries fields}
+\item 
+\mbox{\Hypertarget{classns3_1_1_select_operator_ae5913e2621630185b450a70ca1d3ca7b}\label{classns3_1_1_select_operator_ae5913e2621630185b450a70ca1d3ca7b}} 
+std\+::string {\bfseries select\+\_\+statement}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Select\+Operator.\+cpp\end{DoxyCompactItemize}

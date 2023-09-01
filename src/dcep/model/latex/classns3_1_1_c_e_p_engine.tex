@@ -1,0 +1,91 @@
+\hypertarget{classns3_1_1_c_e_p_engine}{}\doxysection{ns3\+::CEPEngine Class Reference}
+\label{classns3_1_1_c_e_p_engine}\index{ns3::CEPEngine@{ns3::CEPEngine}}
+
+
+Inheritance diagram for ns3\+::CEPEngine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classns3_1_1_c_e_p_engine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns3\+::CEPEngine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classns3_1_1_c_e_p_engine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_ac2cfcf97c46842cb7728a1a51085e47a}\label{classns3_1_1_c_e_p_engine_ac2cfcf97c46842cb7728a1a51085e47a}} 
+void {\bfseries Configure} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a5bf512bcdbe69397fd4ca1712c3835f4}\label{classns3_1_1_c_e_p_engine_a5bf512bcdbe69397fd4ca1712c3835f4}} 
+void {\bfseries Process\+Cep\+Event} (Ptr$<$ Tuple\+Wrapper $>$ e)
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a2791754719fe87b536cb5d2b341916dd}\label{classns3_1_1_c_e_p_engine_a2791754719fe87b536cb5d2b341916dd}} 
+void {\bfseries Add\+Schemas} (YAML\+::\+Node stream\+\_\+schemas)
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_ae169f72b261a087c23b60659ffe8db08}\label{classns3_1_1_c_e_p_engine_ae169f72b261a087c23b60659ffe8db08}} 
+void {\bfseries Deploy\+Query} (const Ptr$<$ Stream\+Query $>$ \&query)
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a9711813ccc30e5dd94f188f195e3229b}\label{classns3_1_1_c_e_p_engine_a9711813ccc30e5dd94f188f195e3229b}} 
+void {\bfseries parse\+Sql} (std\+::string query)
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_ae7ccd6076928e73b84aaecb68d7bca2b}\label{classns3_1_1_c_e_p_engine_ae7ccd6076928e73b84aaecb68d7bca2b}} 
+void {\bfseries Add\+Next\+Hop} (int stream\+\_\+id, int node\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_aef75d859752db8fc848710ca3ff56a27}\label{classns3_1_1_c_e_p_engine_aef75d859752db8fc848710ca3ff56a27}} 
+std\+::map$<$ int, std\+::vector$<$ int $>$ $>$ {\bfseries Get\+Stream\+Id\+To\+Nodes} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a463a6c982008465f119d78ee6cc07e7a}\label{classns3_1_1_c_e_p_engine_a463a6c982008465f119d78ee6cc07e7a}} 
+std\+::map$<$ int, std\+::pair$<$ Ipv4\+Address, int $>$ $>$ {\bfseries Get\+Node\+Id\+To\+Tuples\+Address} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a817de5c623ff600a040393ac20bf5acf}\label{classns3_1_1_c_e_p_engine_a817de5c623ff600a040393ac20bf5acf}} 
+void {\bfseries Set\+Node\+Id\+To\+Tuples\+Address} (std\+::map$<$ int, std\+::pair$<$ Ipv4\+Address, int $>$$>$ node\+Id\+To\+Tuples\+Ip\+And\+Port)
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a0a60e1427fbaa03e15c730ff3f03e157}\label{classns3_1_1_c_e_p_engine_a0a60e1427fbaa03e15c730ff3f03e157}} 
+std\+::map$<$ int, std\+::pair$<$ Ipv4\+Address, int $>$ $>$ {\bfseries Get\+Node\+Id\+To\+Migration\+Address} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a1a0b6eccec49f9fb7ba8c5caaf4fbec8}\label{classns3_1_1_c_e_p_engine_a1a0b6eccec49f9fb7ba8c5caaf4fbec8}} 
+void {\bfseries Set\+Node\+Id\+To\+Migration\+Address} (std\+::map$<$ int, std\+::pair$<$ Ipv4\+Address, int $>$$>$ node\+Id\+To\+Migration\+Ip\+And\+Port)
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a898db3eeb1399a08af4696f8a8cf2cdf}\label{classns3_1_1_c_e_p_engine_a898db3eeb1399a08af4696f8a8cf2cdf}} 
+void {\bfseries Set\+Node\+Id} (int node\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a30a8d6ca2ff53ec2840a7057a287f87e}\label{classns3_1_1_c_e_p_engine_a30a8d6ca2ff53ec2840a7057a287f87e}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a70c66d0676262213f13f1a8786a3637f}\label{classns3_1_1_c_e_p_engine_a70c66d0676262213f13f1a8786a3637f}} 
+long {\bfseries last\+\_\+received\+\_\+tuple} = -\/1
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a4f7d7410acf94aca43c70dac40a5cb12}\label{classns3_1_1_c_e_p_engine_a4f7d7410acf94aca43c70dac40a5cb12}} 
+long {\bfseries number\+\_\+tuples\+\_\+received} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_a5fcab783a1f979bd73602593221f9ad0}\label{classns3_1_1_c_e_p_engine_a5fcab783a1f979bd73602593221f9ad0}} 
+static std\+::map$<$ int, std\+::string $>$ {\bfseries stream\+\_\+id\+\_\+to\+\_\+name} = \{\}
+\item 
+\mbox{\Hypertarget{classns3_1_1_c_e_p_engine_affe49be4e55852f8c29d6d93083798ac}\label{classns3_1_1_c_e_p_engine_affe49be4e55852f8c29d6d93083798ac}} 
+static std\+::map$<$ std\+::string, int $>$ {\bfseries stream\+\_\+name\+\_\+to\+\_\+id} = \{\}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cep-\/engine.\+h\item 
+cep-\/engine.\+cc\end{DoxyCompactItemize}

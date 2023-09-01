@@ -1,0 +1,73 @@
+tracepoints: []
+stream-definitions:
+- stream-id: 1
+  name: BusRecord
+  tuple-format:
+  - {name: a_ts, type: long}
+  - {name: b_line_id, type: long}
+  - {name: c_direction, type: long}
+  - {name: d_journey_pattern_id, type: string}
+  - {name: e_time_frame, type: timestamp}
+  - {name: f_vehicle_journey_id, type: long}
+  - {name: g_operator, type: string}
+  - {name: h_congested, type: long}
+  - {name: i_longitude, type: double}
+  - {name: j_latitude, type: double}
+  - {name: k_delay, type: long}
+  - {name: l_block_id, type: long}
+  - {name: m_vehicle_id, type: long}
+  - {name: n_stop_id, type: long}
+  - {name: o_at_stop, type: long}
+experiments:
+- id: 1
+  flow:
+  - node: coordinator
+    task: deployQueries
+    arguments: [1, 1]
+  - node: coordinator
+    task: addPotentialHost
+    arguments:
+    - [2, 3, 4]
+  - node: coordinator
+    task: addSourceNode
+    arguments:
+    - [1]
+  - node: coordinator
+    task: addSinkNode
+    arguments:
+    - [5]
+  - node: 1
+    task: sendCsvDsAsStream
+    arguments: [1, 1]
+  - node: 5
+    task: retEndOfStream
+    arguments: [30000]
+datasets:
+- {file: Bus1-1hour/siri.20121106.csv, stream-id: 1, name: Dataset, id: '1'}
+spequeries:
+  outputs:
+  - {schema: stream_name1, node: 0, edge: stream_name1, name: Output 0}
+  inputs:
+  - {schema: stream_name0, node: 0, edge: stream_name0, name: input 0}
+  queries:
+  - operators:
+    - name: Filter 0
+      type: filter
+      parameters: {op: '', {arg2: '', type: attribute}, {arg1: '', type: constant}}
+    - name: Select 0
+      type: select
+      parameters:
+        fields: []
+    name: Query1
+    edges:
+    - stream: stream_name1
+      from: {name: Select 0, type: intermediate}
+      to: {name: Output 0, type: intermediate}
+    - stream: stream_name0
+      from: {name: input 0, type: intermediate}
+      to: {name: Filter 0, type: intermediate}
+    - stream: stream_name2
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    id: 1
+

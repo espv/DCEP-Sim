@@ -1,0 +1,41 @@
+build_lib(
+  LIBNAME stream-processing
+  SOURCE_FILES
+    model/operators/SelectOperator.cpp
+    model/operators/GroupOperator.cpp
+    model/operators/CepPatternOperator.cpp
+    model/operators/DefineOperator.cpp
+    model/operators/WithinOperator.cpp
+    model/operators/ForwardOperator.cpp
+    model/operators/SinkOperator.cpp
+    model/operators/JoinOperator.cpp
+    model/operators/FilterOperator.cpp
+    model/operators/Stream.cpp
+    model/operators/PrintOperator.cpp
+    model/operators/PassthroughOperator.cpp
+    model/operators/InputOperator.cpp
+    model/operators/Operator.cpp
+    model/operators/WindowOperator.cpp
+    model/operators/MigrationPlan.cpp
+    model/operators/MigrationMechanism.cpp
+    model/operators/PartialState.cpp
+    model/processing/CpuCore.cpp
+    model/processing/NodeResourceManager.cpp
+    model/Tuple.cpp
+    model/Query.cpp
+    model/Metrics.cc
+  HEADER_FILES
+    model/operators/Operator.h
+    model/operators/SerializedOperator.h
+    model/stream-processing-common.h
+    model/Metrics.h
+    model/Tuple.h
+    model/Query.h
+    model/processing/CpuCore.h
+    model/processing/NodeResourceManager.h
+    model/utility/string-functions.h
+    model/utility/random.h
+  LIBRARIES_TO_LINK ${libcore}
+  #TEST_SOURCES
+  #  test/stream-processing-test-suite.cc
+)

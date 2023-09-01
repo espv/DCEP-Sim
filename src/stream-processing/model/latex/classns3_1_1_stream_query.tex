@@ -1,0 +1,142 @@
+\hypertarget{classns3_1_1_stream_query}{}\doxysection{ns3\+::Stream\+Query Class Reference}
+\label{classns3_1_1_stream_query}\index{ns3::StreamQuery@{ns3::StreamQuery}}
+
+
+Inheritance diagram for ns3\+::Stream\+Query\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classns3_1_1_stream_query__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns3\+::Stream\+Query\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classns3_1_1_stream_query__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a54edfd2695b4b5008af7736bb00a4c04}\label{classns3_1_1_stream_query_a54edfd2695b4b5008af7736bb00a4c04}} 
+{\bfseries Stream\+Query} (int id, int unique\+\_\+query\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ad19a8ebd663e86948ddce4ab898ff542}\label{classns3_1_1_stream_query_ad19a8ebd663e86948ddce4ab898ff542}} 
+void {\bfseries set\+Time} (Ptr$<$ Tuple\+Wrapper $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ad9ecae78df2419f1436dbaeed8de06df}\label{classns3_1_1_stream_query_ad9ecae78df2419f1436dbaeed8de06df}} 
+void {\bfseries set\+Field\+Indexes} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a841bfb46bd26212067fba1c8d8f0b0a3}\label{classns3_1_1_stream_query_a841bfb46bd26212067fba1c8d8f0b0a3}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream_query}{Stream\+Query}} $>$ {\bfseries copy} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a930871437cf763ee5c746a7513aecc99}\label{classns3_1_1_stream_query_a930871437cf763ee5c746a7513aecc99}} 
+void {\bfseries add\+Stream} (Ptr$<$ Stream $>$ stream)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a6c06758c412d93e835fd2e9741eb0536}\label{classns3_1_1_stream_query_a6c06758c412d93e835fd2e9741eb0536}} 
+std\+::vector$<$ Ptr$<$ Partial\+State\+Wrapper $>$ $>$ {\bfseries Get\+Essential\+States} (std\+::string alias)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ab4518c4f0d4fc3c28c6ed79ff2d2db70}\label{classns3_1_1_stream_query_ab4518c4f0d4fc3c28c6ed79ff2d2db70}} 
+void {\bfseries Add\+Essential\+Parameter} (std\+::string alias, std\+::string field)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a7660fa7ce73b385c68b1205ca46a2d4a}\label{classns3_1_1_stream_query_a7660fa7ce73b385c68b1205ca46a2d4a}} 
+void {\bfseries Add\+Unessential\+Parameter} (std\+::string alias, std\+::string field)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a14fcbd90f7d2022e938325d539c2aaaf}\label{classns3_1_1_stream_query_a14fcbd90f7d2022e938325d539c2aaaf}} 
+static Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream_query}{Stream\+Query}} $>$ {\bfseries build\+Query} (std\+::vector$<$ YAML\+::\+Node $>$ vertices\+\_\+yaml, std\+::vector$<$ YAML\+::\+Node $>$ edges\+\_\+yaml, int query\+\_\+index, int unique\+\_\+query\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a33e4178a5231536632a7b7828d39c175}\label{classns3_1_1_stream_query_a33e4178a5231536632a7b7828d39c175}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ae94db359716fc4000795523ec3955004}\label{classns3_1_1_stream_query_ae94db359716fc4000795523ec3955004}} 
+std\+::mutex {\bfseries mtx}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a864410e61d9e5344e8bb63b03e966f40}\label{classns3_1_1_stream_query_a864410e61d9e5344e8bb63b03e966f40}} 
+std\+::condition\+\_\+variable {\bfseries cv}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a14050ec61190699facc9a10322876e09}\label{classns3_1_1_stream_query_a14050ec61190699facc9a10322876e09}} 
+bool {\bfseries started} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ae342f7a4cd78b48d93c11fea397e6a4d}\label{classns3_1_1_stream_query_ae342f7a4cd78b48d93c11fea397e6a4d}} 
+Ptr$<$ Node $>$ {\bfseries node}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a2070b8845ce58cb09bad1c70bfafc561}\label{classns3_1_1_stream_query_a2070b8845ce58cb09bad1c70bfafc561}} 
+Callback$<$ void, Ptr$<$ Tuple\+Wrapper $>$ $>$ {\bfseries output\+Callback}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_aab49798549958c82b4e488289de05d23}\label{classns3_1_1_stream_query_aab49798549958c82b4e488289de05d23}} 
+std\+::map$<$ int, std\+::map$<$ std\+::string, bool $>$ $>$ {\bfseries stream\+Id\+To\+Field\+To\+Essential}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ae00183286fe3a87d3e9b7eb587e6f1b8}\label{classns3_1_1_stream_query_ae00183286fe3a87d3e9b7eb587e6f1b8}} 
+std\+::map$<$ int, std\+::map$<$ int, Ptr$<$ Operator $>$ $>$ $>$ {\bfseries stream\+Id\+To\+Operator\+Id\+To\+Operator}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ab72643b3d7e01ca6d025da260480ea53}\label{classns3_1_1_stream_query_ab72643b3d7e01ca6d025da260480ea53}} 
+std\+::vector$<$ int $>$ {\bfseries sink\+\_\+nodes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ae26a5d5fa98a9c3bc78c0a2f9a5bc8e4}\label{classns3_1_1_stream_query_ae26a5d5fa98a9c3bc78c0a2f9a5bc8e4}} 
+std\+::vector$<$ int $>$ {\bfseries source\+\_\+nodes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a283947e8fcdaaf97a99e6abd76e087ac}\label{classns3_1_1_stream_query_a283947e8fcdaaf97a99e6abd76e087ac}} 
+std\+::vector$<$ int $>$ {\bfseries potential\+\_\+hosts}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_added8db85884280d1d8e9ee70652eddd}\label{classns3_1_1_stream_query_added8db85884280d1d8e9ee70652eddd}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a1a334c01d2bbefb2e75f37fbf0c9d792}\label{classns3_1_1_stream_query_a1a334c01d2bbefb2e75f37fbf0c9d792}} 
+int {\bfseries unique\+\_\+query\+\_\+id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a2e914f9b60eb747cb8496f3b2c74d1d1}\label{classns3_1_1_stream_query_a2e914f9b60eb747cb8496f3b2c74d1d1}} 
+int {\bfseries operator\+\_\+id\+\_\+cnt} = 1
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ad8dd43465182850d2224b4cbd58b942b}\label{classns3_1_1_stream_query_ad8dd43465182850d2224b4cbd58b942b}} 
+Time {\bfseries current\+\_\+time} = Time(0)
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a23995e7874d3efa9934f8d24cbe7f16a}\label{classns3_1_1_stream_query_a23995e7874d3efa9934f8d24cbe7f16a}} 
+bool {\bfseries shed} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_aec772fb300bbeeee130ca74ee771edd6}\label{classns3_1_1_stream_query_aec772fb300bbeeee130ca74ee771edd6}} 
+Time\+Type {\bfseries time\+\_\+type} = PROCESSING\+\_\+\+TIME\+\_\+\+TYPE
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_ad72aacc323234018895a22fe4f6594ec}\label{classns3_1_1_stream_query_ad72aacc323234018895a22fe4f6594ec}} 
+std\+::vector$<$ YAML\+::\+Node $>$ {\bfseries vertices\+\_\+yaml}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_aa4382c91e9234cf959ec582dd9dca3d0}\label{classns3_1_1_stream_query_aa4382c91e9234cf959ec582dd9dca3d0}} 
+std\+::vector$<$ YAML\+::\+Node $>$ {\bfseries edges\+\_\+yaml}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a22de4d6c998245898ded5ef03aee36b5}\label{classns3_1_1_stream_query_a22de4d6c998245898ded5ef03aee36b5}} 
+std\+::map$<$ std\+::string, int $>$ {\bfseries alias\+To\+Stream\+Id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a816b8e6cb7ab4c6f8d2aa1bd7f789ec6}\label{classns3_1_1_stream_query_a816b8e6cb7ab4c6f8d2aa1bd7f789ec6}} 
+std\+::map$<$ std\+::string, std\+::set$<$ std\+::string $>$ $>$ {\bfseries alias\+To\+Essential\+Attributes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a969fd037cedaface504d783649555fe3}\label{classns3_1_1_stream_query_a969fd037cedaface504d783649555fe3}} 
+std\+::map$<$ std\+::string, std\+::set$<$ std\+::string $>$ $>$ {\bfseries alias\+To\+Unssential\+Attributes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_af42aac0dfb4616647d13b182138b6f6a}\label{classns3_1_1_stream_query_af42aac0dfb4616647d13b182138b6f6a}} 
+std\+::map$<$ std\+::string, std\+::map$<$ int, std\+::string $>$ $>$ {\bfseries alias\+To\+Index\+To\+Field}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a14903ba86651560bf289bceeffee283c}\label{classns3_1_1_stream_query_a14903ba86651560bf289bceeffee283c}} 
+static std\+::map$<$ int, std\+::string $>$ {\bfseries ns3\+Node\+Id\+To\+Expose\+Node\+Id}
+\item 
+\mbox{\Hypertarget{classns3_1_1_stream_query_a01019342c05baf4010f5693e5e3174c3}\label{classns3_1_1_stream_query_a01019342c05baf4010f5693e5e3174c3}} 
+static std\+::map$<$ int, Ptr$<$ Node $>$ $>$ {\bfseries node\+Id\+To\+Node}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Query.\+h\item 
+Query.\+cpp\end{DoxyCompactItemize}

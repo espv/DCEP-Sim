@@ -1,0 +1,88 @@
+\hypertarget{classns3_1_1_attribute_filter_argument}{}\doxysection{ns3\+::Attribute\+Filter\+Argument Class Reference}
+\label{classns3_1_1_attribute_filter_argument}\index{ns3::AttributeFilterArgument@{ns3::AttributeFilterArgument}}
+
+
+Inheritance diagram for ns3\+::Attribute\+Filter\+Argument\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Attribute\+Filter\+Argument\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a953c1b3ea3a7d09f9329f38963b39387}\label{classns3_1_1_attribute_filter_argument_a953c1b3ea3a7d09f9329f38963b39387}} 
+{\bfseries Attribute\+Filter\+Argument} (const std\+::string \&alias, const std\+::string \&field, bool cache\+Argument, Ptr$<$ Stream\+Query $>$ query, double offset)
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a1730466eca4b07dd90a9c6723a455e83}\label{classns3_1_1_attribute_filter_argument_a1730466eca4b07dd90a9c6723a455e83}} 
+{\bfseries Attribute\+Filter\+Argument} (Aggregation aggregation, const std\+::string \&alias, const std\+::string \&field, bool cache\+Argument, Ptr$<$ Stream\+Query $>$ query, double offset)
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a76bc1eba0df852b7c4f235b2597a188b}\label{classns3_1_1_attribute_filter_argument_a76bc1eba0df852b7c4f235b2597a188b}} 
+std\+::string {\bfseries get\+String\+Value} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a49cf4a24d69136c62b1303899625aca9}\label{classns3_1_1_attribute_filter_argument_a49cf4a24d69136c62b1303899625aca9}} 
+long {\bfseries get\+Long\+Value} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a977ee6e23a41d67ff1f1487487f357c1}\label{classns3_1_1_attribute_filter_argument_a977ee6e23a41d67ff1f1487487f357c1}} 
+double {\bfseries get\+Double\+Value} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a307dd43627def1f9a146996dadc526fa}\label{classns3_1_1_attribute_filter_argument_a307dd43627def1f9a146996dadc526fa}} 
+bool {\bfseries is\+Initialized} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_af2808e0c5c201c17f7fbe1570793eaa4}\label{classns3_1_1_attribute_filter_argument_af2808e0c5c201c17f7fbe1570793eaa4}} 
+void {\bfseries cache} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a10ca748542e880c2c743278aa41b4960}\label{classns3_1_1_attribute_filter_argument_a10ca748542e880c2c743278aa41b4960}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_filter_argument}{Filter\+Argument}} $>$ {\bfseries copy} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a641db9c5c252910a3fc3045bcbdd5b72}\label{classns3_1_1_attribute_filter_argument_a641db9c5c252910a3fc3045bcbdd5b72}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a10105af844225dbb9aac5650ff60cd27}\label{classns3_1_1_attribute_filter_argument_a10105af844225dbb9aac5650ff60cd27}} 
+bool {\bfseries cache\+Argument} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_aee4c7f21258b4dae49397dcfbf22c72f}\label{classns3_1_1_attribute_filter_argument_aee4c7f21258b4dae49397dcfbf22c72f}} 
+int {\bfseries number\+\_\+evicted} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_affed8e8a73d0df00f1506f5ce75ead20}\label{classns3_1_1_attribute_filter_argument_affed8e8a73d0df00f1506f5ce75ead20}} 
+std\+::string {\bfseries filter} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_ab3ceb7718161486b9b09a894d318455f}\label{classns3_1_1_attribute_filter_argument_ab3ceb7718161486b9b09a894d318455f}} 
+std\+::unordered\+\_\+map$<$ long, std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ $>$ $>$ {\bfseries long\+To\+Tuples}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a22330106802dcf254e81c16bf31b73e4}\label{classns3_1_1_attribute_filter_argument_a22330106802dcf254e81c16bf31b73e4}} 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ $>$ $>$ {\bfseries string\+To\+Tuples}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_ab477ce36f34549d626ae2e4d57f9ad76}\label{classns3_1_1_attribute_filter_argument_ab477ce36f34549d626ae2e4d57f9ad76}} 
+std\+::unordered\+\_\+map$<$ double, std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ $>$ $>$ {\bfseries double\+To\+Tuples}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_ab632c2b145c6d531712b5e3e1d0f4f3f}\label{classns3_1_1_attribute_filter_argument_ab632c2b145c6d531712b5e3e1d0f4f3f}} 
+std\+::multiset$<$ std\+::pair$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$, long $>$, \mbox{\hyperlink{structns3_1_1_long_comparator}{Long\+Comparator}} $>$ {\bfseries bst\+Long\+Tuples}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_aa6900a9b351130fc3866c91fc24584fc}\label{classns3_1_1_attribute_filter_argument_aa6900a9b351130fc3866c91fc24584fc}} 
+std\+::multiset$<$ std\+::pair$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$, double $>$, \mbox{\hyperlink{structns3_1_1_double_comparator}{Double\+Comparator}} $>$ {\bfseries bst\+Double\+Tuples}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a37c27757d81c0a64ea5864557ea6a31c}\label{classns3_1_1_attribute_filter_argument_a37c27757d81c0a64ea5864557ea6a31c}} 
+static std\+::pair$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$, long $>$ {\bfseries lower\+\_\+bound} = std\+::make\+\_\+pair(nullptr, LONG\+\_\+\+MIN)
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_ad7dfb8f17ac3de880fee0af07fee1508}\label{classns3_1_1_attribute_filter_argument_ad7dfb8f17ac3de880fee0af07fee1508}} 
+static std\+::pair$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$, long $>$ {\bfseries upper\+\_\+bound} = std\+::make\+\_\+pair(nullptr, LONG\+\_\+\+MAX)
+\item 
+\mbox{\Hypertarget{classns3_1_1_attribute_filter_argument_a6b909694385dc59ea06fafb56a77b056}\label{classns3_1_1_attribute_filter_argument_a6b909694385dc59ea06fafb56a77b056}} 
+static std\+::pair$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$, long $>$ {\bfseries custom\+\_\+bound} = std\+::make\+\_\+pair(nullptr, 0)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Filter\+Operator.\+cpp\end{DoxyCompactItemize}

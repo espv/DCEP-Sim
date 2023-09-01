@@ -1,0 +1,73 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/stream-processing/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 459,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"/home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-stream-processing-debug.so"
+			],
+			"targetId" : "libstream-processing::@94af994df458dadb8a70",
+			"targetIndex" : 52,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/stream-processing/model/operators/Operator.h",
+				"src/stream-processing/model/operators/SerializedOperator.h",
+				"src/stream-processing/model/stream-processing-common.h",
+				"src/stream-processing/model/Metrics.h",
+				"src/stream-processing/model/Tuple.h",
+				"src/stream-processing/model/Query.h",
+				"src/stream-processing/model/processing/CpuCore.h",
+				"src/stream-processing/model/processing/NodeResourceManager.h",
+				"src/stream-processing/model/utility/string-functions.h",
+				"src/stream-processing/model/utility/random.h",
+				"build/include/ns3/stream-processing-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/stream-processing",
+		"source" : "src/stream-processing"
+	}
+}

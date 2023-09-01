@@ -1,0 +1,55 @@
+\hypertarget{classns3_1_1_migration_mechanism}{}\doxysection{ns3\+::Migration\+Mechanism Class Reference}
+\label{classns3_1_1_migration_mechanism}\index{ns3::MigrationMechanism@{ns3::MigrationMechanism}}
+
+
+Inheritance diagram for ns3\+::Migration\+Mechanism\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Migration\+Mechanism\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_a1c2531030ae5a7c7845c765d8a981658}\label{classns3_1_1_migration_mechanism_a1c2531030ae5a7c7845c765d8a981658}} 
+{\bfseries Migration\+Mechanism} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_abc6cd1886da314fa44d9c01225d15b9a}\label{classns3_1_1_migration_mechanism_abc6cd1886da314fa44d9c01225d15b9a}} 
+virtual void {\bfseries Operator\+Final\+Batch\+Ready} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ op, Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch)
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_a0836755035f21aad51e92eae328fcffa}\label{classns3_1_1_migration_mechanism_a0836755035f21aad51e92eae328fcffa}} 
+virtual void {\bfseries Extract\+Operator\+Preamble\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ old\+\_\+host\+\_\+op, Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ new\+\_\+host\+\_\+op)
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_a6109c9bba8177884c7e704352176a3b5}\label{classns3_1_1_migration_mechanism_a6109c9bba8177884c7e704352176a3b5}} 
+virtual void {\bfseries Prepare\+Operator\+Preamble\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ op, Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch)
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_ae27e9edc6cf1d948409a0aea303eae94}\label{classns3_1_1_migration_mechanism_ae27e9edc6cf1d948409a0aea303eae94}} 
+virtual void {\bfseries Prepare\+Batch\+For\+Sending} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch)
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_adcaf8830d8ebce74c9d17eeeca3f5fef}\label{classns3_1_1_migration_mechanism_adcaf8830d8ebce74c9d17eeeca3f5fef}} 
+virtual void {\bfseries Before\+First\+Move\+Next\+State} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_a2e6d92cbffd5f6112a662832d8f62782}\label{classns3_1_1_migration_mechanism_a2e6d92cbffd5f6112a662832d8f62782}} 
+virtual void {\bfseries All\+Preamble\+States\+Sent} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_a877e4ccc9f3f94652f8fd177a14e7328}\label{classns3_1_1_migration_mechanism_a877e4ccc9f3f94652f8fd177a14e7328}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_adc1518e89df3e137d2a7715f36ce38fc}\label{classns3_1_1_migration_mechanism_adc1518e89df3e137d2a7715f36ce38fc}} 
+bool {\bfseries run\+\_\+old\+\_\+and\+\_\+new\+\_\+during\+\_\+migration} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_migration_mechanism_aebd56f36334023af04d1130a260c5bbc}\label{classns3_1_1_migration_mechanism_aebd56f36334023af04d1130a260c5bbc}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ {\bfseries mp}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Migration\+Mechanism.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{classns3_1_1_placement}{}\doxysection{ns3\+::Placement Class Reference}
+\label{classns3_1_1_placement}\index{ns3::Placement@{ns3::Placement}}
+
+
+{\ttfamily \#include $<$placement.\+h$>$}
+
+
+
+Inheritance diagram for ns3\+::Placement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classns3_1_1_placement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns3\+::Placement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classns3_1_1_placement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_ae23344a8b58b703ab903cb30ae679fe1}\label{classns3_1_1_placement_ae23344a8b58b703ab903cb30ae679fe1}} 
+void {\bfseries configure} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_a05c34b4055d9d57e016d635d3e757e04}\label{classns3_1_1_placement_a05c34b4055d9d57e016d635d3e757e04}} 
+void {\bfseries Send\+Cep\+Event\+To\+Cep\+Engine\+New} (Ptr$<$ Tuple\+Wrapper $>$ tuple)
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_a6379131de6c74ff914a1ee46523bb335}\label{classns3_1_1_placement_a6379131de6c74ff914a1ee46523bb335}} 
+void {\bfseries Rcv\+Cep\+Event\+New} (Ptr$<$ Tuple\+Wrapper $>$ tuple\+Wrapper)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_a64e138e398ecd6d628e3ebee1b7c82ac}\label{classns3_1_1_placement_a64e138e398ecd6d628e3ebee1b7c82ac}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_af7b64e15bfb3dbc5c89d394b4f3b9e81}\label{classns3_1_1_placement_af7b64e15bfb3dbc5c89d394b4f3b9e81}} 
+class {\bfseries Centralized\+Placement\+Policy}
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_a753e65d8eb3056f14b60c145f2f48319}\label{classns3_1_1_placement_a753e65d8eb3056f14b60c145f2f48319}} 
+class {\bfseries Detector}
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_ae5fa6fa1c042ed9cce29f36ce22c2eb8}\label{classns3_1_1_placement_ae5fa6fa1c042ed9cce29f36ce22c2eb8}} 
+class {\bfseries Forwarder}
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_abe84aa353a9443cfe2b538376f8f3bc6}\label{classns3_1_1_placement_abe84aa353a9443cfe2b538376f8f3bc6}} 
+class {\bfseries Dcep}
+\item 
+\mbox{\Hypertarget{classns3_1_1_placement_a54c1252abc87a78a301e6b6984470408}\label{classns3_1_1_placement_a54c1252abc87a78a301e6b6984470408}} 
+class {\bfseries Resource\+Manager}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The placement component can be seen as an extension for a CEP engine which enables distribution. This means that the primary goal of this component is to hide distribution to the CEP engine. To achieve this, the placement component takes care of\+:
+\begin{DoxyEnumerate}
+\item operator placement assignment on network nodes, essentially building an operator network.
+\item event forwarding through the operator network The design of the placement component applies the separation of policies and mechanisms. The aim is to allow different placement assignment policies which can be loaded at compile or runtime. This should make this component reusable across different system scenarios. A placement object implements mechanisms for building the operator network and forwarding events through it. And instance of a Placement\+Policy (defined above) object implements a placement assignment algorithm to determine where an operator should be placed. 
+\end{DoxyEnumerate}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+placement.\+h\item 
+placement.\+cc\end{DoxyCompactItemize}

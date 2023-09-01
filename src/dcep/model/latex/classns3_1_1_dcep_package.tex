@@ -1,0 +1,82 @@
+\hypertarget{classns3_1_1_dcep_package}{}\doxysection{ns3\+::Dcep\+Package Class Reference}
+\label{classns3_1_1_dcep_package}\index{ns3::DcepPackage@{ns3::DcepPackage}}
+
+
+Inheritance diagram for ns3\+::Dcep\+Package\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classns3_1_1_dcep_package__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns3\+::Dcep\+Package\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classns3_1_1_dcep_package__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a2507545ddeb8fd3c115942c760f6c746}\label{classns3_1_1_dcep_package_a2507545ddeb8fd3c115942c760f6c746}} 
+{\bfseries Dcep\+Package} (const Ptr$<$ Socket $>$ \&socket)
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a66dd65e98420f4c0e21c849dde613fdb}\label{classns3_1_1_dcep_package_a66dd65e98420f4c0e21c849dde613fdb}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_acc5167e092cd98265760d1affff7e99f}\label{classns3_1_1_dcep_package_acc5167e092cd98265760d1affff7e99f}} 
+void {\bfseries init} (Ptr$<$ Packet $>$)
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a94028c0d228a725b3a6b7f5e46be49c6}\label{classns3_1_1_dcep_package_a94028c0d228a725b3a6b7f5e46be49c6}} 
+bool {\bfseries read\+Header} (int header\+\_\+size)
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_adeff5293447539d9644e3dbd7423ad53}\label{classns3_1_1_dcep_package_adeff5293447539d9644e3dbd7423ad53}} 
+void {\bfseries set\+Size} (int payload\+\_\+size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a00b1c25e287ca589ed26eb110f4055b4}\label{classns3_1_1_dcep_package_a00b1c25e287ca589ed26eb110f4055b4}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_af5c3aa7726286cd2d3c5b070ca09fbdb}\label{classns3_1_1_dcep_package_af5c3aa7726286cd2d3c5b070ca09fbdb}} 
+Ptr$<$ Socket $>$ {\bfseries socket}
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a8fc44805dc83a6693bab0f3b112763a3}\label{classns3_1_1_dcep_package_a8fc44805dc83a6693bab0f3b112763a3}} 
+uint8\+\_\+t $\ast$ {\bfseries payload}
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a8121e677f02abbd26fcf1a9d62b6906c}\label{classns3_1_1_dcep_package_a8121e677f02abbd26fcf1a9d62b6906c}} 
+std\+::size\+\_\+t {\bfseries size}
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a1df02639858c97dde0de314cdaaa7bec}\label{classns3_1_1_dcep_package_a1df02639858c97dde0de314cdaaa7bec}} 
+std\+::size\+\_\+t {\bfseries copied\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_afe93f5737c1e13a10d411ba1390f8b12}\label{classns3_1_1_dcep_package_afe93f5737c1e13a10d411ba1390f8b12}} 
+\mbox{\hyperlink{classns3_1_1_dcep_header}{Dcep\+Header}} {\bfseries dcep\+\_\+header}
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_ae6102fb3ee8fba7556c0ec19633413d3}\label{classns3_1_1_dcep_package_ae6102fb3ee8fba7556c0ec19633413d3}} 
+bool {\bfseries node\+\_\+failed} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a4d3ce7c7d50b21553b66d0f9d00c5c44}\label{classns3_1_1_dcep_package_a4d3ce7c7d50b21553b66d0f9d00c5c44}} 
+bool {\bfseries active} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a95e928625b3dcc04958d1dad924d25a7}\label{classns3_1_1_dcep_package_a95e928625b3dcc04958d1dad924d25a7}} 
+bool {\bfseries loaded\+\_\+header} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_dcep_package_a3d971a0fa036f0e197fe0cca2316c8e1}\label{classns3_1_1_dcep_package_a3d971a0fa036f0e197fe0cca2316c8e1}} 
+Ptr$<$ Packet $>$ {\bfseries cur\+\_\+buffered\+\_\+packet}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+communication.\+h\item 
+communication.\+cc\end{DoxyCompactItemize}

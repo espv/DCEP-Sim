@@ -1,0 +1,2 @@
+#!/bin/bash
+nohup ./run-simulations-lazy-1&disown; nohup ./run-simulations-lazy-2&disown; nohup ./run-simulations-lazy-3&disown; nohup ./run-simulations-lazy-4&disown; nohup ./run-simulations-lazy-5 &disown

@@ -1,0 +1,119 @@
+\hypertarget{classns3_1_1_group_operator}{}\doxysection{ns3\+::Group\+Operator Class Reference}
+\label{classns3_1_1_group_operator}\index{ns3::GroupOperator@{ns3::GroupOperator}}
+
+
+Inheritance diagram for ns3\+::Group\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Group\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a80f47708f89019e3b54e2e3fe9bf45ae}\label{classns3_1_1_group_operator_a80f47708f89019e3b54e2e3fe9bf45ae}} 
+{\bfseries Group\+Operator} (std\+::vector$<$ std\+::string $>$ group\+\_\+keys)
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a7f9ba107f84779737a633a5c2e6d3921}\label{classns3_1_1_group_operator_a7f9ba107f84779737a633a5c2e6d3921}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a41322d4e093d355895cd43380e5c30d3}\label{classns3_1_1_group_operator_a41322d4e093d355895cd43380e5c30d3}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_afd780745dee75bc0686fbeed089f9b5f}\label{classns3_1_1_group_operator_afd780745dee75bc0686fbeed089f9b5f}} 
+void {\bfseries init\+\_\+partitions} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_select_operator}{Select\+Operator}} $>$ select\+\_\+operator)
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a68a30893b7c7a40c252d4c9271c31614}\label{classns3_1_1_group_operator_a68a30893b7c7a40c252d4c9271c31614}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ {\bfseries Get\+Group} (int group\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a4fc8d384a26da866deb78cc733b3d751}\label{classns3_1_1_group_operator_a4fc8d384a26da866deb78cc733b3d751}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a36166be1133662f2abbbf189d48410ae}\label{classns3_1_1_group_operator_a36166be1133662f2abbbf189d48410ae}} 
+void {\bfseries process} (const std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple}{Tuple}} $>$ $>$ \&tuple)
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a73bb51f1ed4cb58a8f9c8062d4c57a7b}\label{classns3_1_1_group_operator_a73bb51f1ed4cb58a8f9c8062d4c57a7b}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a62540dbf33d8c3fcd38d2c3e7c434256}\label{classns3_1_1_group_operator_a62540dbf33d8c3fcd38d2c3e7c434256}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ {\bfseries Extract\+Preamble\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_aaec42f30745058b38b01ffc47c864721}\label{classns3_1_1_group_operator_aaec42f30745058b38b01ffc47c864721}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a75b5caa7eefe5aa7b1c05e4c90f34c1a}\label{classns3_1_1_group_operator_a75b5caa7eefe5aa7b1c05e4c90f34c1a}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a29a7c31995cc6ddf83ea787bfeb96984}\label{classns3_1_1_group_operator_a29a7c31995cc6ddf83ea787bfeb96984}} 
+void {\bfseries do\+Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp)
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a613adfe5e9477b008c4ce8c6d24c2a53}\label{classns3_1_1_group_operator_a613adfe5e9477b008c4ce8c6d24c2a53}} 
+void {\bfseries Extract\+Diff\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a74edf3737f2cce8f5e16e7e32d2a714f}\label{classns3_1_1_group_operator_a74edf3737f2cce8f5e16e7e32d2a714f}} 
+Time {\bfseries get\+\_\+base\+\_\+processing\+\_\+time} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a3ec4f913e369c831acdb0d71d0c1b56e}\label{classns3_1_1_group_operator_a3ec4f913e369c831acdb0d71d0c1b56e}} 
+Time {\bfseries get\+\_\+emit\+\_\+time\+\_\+added} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a112a643f326b24ab2cf6c6ee805bb683}\label{classns3_1_1_group_operator_a112a643f326b24ab2cf6c6ee805bb683}} 
+Time {\bfseries get\+\_\+forward\+\_\+time\+\_\+added} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a12346c74d1d2767b4a0cac2bdc2e3096}\label{classns3_1_1_group_operator_a12346c74d1d2767b4a0cac2bdc2e3096}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a5a9b47e021441eebcf024e1a02264cdc}\label{classns3_1_1_group_operator_a5a9b47e021441eebcf024e1a02264cdc}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ $>$ {\bfseries groups}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_adc2f4e438a79b4e7791d469ec872ec7f}\label{classns3_1_1_group_operator_adc2f4e438a79b4e7791d469ec872ec7f}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ $>$ {\bfseries partitions}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_ab07e7e7626aefade4b0e45b492d66430}\label{classns3_1_1_group_operator_ab07e7e7626aefade4b0e45b492d66430}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_grouper}{Grouper}} $>$ {\bfseries first\+\_\+grouper}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a9e34854ce323eb022e7f20e95e8a862b}\label{classns3_1_1_group_operator_a9e34854ce323eb022e7f20e95e8a862b}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_partitioner}{Partitioner}} $>$ {\bfseries first\+\_\+partitioner}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a61cf01a23edd49791774e398774387f1}\label{classns3_1_1_group_operator_a61cf01a23edd49791774e398774387f1}} 
+std\+::vector$<$ int $>$ {\bfseries depth\+\_\+indexes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a57ab83d5d6f09fefefad16e50ee12889}\label{classns3_1_1_group_operator_a57ab83d5d6f09fefefad16e50ee12889}} 
+std\+::vector$<$ int $>$ {\bfseries partition\+\_\+depth\+\_\+indexes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a46e50e7aee993c60c7366e79dd32dcd0}\label{classns3_1_1_group_operator_a46e50e7aee993c60c7366e79dd32dcd0}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries group\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_af1e0ba23ed6938dbecd1dc5b45ac40d1}\label{classns3_1_1_group_operator_af1e0ba23ed6938dbecd1dc5b45ac40d1}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries partition\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a7468a4f2f7e5134339a5710acebb313c}\label{classns3_1_1_group_operator_a7468a4f2f7e5134339a5710acebb313c}} 
+std\+::vector$<$ Type $>$ {\bfseries group\+\_\+types}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_ac914b5557f0727fbe4aaf469e04f6af9}\label{classns3_1_1_group_operator_ac914b5557f0727fbe4aaf469e04f6af9}} 
+std\+::vector$<$ Type $>$ {\bfseries partition\+\_\+types}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_abd19632a7a785b3b556cda4e309f7389}\label{classns3_1_1_group_operator_abd19632a7a785b3b556cda4e309f7389}} 
+std\+::vector$<$ int $>$ {\bfseries tuple\+\_\+indexes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_afd7ec2d923a6457c133d769ca0f3718c}\label{classns3_1_1_group_operator_afd7ec2d923a6457c133d769ca0f3718c}} 
+std\+::vector$<$ int $>$ {\bfseries partition\+\_\+tuple\+\_\+indexes}
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_a12dad701aad90c61ec90fb8b777d2b5b}\label{classns3_1_1_group_operator_a12dad701aad90c61ec90fb8b777d2b5b}} 
+bool {\bfseries single\+\_\+group} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_group_operator_ae8af4ed575764911a5c259cf7b57ad58}\label{classns3_1_1_group_operator_ae8af4ed575764911a5c259cf7b57ad58}} 
+std\+::map$<$ int, Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ $>$ {\bfseries group\+\_\+map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Group\+Operator.\+cpp\end{DoxyCompactItemize}

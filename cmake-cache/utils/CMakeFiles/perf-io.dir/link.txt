@@ -1,0 +1,1 @@
+/usr/bin/c++ -g "CMakeFiles/perf-io.dir/perf/perf-io.cc.o" -o /home/espen/ns-3/ns3-wip/build/utils/perf/ns3.36.1-perf-io-debug  -Wl,-rpath,/home/espen/ns-3/ns3-wip/build/lib /home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-core-debug.so -Wl,--no-as-needed /usr/lib/x86_64-linux-gnu/librt.a -Wl,--as-needed 

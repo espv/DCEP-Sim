@@ -1,0 +1,36 @@
+# CMake generated Testfile for 
+# Source directory: /home/espen/ns-3/ns3-wip/src
+# Build directory: /home/espen/ns-3/ns3-wip/cmake-cache/src
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("dcep")
+subdirs("stream-processing")
+subdirs("core")
+subdirs("olsr")
+subdirs("internet")
+subdirs("network")
+subdirs("stats")
+subdirs("bridge")
+subdirs("traffic-control")
+subdirs("config-store")
+subdirs("netanim")
+subdirs("mobility")
+subdirs("wimax")
+subdirs("propagation")
+subdirs("wifi")
+subdirs("energy")
+subdirs("spectrum")
+subdirs("antenna")
+subdirs("csma")
+subdirs("lte")
+subdirs("fd-net-device")
+subdirs("buildings")
+subdirs("virtual-net-device")
+subdirs("point-to-point")
+subdirs("applications")
+subdirs("uan")
+subdirs("lr-wpan")
+subdirs("wave")
+subdirs("point-to-point-layout")
+subdirs("test")

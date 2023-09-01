@@ -1,0 +1,108 @@
+\hypertarget{classns3_1_1_tuple_wrapper}{}\doxysection{ns3\+::Tuple\+Wrapper Class Reference}
+\label{classns3_1_1_tuple_wrapper}\index{ns3::TupleWrapper@{ns3::TupleWrapper}}
+
+
+Inheritance diagram for ns3\+::Tuple\+Wrapper\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Tuple\+Wrapper\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_abb5a29b5e2554a25a6fee83f5c9c67d8}\label{classns3_1_1_tuple_wrapper_abb5a29b5e2554a25a6fee83f5c9c67d8}} 
+{\bfseries Tuple\+Wrapper} (std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple}{Tuple}} $>$$>$ tuples)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a39699f9cbbe4b759a8f52eb8c0d0db93}\label{classns3_1_1_tuple_wrapper_a39699f9cbbe4b759a8f52eb8c0d0db93}} 
+{\bfseries Tuple\+Wrapper} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper, Ptr$<$ Stream\+Query $>$ query)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a6928b6f3ae04a0cba240b195aa799040}\label{classns3_1_1_tuple_wrapper_a6928b6f3ae04a0cba240b195aa799040}} 
+{\bfseries Tuple\+Wrapper} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a5773b11c3ccc4db18233cf64c906a12b}\label{classns3_1_1_tuple_wrapper_a5773b11c3ccc4db18233cf64c906a12b}} 
+{\bfseries Tuple\+Wrapper} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper, bool shed\+\_\+unessential\+\_\+attributes, bool new\+\_\+ids)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_ab6425339df800c7dbdc479be363c187f}\label{classns3_1_1_tuple_wrapper_ab6425339df800c7dbdc479be363c187f}} 
+void {\bfseries add\+\_\+tuple} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple}{Tuple}} $>$ t)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_aca2595ce6461f71368dce888759fe6af}\label{classns3_1_1_tuple_wrapper_aca2595ce6461f71368dce888759fe6af}} 
+bool {\bfseries contains\+Stream\+Id} (int stream\+\_\+id)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a25d99f3382887a19cfc95f0a94795e02}\label{classns3_1_1_tuple_wrapper_a25d99f3382887a19cfc95f0a94795e02}} 
+void {\bfseries shed\+\_\+unessential} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a860f7c73640112a5ab34e87bfbdad13a}\label{classns3_1_1_tuple_wrapper_a860f7c73640112a5ab34e87bfbdad13a}} 
+bool {\bfseries cmp} (std\+::vector$<$ int $>$ stream\+\_\+ids)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a71c8a1f69d3c5dd2682b313134926f97}\label{classns3_1_1_tuple_wrapper_a71c8a1f69d3c5dd2682b313134926f97}} 
+Time {\bfseries get\+Time} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_aaeb74308c9e79b3d41a93b8e07ab68fa}\label{classns3_1_1_tuple_wrapper_aaeb74308c9e79b3d41a93b8e07ab68fa}} 
+void {\bfseries set\+Time} (Time t)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a1cb23d3455afe9ae9b5bb5c2d4bbbd05}\label{classns3_1_1_tuple_wrapper_a1cb23d3455afe9ae9b5bb5c2d4bbbd05}} 
+size\+\_\+t {\bfseries Get\+Serialized\+Size} (bool with\+\_\+group)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a0a264697759e54ffd543b654dd5aeaae}\label{classns3_1_1_tuple_wrapper_a0a264697759e54ffd543b654dd5aeaae}} 
+size\+\_\+t {\bfseries Serialize} (bool with\+\_\+group, Buffer\+::\+Iterator iterator)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_abeb0332a8cf609ece33838d9fded8579}\label{classns3_1_1_tuple_wrapper_abeb0332a8cf609ece33838d9fded8579}} 
+size\+\_\+t {\bfseries Get\+Serialized\+Size} () override
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_aa73f01863eb693af7e1da9c3d21b4743}\label{classns3_1_1_tuple_wrapper_aa73f01863eb693af7e1da9c3d21b4743}} 
+size\+\_\+t {\bfseries Get\+Utility} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_ac14a74bf9bb32f8eaefc85ea9d887668}\label{classns3_1_1_tuple_wrapper_ac14a74bf9bb32f8eaefc85ea9d887668}} 
+static Type\+Id {\bfseries Get\+Type\+Id} ()
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a59a34407bac44a3d67541325f605b8eb}\label{classns3_1_1_tuple_wrapper_a59a34407bac44a3d67541325f605b8eb}} 
+static Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ {\bfseries Deserialize} (uint8\+\_\+t $\ast$serialized\+\_\+payload, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_aa5a63f30461f7943d4fafd2658ea3694}\label{classns3_1_1_tuple_wrapper_aa5a63f30461f7943d4fafd2658ea3694}} 
+static Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ {\bfseries do\+Deserialize} (Buffer\+::\+Iterator $\ast$iterator)
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_acd9d5a90a5b52ee5baf45b5f79534922}\label{classns3_1_1_tuple_wrapper_acd9d5a90a5b52ee5baf45b5f79534922}} 
+static Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ {\bfseries Deserialize\+Group\+Less} (uint8\+\_\+t $\ast$serialized\+\_\+payload)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a29c65a350bd9264d6bc124b13d908fd3}\label{classns3_1_1_tuple_wrapper_a29c65a350bd9264d6bc124b13d908fd3}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ {\bfseries group} = Group\+::no\+\_\+group
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_af776e260a2a30350b05ebc8004fce7a3}\label{classns3_1_1_tuple_wrapper_af776e260a2a30350b05ebc8004fce7a3}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_group}{Group}} $>$ {\bfseries partition\+\_\+group} = Group\+::no\+\_\+group
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a73f657df9c77d70fa7fdea6922b7c807}\label{classns3_1_1_tuple_wrapper_a73f657df9c77d70fa7fdea6922b7c807}} 
+std\+::vector$<$ Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple}{Tuple}} $>$ $>$ {\bfseries tuples}
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a5e0621dd468b9b1405b557fd3ce32071}\label{classns3_1_1_tuple_wrapper_a5e0621dd468b9b1405b557fd3ce32071}} 
+bool {\bfseries evicted} = false
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_ac3917fc785751acae78dfcbefa70d53b}\label{classns3_1_1_tuple_wrapper_ac3917fc785751acae78dfcbefa70d53b}} 
+Ptr$<$ Stream\+Query $>$ {\bfseries query}
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a7dcb91a5b9d88643db600769cc3abfb8}\label{classns3_1_1_tuple_wrapper_a7dcb91a5b9d88643db600769cc3abfb8}} 
+int {\bfseries next\+\_\+operator\+\_\+id} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a8a325bbb5ef03e13430a99a2c72cc56d}\label{classns3_1_1_tuple_wrapper_a8a325bbb5ef03e13430a99a2c72cc56d}} 
+Ptr$<$ Node $>$ {\bfseries node}
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_a46b9031e651097d0d8041c4b05639ca9}\label{classns3_1_1_tuple_wrapper_a46b9031e651097d0d8041c4b05639ca9}} 
+bool {\bfseries shed} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_tuple_wrapper_ac8390b5d0b0796870c22ba478eab2ed1}\label{classns3_1_1_tuple_wrapper_ac8390b5d0b0796870c22ba478eab2ed1}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} \&tuple\+Wrapper)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\end{DoxyCompactItemize}

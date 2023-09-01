@@ -1,0 +1,507 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./helper/wave-bsm-helper.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./helper/wave-bsm-stats.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./helper/wave-helper.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./helper/wave-mac-helper.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./helper/wifi-80211p-helper.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/bsm-application.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/channel-coordinator.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/channel-manager.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/channel-scheduler.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/default-channel-scheduler.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/higher-tx-tag.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/ocb-wifi-mac.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/vendor-specific-action.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/vsa-manager.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/wave-frame-exchange-manager.cc.o"
+		},
+		{
+			"path" : "src/wave/CMakeFiles/libwave-obj.dir/./model/wave-net-device.cc.o"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"build_lib",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"include",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/wave/CMakeLists.txt",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 138,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 361,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 363,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 539,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1162,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 314,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1157,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 116,
+				"parent" : 3
+			},
+			{
+				"file" : 2,
+				"parent" : 11
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 19,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 57,
+				"parent" : 12
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 540,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 608,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 749,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIC -fdiagnostics-color=always   -fno-semantic-interposition"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				},
+				{
+					"fragment" : "-std=gnu++20"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "HAVE_SQLITE3"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "NS3_ASSERT_ENABLE"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "NS3_BUILD_PROFILE_DEBUG"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "NS3_LOG_ENABLE"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "PROJECT_SOURCE_PATH=\"/home/espen/ns-3/ns3-wip\""
+				},
+				{
+					"backtrace" : 14,
+					"define" : "__LINUX__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 15,
+					"path" : "/usr"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/espen/ns-3/ns3-wip/build/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/usr/include/python3.10"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		}
+	],
+	"id" : "libwave-obj::@fc37df3f93ccae5d0f34",
+	"name" : "libwave-obj",
+	"paths" : 
+	{
+		"build" : "src/wave",
+		"source" : "src/wave"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/helper/wave-bsm-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/helper/wave-bsm-stats.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/helper/wave-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/helper/wave-mac-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/helper/wifi-80211p-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/bsm-application.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/channel-coordinator.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/channel-manager.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/channel-scheduler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/default-channel-scheduler.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/higher-tx-tag.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/ocb-wifi-mac.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/vendor-specific-action.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/vsa-manager.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/wave-frame-exchange-manager.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/wave/model/wave-net-device.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/helper/wave-bsm-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/helper/wave-bsm-stats.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/helper/wave-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/helper/wave-mac-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/helper/wifi-80211p-helper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/bsm-application.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/channel-coordinator.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/channel-manager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/channel-scheduler.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/default-channel-scheduler.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/higher-tx-tag.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/ocb-wifi-mac.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/vendor-specific-action.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/vsa-manager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/wave-frame-exchange-manager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/wave/model/wave-net-device.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jackson-annotations-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jgraph.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/underscore-1.78-SNAPSHOT-jar-with-dependencies.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/medusaXmlRpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/snakeyaml-1.28.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jackson-databind-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jcommon-1.0.0-pre2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jackson-core-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jaxen-jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/xml-apis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jaxen-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/docconverter-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/xmlrpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jfreechart-1.0.0-pre2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jackson-dataformat-yaml-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/json-20180813.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/saxpath.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/jgraphaddons.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/xalan.jar!/" />
+      <root url="jar://$PROJECT_DIR$/viewer/lib/underscore-1.78.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

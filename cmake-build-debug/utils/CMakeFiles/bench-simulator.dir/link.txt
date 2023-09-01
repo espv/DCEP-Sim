@@ -1,0 +1,1 @@
+/usr/bin/c++ -g "CMakeFiles/bench-simulator.dir/bench-simulator.cc.o" -o /home/espen/ns-3/ns3-wip/build/utils/ns3.36.1-bench-simulator-debug  -Wl,-rpath,/home/espen/ns-3/ns3-wip/build/lib /home/espen/ns-3/ns3-wip/build/lib/libns3.36.1-core-debug.so -Wl,--no-as-needed /usr/lib/x86_64-linux-gnu/librt.a -Wl,--as-needed 

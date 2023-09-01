@@ -1,0 +1,55 @@
+Performing C++ SOURCE FILE Test HAVE_UINT128_T failed with the following output:
+Change Dir: /home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3432e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3432e.dir/build.make CMakeFiles/cmTC_3432e.dir/build
+gmake[1]: Entering directory '/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS'
+Building CXX object CMakeFiles/cmTC_3432e.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_UINT128_T  -fPIE -std=gnu++20 -o CMakeFiles/cmTC_3432e.dir/src.cxx.o -c /home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS/src.cxx
+/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS/src.cxx: In function ‘int main(int, char**)’:
+/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS/src.cxx:5:18: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint8_t’?
+    5 |             if ((uint128_t *) 0) return 0;
+      |                  ^~~~~~~~~
+      |                  uint8_t
+/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS/src.cxx:5:29: error: expected primary-expression before ‘)’ token
+    5 |             if ((uint128_t *) 0) return 0;
+      |                             ^
+/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS/src.cxx:5:30: error: expected ‘)’ before numeric constant
+    5 |             if ((uint128_t *) 0) return 0;
+      |                ~             ^~
+      |                              )
+/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS/src.cxx:6:25: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint8_t’?
+    6 |             if (sizeof (uint128_t)) return 0;
+      |                         ^~~~~~~~~
+      |                         uint8_t
+gmake[1]: *** [CMakeFiles/cmTC_3432e.dir/build.make:78: CMakeFiles/cmTC_3432e.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-2vyhrS'
+gmake: *** [Makefile:127: cmTC_3432e/fast] Error 2
+
+
+Source file was:
+#include <stdint.h>
+       int main(int argc, char **argv)
+         {
+            (void)argc; (void)argv;
+            if ((uint128_t *) 0) return 0;
+            if (sizeof (uint128_t)) return 0;
+            return 1;
+         }
+
+Determining if the include file net/netmap_user.h exists failed with the following output:
+Change Dir: /home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-3Mvo1n
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ef9eb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ef9eb.dir/build.make CMakeFiles/cmTC_ef9eb.dir/build
+gmake[1]: Entering directory '/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-3Mvo1n'
+Building CXX object CMakeFiles/cmTC_ef9eb.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++20 -o CMakeFiles/cmTC_ef9eb.dir/CheckIncludeFile.cxx.o -c /home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-3Mvo1n/CheckIncludeFile.cxx
+/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-3Mvo1n/CheckIncludeFile.cxx:1:10: fatal error: net/netmap_user.h: No such file or directory
+    1 | #include <net/netmap_user.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_ef9eb.dir/build.make:78: CMakeFiles/cmTC_ef9eb.dir/CheckIncludeFile.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/espen/ns-3/ns3-wip/cmake-cache/CMakeFiles/CMakeScratch/TryCompile-3Mvo1n'
+gmake: *** [Makefile:127: cmTC_ef9eb/fast] Error 2
+
+
+

@@ -1,0 +1,55 @@
+\hypertarget{classns3_1_1_sink_operator}{}\doxysection{ns3\+::Sink\+Operator Class Reference}
+\label{classns3_1_1_sink_operator}\index{ns3::SinkOperator@{ns3::SinkOperator}}
+
+
+Inheritance diagram for ns3\+::Sink\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for ns3\+::Sink\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_ac2398c5ae2ba1645f5c3696dc44eb4b9}\label{classns3_1_1_sink_operator_ac2398c5ae2ba1645f5c3696dc44eb4b9}} 
+Ptr$<$ \mbox{\hyperlink{classns3_1_1_operator}{Operator}} $>$ {\bfseries copy} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_stream}{Stream}} $>$ s) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_a91330e0bfa449f46952fca3aea7219ff}\label{classns3_1_1_sink_operator_a91330e0bfa449f46952fca3aea7219ff}} 
+void {\bfseries process} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_tuple_wrapper}{Tuple\+Wrapper}} $>$ tuple\+Wrapper) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_ae511bc2fbc563177d143605d8ef8b71e}\label{classns3_1_1_sink_operator_ae511bc2fbc563177d143605d8ef8b71e}} 
+int {\bfseries calculate\+Migration\+Size} (migration\+\_\+types migration\+\_\+type) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_a48a055206489e1340dce7777bb2116bb}\label{classns3_1_1_sink_operator_a48a055206489e1340dce7777bb2116bb}} 
+void {\bfseries Extract\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_migration_plan}{Migration\+Plan}} $>$ mp) override
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_a7b7af71ec20a680c53b1b40769642864}\label{classns3_1_1_sink_operator_a7b7af71ec20a680c53b1b40769642864}} 
+void {\bfseries Import\+State} (Ptr$<$ \mbox{\hyperlink{classns3_1_1_partial_state_batch}{Partial\+State\+Batch}} $>$ batch) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_a37c43178a9f9a0ba2e9b7abcbde2e983}\label{classns3_1_1_sink_operator_a37c43178a9f9a0ba2e9b7abcbde2e983}} 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_a246278d8091816e286b18f1f2bd71c8a}\label{classns3_1_1_sink_operator_a246278d8091816e286b18f1f2bd71c8a}} 
+long {\bfseries number\+\_\+tuples} = 0
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_a3b4c0aa3ba7172251a55236e80c905cd}\label{classns3_1_1_sink_operator_a3b4c0aa3ba7172251a55236e80c905cd}} 
+long {\bfseries time\+\_\+last\+\_\+received} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns3_1_1_sink_operator_aaa60d9d6de700d5653af4a48b245a299}\label{classns3_1_1_sink_operator_aaa60d9d6de700d5653af4a48b245a299}} 
+static long {\bfseries total\+\_\+number\+\_\+tuples} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Operator.\+h\item 
+Sink\+Operator.\+cpp\end{DoxyCompactItemize}

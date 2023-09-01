@@ -1,0 +1,66 @@
+stream-definitions:
+- stream-id: 1
+  name: BusRecord
+  tuple-format:
+  - {name: a_ts, type: long}
+  - {name: b_line_id, type: long}
+  - {name: c_direction, type: long}
+  - {name: d_journey_pattern_id, type: string}
+  - {name: e_time_frame, type: timestamp}
+  - {name: f_vehicle_journey_id, type: long}
+  - {name: g_operator, type: string}
+  - {name: h_congested, type: long}
+  - {name: i_longitude, type: double}
+  - {name: j_latitude, type: double}
+  - {name: k_delay, type: long}
+  - {name: l_block_id, type: long}
+  - {name: m_vehicle_id, type: long}
+  - {name: n_stop_id, type: long}
+  - {name: o_at_stop, type: long}
+experiments:
+- id: 1
+  flow:
+  - node: -1
+    task: deployQueries
+    arguments:
+    - {queryId: int}
+  - node: -1
+    task: addPotentialHost
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSourceNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: addSinkNode
+    arguments:
+    - {nodeId: int}
+  - node: -1
+    task: sendCsvDsAsStream
+    arguments:
+    - {datasetId: int, iterations: int}
+  - node: -1
+    task: retEndOfStream
+    arguments:
+    - {ms: int}
+datasets: []
+spequeries:
+  outputs: []
+  inputs: []
+  queries:
+  - operators:
+    - name: Filter 0
+      type: filter
+      parameters: {op: '', arg2: '', arg1: ''}
+    - name: Select 0
+      type: select
+      parameters:
+        fields: []
+    name: NewName0
+    edges:
+    - stream: stream_name1
+      from: {name: Filter 0, type: intermediate}
+      to: {name: Select 0, type: intermediate}
+    id: NewName0
+
